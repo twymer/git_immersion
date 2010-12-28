@@ -1,24 +1,31 @@
 <html>
-<head>
-<link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div id="header">
-<a href="http://edgecase.com">
-<img id="logo" src="edgecase.gif" >
-</a>
-<div class="title">Git Immersion Labs</div>
-<div class="nav">
-<ul>
-<li><a href="lab_26.html">Next Lab</a></li>
-<li><a href="lab_24.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
+  <head>
+    <link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="header">
+      <a href="http://edgecase.com">
+        <img id="logo" src="edgecase.gif" >
+      </a>
+      <div class="title">Git Immersion Labs</div>
+      <div class="nav">
+  <ul>
+    <li>
+              <a href="lab_26.html">Next Lab</a>
+          </li>
+    <li>
+              <a href="lab_24.html">Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+  </ul>
 </div>
-</div>
-<div id="main">
-<div id="content">
-<h1>Lab 25:  Navigating Branches</h1>
+
+    </div>
+    <div id="main">
+      <div id="content">
+        <h1>Lab 25:  Navigating Branches</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Learn how to navigate between the branches of a repository</li>
@@ -29,16 +36,16 @@
 <pre class="instructions">git hist --all</pre>
 <p class="command">Output:</p>
 <pre class="sample">$ git hist --all
-* 1b2b22d 2010-06-21 | Updated Rakefile (HEAD, greet) [Jim Weirich]
-* 8cc8712 2010-06-21 | Hello uses Greeter [Jim Weirich]
-* 5563881 2010-06-21 | Added greeter class [Jim Weirich]
-* 8547b5f 2010-06-21 | Added a Rakefile. (master) [Jim Weirich]
-* c2ad33c 2010-06-21 | Moved hello.rb to lib [Jim Weirich]
-* 2ae006e 2010-06-21 | Add an author/email comment [Jim Weirich]
-* 7c5f85f 2010-06-21 | Added a comment (v1) [Jim Weirich]
-* 7d21264 2010-06-21 | Added a default value (v1-beta) [Jim Weirich]
-* 46d1c17 2010-06-21 | Using ARGV [Jim Weirich]
-* c97dcf3 2010-06-21 | First Commit [Jim Weirich]</pre>
+* 164696a 2010-12-28 | Updated Rakefile (HEAD, greet) [Jim Weirich]
+* 8dda11d 2010-12-28 | Hello uses Greeter [Jim Weirich]
+* 87c19c4 2010-12-28 | Added greeter class [Jim Weirich]
+* 19e2359 2010-12-28 | Added a Rakefile. (master) [Jim Weirich]
+* 0530609 2010-12-28 | Moved hello.rb to lib [Jim Weirich]
+* 2fc367b 2010-12-28 | Add an author/email comment [Jim Weirich]
+* 15fde51 2010-12-28 | Added a comment (v1) [Jim Weirich]
+* e76e760 2010-12-28 | Added a default value (v1-beta) [Jim Weirich]
+* 2370a1d 2010-12-28 | Using ARGV [Jim Weirich]
+* a3f8b17 2010-12-28 | First Commit [Jim Weirich]</pre>
 <h3>Switch to the Master Branch</h3>
 <p>Just use the <code>git checkout</code> command to switch between branches.</p>
 <p class="command">Execute:</p>
@@ -48,7 +55,7 @@ cat lib/hello.rb</pre>
 <pre class="sample">$ git checkout master
 Switched to branch 'master'
 $ cat lib/hello.rb
-# This is an unwanted but committed change
+# Default is World
 # Author: Jim Weirich (jim@somewhere.com)
 name = ARGV.first || "World"
 
@@ -72,16 +79,23 @@ greeter = Greeter.new(name)
 puts greeter.greet
 </pre>
 <p>The contents of the <code>lib/hello.rb</code> confirms we are back on the <strong>greet</strong> branch.</p>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="nav">
+  <ul>
+    <li>
+              <a href="lab_26.html">Next Lab</a>
+          </li>
+    <li>
+              <a href="lab_24.html">Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+  </ul>
 </div>
-</div>
-<div id="footer">
-<div class="nav">
-<ul>
-<li><a href="lab_26.html">Next Lab</a></li>
-<li><a href="lab_24.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
-</div>
-</div>
-</body>
+
+    </div>
+  </body>
 </html>

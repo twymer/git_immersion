@@ -1,24 +1,31 @@
 <html>
-<head>
-<link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div id="header">
-<a href="http://edgecase.com">
-<img id="logo" src="edgecase.gif" >
-</a>
-<div class="title">Git Immersion Labs</div>
-<div class="nav">
-<ul>
-<li><a href="lab_29.html">Next Lab</a></li>
-<li><a href="lab_27.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
+  <head>
+    <link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="header">
+      <a href="http://edgecase.com">
+        <img id="logo" src="edgecase.gif" >
+      </a>
+      <div class="title">Git Immersion Labs</div>
+      <div class="nav">
+  <ul>
+    <li>
+              <a href="lab_29.html">Next Lab</a>
+          </li>
+    <li>
+              <a href="lab_27.html">Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+  </ul>
 </div>
-</div>
-<div id="main">
-<div id="content">
-<h1>Lab 28:  Merging</h1>
+
+    </div>
+    <div id="main">
+      <div id="content">
+        <h1>Lab 28:  Merging</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Learning who to merge two diverging branches to bring the changes back into a single branch.</li>
@@ -39,34 +46,41 @@ Merge made by recursive.
  1 files changed, 1 insertions(+), 0 deletions(-)
  create mode 100644 README
 $ git hist --all
-*   247fc6f 2010-06-21 | Merge branch 'master' into greet (HEAD, greet) [Jim Weirich]
+*   5602bd6 2010-12-28 | Merge branch 'master' into greet (HEAD, greet) [Jim Weirich]
 |\  
-| * f396c14 2010-06-21 | Added README (master) [Jim Weirich]
-* | 1b2b22d 2010-06-21 | Updated Rakefile [Jim Weirich]
-* | 8cc8712 2010-06-21 | Hello uses Greeter [Jim Weirich]
-* | 5563881 2010-06-21 | Added greeter class [Jim Weirich]
+| * 399b53b 2010-12-28 | Added README (master) [Jim Weirich]
+* | 164696a 2010-12-28 | Updated Rakefile [Jim Weirich]
+* | 8dda11d 2010-12-28 | Hello uses Greeter [Jim Weirich]
+* | 87c19c4 2010-12-28 | Added greeter class [Jim Weirich]
 |/  
-* 8547b5f 2010-06-21 | Added a Rakefile. [Jim Weirich]
-* c2ad33c 2010-06-21 | Moved hello.rb to lib [Jim Weirich]
-* 2ae006e 2010-06-21 | Add an author/email comment [Jim Weirich]
-* 7c5f85f 2010-06-21 | Added a comment (v1) [Jim Weirich]
-* 7d21264 2010-06-21 | Added a default value (v1-beta) [Jim Weirich]
-* 46d1c17 2010-06-21 | Using ARGV [Jim Weirich]
-* c97dcf3 2010-06-21 | First Commit [Jim Weirich]</pre>
+* 19e2359 2010-12-28 | Added a Rakefile. [Jim Weirich]
+* 0530609 2010-12-28 | Moved hello.rb to lib [Jim Weirich]
+* 2fc367b 2010-12-28 | Add an author/email comment [Jim Weirich]
+* 15fde51 2010-12-28 | Added a comment (v1) [Jim Weirich]
+* e76e760 2010-12-28 | Added a default value (v1-beta) [Jim Weirich]
+* 2370a1d 2010-12-28 | Using ARGV [Jim Weirich]
+* a3f8b17 2010-12-28 | First Commit [Jim Weirich]</pre>
 <p>By merging master into your greet branch periodically, you can pick up any changes to master and keep your changes in greet compatible with changes in the mainline.</p>
 <p>However, it does produce ugly commit graphs. Latter we will look at the option of rebasing rather than merging.</p>
 <h3>Up Next</h3>
 <p>But first, what if the changes in master conflict with the changes in greet?</p>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="nav">
+  <ul>
+    <li>
+              <a href="lab_29.html">Next Lab</a>
+          </li>
+    <li>
+              <a href="lab_27.html">Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+  </ul>
 </div>
-</div>
-<div id="footer">
-<div class="nav">
-<ul>
-<li><a href="lab_29.html">Next Lab</a></li>
-<li><a href="lab_27.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
-</div>
-</div>
-</body>
+
+    </div>
+  </body>
 </html>

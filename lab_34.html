@@ -1,30 +1,38 @@
 <html>
-<head>
-<link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div id="header">
-<a href="http://edgecase.com">
-<img id="logo" src="edgecase.gif" >
-</a>
-<div class="title">Git Immersion Labs</div>
-<div class="nav">
-<ul>
-<li><a href="lab_35.html">Next Lab</a></li>
-<li><a href="lab_33.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
+  <head>
+    <link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="header">
+      <a href="http://edgecase.com">
+        <img id="logo" src="edgecase.gif" >
+      </a>
+      <div class="title">Git Immersion Labs</div>
+      <div class="nav">
+  <ul>
+    <li>
+              <a href="lab_35.html">Next Lab</a>
+          </li>
+    <li>
+              <a href="lab_33.html">Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+  </ul>
 </div>
-</div>
-<div id="main">
-<div id="content">
-<h1>Lab 34:  Rebasing</h1>
+
+    </div>
+    <div id="main">
+      <div id="content">
+        <h1>Lab 34:  Rebasing</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Use the rebase command rather than the merge command.</li>
 </ul>
 <h2>Steps</h2>
-<p>Ok, we are back in time before the merge and we want to get the changes in master into our greet branch.</p>
+<p>Ok, we are back in time before the first merge and we want to get the changes in master into our greet branch.</p>
+<p>This time we will use the rebase command instead of the merge command to bring in the changes from the master branch.</p>
 <p class="command">Execute:</p>
 <pre class="instructions">git checkout greet
 git rebase master
@@ -40,17 +48,17 @@ Applying: hello uses Greeter
 Applying: updated Rakefile
 $
 $ git hist
-* 51a6293 2010-06-21 | Updated Rakefile (HEAD, greet) [Jim Weirich]
-* 5e59e31 2010-06-21 | Hello uses Greeter [Jim Weirich]
-* 27bb225 2010-06-21 | Added greeter class [Jim Weirich]
-* f396c14 2010-06-21 | Added README (master) [Jim Weirich]
-* 8547b5f 2010-06-21 | Added a Rakefile. [Jim Weirich]
-* c2ad33c 2010-06-21 | Moved hello.rb to lib [Jim Weirich]
-* 2ae006e 2010-06-21 | Add an author/email comment [Jim Weirich]
-* 7c5f85f 2010-06-21 | Added a comment (v1) [Jim Weirich]
-* 7d21264 2010-06-21 | Added a default value (v1-beta) [Jim Weirich]
-* 46d1c17 2010-06-21 | Using ARGV [Jim Weirich]
-* c97dcf3 2010-06-21 | First Commit [Jim Weirich]</pre>
+* d45fb1b 2010-12-28 | Updated Rakefile (HEAD, greet) [Jim Weirich]
+* 9567497 2010-12-28 | Hello uses Greeter [Jim Weirich]
+* d3247e0 2010-12-28 | Added greeter class [Jim Weirich]
+* 399b53b 2010-12-28 | Added README (master) [Jim Weirich]
+* 19e2359 2010-12-28 | Added a Rakefile. [Jim Weirich]
+* 0530609 2010-12-28 | Moved hello.rb to lib [Jim Weirich]
+* 2fc367b 2010-12-28 | Add an author/email comment [Jim Weirich]
+* 15fde51 2010-12-28 | Added a comment (v1) [Jim Weirich]
+* e76e760 2010-12-28 | Added a default value (v1-beta) [Jim Weirich]
+* 2370a1d 2010-12-28 | Using ARGV [Jim Weirich]
+* a3f8b17 2010-12-28 | First Commit [Jim Weirich]</pre>
 <h3>Merge VS Rebase</h3>
 <p>The final result of the rebase is very similar to the merge.  The greet branch now contains all of its changes, as well as all the changes from the master branch.  However, the commit tree is quite different.  The commit tree for the greet branch has been rewritten so that the master branch is a part of the commit history.  This leaves the chain of commits linear and much easier to read.</p>
 <h3>When to Rebase, When to Merge?</h3>
@@ -60,16 +68,23 @@ $ git hist
 	<li>When the <em>exact</em> history of the commit branch is important (since rebase rewrites the commit history).</li>
 </ol>
 <p>Given the above guidelines, I tend to use rebase for short-lived, local branches and merge for branches in the public repository.</p>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="nav">
+  <ul>
+    <li>
+              <a href="lab_35.html">Next Lab</a>
+          </li>
+    <li>
+              <a href="lab_33.html">Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+  </ul>
 </div>
-</div>
-<div id="footer">
-<div class="nav">
-<ul>
-<li><a href="lab_35.html">Next Lab</a></li>
-<li><a href="lab_33.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
-</div>
-</div>
-</body>
+
+    </div>
+  </body>
 </html>

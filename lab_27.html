@@ -1,24 +1,31 @@
 <html>
-<head>
-<link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div id="header">
-<a href="http://edgecase.com">
-<img id="logo" src="edgecase.gif" >
-</a>
-<div class="title">Git Immersion Labs</div>
-<div class="nav">
-<ul>
-<li><a href="lab_28.html">Next Lab</a></li>
-<li><a href="lab_26.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
+  <head>
+    <link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="header">
+      <a href="http://edgecase.com">
+        <img id="logo" src="edgecase.gif" >
+      </a>
+      <div class="title">Git Immersion Labs</div>
+      <div class="nav">
+  <ul>
+    <li>
+              <a href="lab_28.html">Next Lab</a>
+          </li>
+    <li>
+              <a href="lab_26.html">Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+  </ul>
 </div>
-</div>
-<div id="main">
-<div id="content">
-<h1>Lab 27:  Viewing Diverging Branches</h1>
+
+    </div>
+    <div id="main">
+      <div id="content">
+        <h1>Lab 27:  Viewing Diverging Branches</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Learn how to view diverging branches in a repository.</li>
@@ -30,30 +37,37 @@
 <pre class="instructions">git hist --all</pre>
 <p class="command">Output:</p>
 <pre class="sample">$ git hist --all
-* f396c14 2010-06-21 | Added README (HEAD, master) [Jim Weirich]
-| * 1b2b22d 2010-06-21 | Updated Rakefile (greet) [Jim Weirich]
-| * 8cc8712 2010-06-21 | Hello uses Greeter [Jim Weirich]
-| * 5563881 2010-06-21 | Added greeter class [Jim Weirich]
+* 164696a 2010-12-28 | Updated Rakefile (greet) [Jim Weirich]
+* 8dda11d 2010-12-28 | Hello uses Greeter [Jim Weirich]
+* 87c19c4 2010-12-28 | Added greeter class [Jim Weirich]
+| * 399b53b 2010-12-28 | Added README (HEAD, master) [Jim Weirich]
 |/  
-* 8547b5f 2010-06-21 | Added a Rakefile. [Jim Weirich]
-* c2ad33c 2010-06-21 | Moved hello.rb to lib [Jim Weirich]
-* 2ae006e 2010-06-21 | Add an author/email comment [Jim Weirich]
-* 7c5f85f 2010-06-21 | Added a comment (v1) [Jim Weirich]
-* 7d21264 2010-06-21 | Added a default value (v1-beta) [Jim Weirich]
-* 46d1c17 2010-06-21 | Using ARGV [Jim Weirich]
-* c97dcf3 2010-06-21 | First Commit [Jim Weirich]</pre>
+* 19e2359 2010-12-28 | Added a Rakefile. [Jim Weirich]
+* 0530609 2010-12-28 | Moved hello.rb to lib [Jim Weirich]
+* 2fc367b 2010-12-28 | Add an author/email comment [Jim Weirich]
+* 15fde51 2010-12-28 | Added a comment (v1) [Jim Weirich]
+* e76e760 2010-12-28 | Added a default value (v1-beta) [Jim Weirich]
+* 2370a1d 2010-12-28 | Using ARGV [Jim Weirich]
+* a3f8b17 2010-12-28 | First Commit [Jim Weirich]</pre>
 <p>Here is our first chance to see the &#8212;graph option on <code>git hist</code> in action. Adding the &#8212;graph option to git log causes it to draw the commit tree using simple <span class="caps">ASCII</span> characters.  We can see both branches (greet and master), and that the master branch is the current <span class="caps">HEAD</span>. The common ancestor to both branches is the &#8220;Added a Rakefile&#8221; branch.</p>
 <p>The <code>--all</code> flag makes sure that we see all the branches.  The default is to show only the current branch.</p>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="nav">
+  <ul>
+    <li>
+              <a href="lab_28.html">Next Lab</a>
+          </li>
+    <li>
+              <a href="lab_26.html">Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+  </ul>
 </div>
-</div>
-<div id="footer">
-<div class="nav">
-<ul>
-<li><a href="lab_28.html">Next Lab</a></li>
-<li><a href="lab_26.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
-</div>
-</div>
-</body>
+
+    </div>
+  </body>
 </html>

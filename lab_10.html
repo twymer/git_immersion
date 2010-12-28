@@ -1,24 +1,31 @@
 <html>
-<head>
-<link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div id="header">
-<a href="http://edgecase.com">
-<img id="logo" src="edgecase.gif" >
-</a>
-<div class="title">Git Immersion Labs</div>
-<div class="nav">
-<ul>
-<li><a href="lab_11.html">Next Lab</a></li>
-<li><a href="lab_09.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
+  <head>
+    <link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="header">
+      <a href="http://edgecase.com">
+        <img id="logo" src="edgecase.gif" >
+      </a>
+      <div class="title">Git Immersion Labs</div>
+      <div class="nav">
+  <ul>
+    <li>
+              <a href="lab_11.html">Next Lab</a>
+          </li>
+    <li>
+              <a href="lab_09.html">Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+  </ul>
 </div>
-</div>
-<div id="main">
-<div id="content">
-<h1>Lab 10:  History</h1>
+
+    </div>
+    <div id="main">
+      <div id="content">
+        <h1>Lab 10:  History</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Learn how to view the history of the project.</li>
@@ -30,27 +37,27 @@
 <p>You should see &#8230;</p>
 <p class="command">Output:</p>
 <pre class="sample">$ git log
-commit 7c5f85f22fbfc1702df37864004f378d7c2f9925
+commit 15fde51dc4c663196f550276c19b9f958f8918c8
 Author: Jim Weirich &lt;jim.weirich@gmail.com&gt;
-Date:   Mon Jun 21 10:29:33 2010 -0400
+Date:   Tue Dec 28 16:33:36 2010 -0500
 
     Added a comment
 
-commit 7d21264ef12a32bf38d71750a540331317917cd5
+commit e76e760987e23c707b0272610acae6f588cae991
 Author: Jim Weirich &lt;jim.weirich@gmail.com&gt;
-Date:   Mon Jun 21 10:29:33 2010 -0400
+Date:   Tue Dec 28 16:33:35 2010 -0500
 
     Added a default value
 
-commit 46d1c1719b8f18c34ea6db374b76214081a57599
+commit 2370a1dc0335ac6338cae897b8dad16126158dea
 Author: Jim Weirich &lt;jim.weirich@gmail.com&gt;
-Date:   Mon Jun 21 10:29:33 2010 -0400
+Date:   Tue Dec 28 16:33:35 2010 -0500
 
     Using ARGV
 
-commit c97dcf37e2945e4b413776dea2c660594b1ac9e8
+commit a3f8b177b12ae713f4d9f43373551bd238ea8444
 Author: Jim Weirich &lt;jim.weirich@gmail.com&gt;
-Date:   Mon Jun 21 10:29:32 2010 -0400
+Date:   Tue Dec 28 16:33:35 2010 -0500
 
     First Commit
 </pre>
@@ -62,16 +69,16 @@ Date:   Mon Jun 21 10:29:32 2010 -0400
 <p>You should see &#8230;</p>
 <p class="command">Output:</p>
 <pre class="sample">$ git log --pretty=oneline
-7c5f85f22fbfc1702df37864004f378d7c2f9925 Added a comment
-7d21264ef12a32bf38d71750a540331317917cd5 Added a default value
-46d1c1719b8f18c34ea6db374b76214081a57599 Using ARGV
-c97dcf37e2945e4b413776dea2c660594b1ac9e8 First Commit
+15fde51dc4c663196f550276c19b9f958f8918c8 Added a comment
+e76e760987e23c707b0272610acae6f588cae991 Added a default value
+2370a1dc0335ac6338cae897b8dad16126158dea Using ARGV
+a3f8b177b12ae713f4d9f43373551bd238ea8444 First Commit
 </pre>
 <h3>Controlling Which Entries are Displayed</h3>
 <p>There are a lot of options for selecting which entries are displayed in the log.  Play around with the following options:</p>
 <pre class="instructions">git log --pretty=oneline --max-count=2
-git log --pretty=oneline --since='5 minutes ago' 
-git log --pretty=oneline --until='5 minutes ago' 
+git log --pretty=oneline --since='5 minutes ago'
+git log --pretty=oneline --until='5 minutes ago'
 git log --pretty=oneline --author=&lt;your name&gt;
 git log --pretty=oneline --all</pre>
 <p>See man git-log for all the details.</p>
@@ -85,10 +92,10 @@ git log --pretty=oneline --all</pre>
 <p>It looks like this:</p>
 <p class="command">Output:</p>
 <pre class="sample">$ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
-* 7c5f85f 2010-06-21 | Added a comment (HEAD, master) [Jim Weirich]
-* 7d21264 2010-06-21 | Added a default value [Jim Weirich]
-* 46d1c17 2010-06-21 | Using ARGV [Jim Weirich]
-* c97dcf3 2010-06-21 | First Commit [Jim Weirich]</pre>
+* 15fde51 2010-12-28 | Added a comment (HEAD, master) [Jim Weirich]
+* e76e760 2010-12-28 | Added a default value [Jim Weirich]
+* 2370a1d 2010-12-28 | Using ARGV [Jim Weirich]
+* a3f8b17 2010-12-28 | First Commit [Jim Weirich]</pre>
 <p>Let&#8217;s look at it in detail:</p>
 <ul>
 	<li><code>--pretty="..."</code> defines the format of the output.</li>
@@ -103,16 +110,23 @@ git log --pretty=oneline --all</pre>
 <p>This is a lot to type everytime you want to see the log. Fortunately we will learn about git aliases in the next lab.</p>
 <h3>Other Tools</h3>
 <p>Both <code>gitx</code> (for Macs) and <code>gitk</code> (any platform) are useful in exploring log history.</p>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="nav">
+  <ul>
+    <li>
+              <a href="lab_11.html">Next Lab</a>
+          </li>
+    <li>
+              <a href="lab_09.html">Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+  </ul>
 </div>
-</div>
-<div id="footer">
-<div class="nav">
-<ul>
-<li><a href="lab_11.html">Next Lab</a></li>
-<li><a href="lab_09.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
-</div>
-</div>
-</body>
+
+    </div>
+  </body>
 </html>

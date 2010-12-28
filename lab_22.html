@@ -1,24 +1,31 @@
 <html>
-<head>
-<link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div id="header">
-<a href="http://edgecase.com">
-<img id="logo" src="edgecase.gif" >
-</a>
-<div class="title">Git Immersion Labs</div>
-<div class="nav">
-<ul>
-<li><a href="lab_23.html">Next Lab</a></li>
-<li><a href="lab_21.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
+  <head>
+    <link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="header">
+      <a href="http://edgecase.com">
+        <img id="logo" src="edgecase.gif" >
+      </a>
+      <div class="title">Git Immersion Labs</div>
+      <div class="nav">
+  <ul>
+    <li>
+              <a href="lab_23.html">Next Lab</a>
+          </li>
+    <li>
+              <a href="lab_21.html">Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+  </ul>
 </div>
-</div>
-<div id="main">
-<div id="content">
-<h1>Lab 22:  Git Internals: The .git directory</h1>
+
+    </div>
+    <div id="main">
+      <div id="content">
+        <h1>Lab 22:  Git Internals: The .git directory</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Learn about the structure of the <code>.git</code> directory</li>
@@ -26,10 +33,12 @@
 <h3>The <code>.git</code> Directory</h3>
 <p>Time to do some exploring.  First, from the root of your project directory&#8230;</p>
 <p class="command">Execute:</p>
-<pre class="instructions">cls -C .git</pre>
+<pre class="instructions">ls -C .git</pre>
 <p class="command">Output:</p>
-<pre class="sample">$ cls -C .git
-sh: cls: command not found
+<pre class="sample">$ ls -C .git
+COMMIT_EDITMSG	ORIG_HEAD	description	info		refs
+HEAD		branches	hooks		logs		rr-cache
+MERGE_RR	config		index		objects
 </pre>
 <p>This is the magic directory where all the git &#8220;stuff&#8221; is stored. Let&#8217;s peek in the objects directory.</p>
 <h3>The Object Store</h3>
@@ -37,18 +46,17 @@ sh: cls: command not found
 <pre class="instructions">ls -C .git/objects</pre>
 <p class="command">Output:</p>
 <pre class="sample">$ ls -C .git/objects
-11	43	59	79	97	a8	dc
-24	46	69	7c	99	af	ec
-27	49	6b	7d	9c	c2	info
-2a	57	78	85	a2	c9	pack
+05	15	24	2f	43	6b	9c	af	e4	pack
+09	19	27	34	59	78	a3	b5	e7
+11	23	28	3d	69	97	ac	c4	info
 </pre>
 <p>You should see a bunch of directories with 2 letter names.  The directory names are the first two letters of the sha1 hash of the object stored in git.</p>
 <h3>Deeper into the Object Store</h3>
 <p class="command">Execute:</p>
 <pre class="instructions">ls -C .git/objects/&lt;dir&gt;</pre>
 <p class="command">Output:</p>
-<pre class="sample">$ ls -C .git/objects/11
-b345c2fc315b5f7ae6db2e0f6b0570780c20d1
+<pre class="sample">$ ls -C .git/objects/05
+30609e78ecd85c3acb1fee30fee67550826f1f
 </pre>
 <p>Look in one of the two-letter directories.  You should see some files with 38 character names.  These are the files that contain the objects stored in git.  These files are compressed and encoded, so looking at their contents directly won&#8217;t be very helpful, but we will take a closer look in a bit.</p>
 <h3>Config File</h3>
@@ -80,7 +88,7 @@ $ ls .git/refs/tags
 v1
 v1-beta
 $ cat .git/refs/tags/v1
-7c5f85f22fbfc1702df37864004f378d7c2f9925
+15fde51dc4c663196f550276c19b9f958f8918c8
 </pre>
 <p>You should recogize the files in the tags subdirectory.  Each file corresponds to a tag you created with the <code>git tag</code> command earlier. It&#8217;s content is just the hash of the commit tied to the tag.</p>
 <p>The heads directory is similar, but is used for branches rather than tags.  We only have one branch at the moment, so all you will see is master in this directory.</p>
@@ -92,16 +100,23 @@ $ cat .git/refs/tags/v1
 ref: refs/heads/master
 </pre>
 <p>The <span class="caps">HEAD</span> file contains a reference to the current branch.  Should be a reference to master at this point.</p>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="nav">
+  <ul>
+    <li>
+              <a href="lab_23.html">Next Lab</a>
+          </li>
+    <li>
+              <a href="lab_21.html">Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+  </ul>
 </div>
-</div>
-<div id="footer">
-<div class="nav">
-<ul>
-<li><a href="lab_23.html">Next Lab</a></li>
-<li><a href="lab_21.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
-</div>
-</div>
-</body>
+
+    </div>
+  </body>
 </html>
