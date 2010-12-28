@@ -1,32 +1,24 @@
-<!doctype html>
 <html>
-  <head>
-    <link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <header>
-      <a href="http://edgecase.com">
-        <img id="logo" src="edgecase.gif"\ >
-      </a>
-      <div class="title">Git Immersion Labs</div>
-      <nav>
-  <ul>
-    <li>
-              <a href="lab_41.html">&laquo; Previous Lab</a>
-          </li>
-    <li>
-      <a href="index.html">Index</a>
-    </li>
-    <li>
-              <a href="lab_43.html">Next Lab &raquo;</a>
-          </li>
-  </ul>
-</nav>
-
-    </header>
-    <section id="main">
-      <article>
-        <h1>Lab 42:  Merging Pulled Changes</h1>
+<head>
+<link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+<a href="http://edgecase.com">
+<img id="logo" src="edgecase.gif" >
+</a>
+<div class="title">Git Immersion Labs</div>
+<div class="nav">
+<ul>
+<li><a href="lab_43.html">Next Lab</a></li>
+<li><a href="lab_41.html">Previous Lab</a></li>
+<li><a href="index.html">Index</a></li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="content">
+<h1>Lab 42:  Merging Pulled Changes</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Learn to get the pulled changes into the current branch and working directory.</li>
@@ -37,7 +29,7 @@
 <pre class="instructions">git merge origin/master</pre>
 <p class="command">Output:</p>
 <pre class="sample">$ git merge origin/master
-Updating 5ead415..005702d
+Updating 51a6293..48c09a5
 Fast-forward
  README |    1 +
  1 files changed, 1 insertions(+), 0 deletions(-)
@@ -51,26 +43,17 @@ Fast-forward
 This is the Hello World example from the git tutorial.
 (changed in original)
 </pre>
-<p>There&#8217;s the changes.  Even though &#8220;git fetch&#8221; does not merge the changes, we can still manually merge the changes from the remote repository.</p>
-<h3>Up Next</h3>
-<p>Next let&#8217;s take a look at combining the fetch &amp; merge process into a single command.</p>
-      </article>
-    </section>
-    <footer>
-      <nav>
-  <ul>
-    <li>
-              <a href="lab_41.html">&laquo; Previous Lab</a>
-          </li>
-    <li>
-      <a href="index.html">Index</a>
-    </li>
-    <li>
-              <a href="lab_43.html">Next Lab &raquo;</a>
-          </li>
-  </ul>
-</nav>
-
-   </footer>
-  </body>
+<p>There&#8217;s the changes.</p>
+</div>
+</div>
+<div id="footer">
+<div class="nav">
+<ul>
+<li><a href="lab_43.html">Next Lab</a></li>
+<li><a href="lab_41.html">Previous Lab</a></li>
+<li><a href="index.html">Index</a></li>
+</ul>
+</div>
+</div>
+</body>
 </html>

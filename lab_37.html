@@ -1,32 +1,24 @@
-<!doctype html>
 <html>
-  <head>
-    <link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <header>
-      <a href="http://edgecase.com">
-        <img id="logo" src="edgecase.gif"\ >
-      </a>
-      <div class="title">Git Immersion Labs</div>
-      <nav>
-  <ul>
-    <li>
-              <a href="lab_36.html">&laquo; Previous Lab</a>
-          </li>
-    <li>
-      <a href="index.html">Index</a>
-    </li>
-    <li>
-              <a href="lab_38.html">Next Lab &raquo;</a>
-          </li>
-  </ul>
-</nav>
-
-    </header>
-    <section id="main">
-      <article>
-        <h1>Lab 37:  Review the Cloned Repository</h1>
+<head>
+<link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+<a href="http://edgecase.com">
+<img id="logo" src="edgecase.gif" >
+</a>
+<div class="title">Git Immersion Labs</div>
+<div class="nav">
+<ul>
+<li><a href="lab_38.html">Next Lab</a></li>
+<li><a href="lab_36.html">Previous Lab</a></li>
+<li><a href="index.html">Index</a></li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="content">
+<h1>Lab 37:  Review the Cloned Repository</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Learn about branches on remote repositories.</li>
@@ -38,10 +30,6 @@
 ls</pre>
 <p class="command">Output:</p>
 <pre class="sample">$ cd cloned_hello
-$ ls
-README
-Rakefile
-lib
 </pre>
 <p>You should see a list of all the files in the top level of the original repository (<code>README</code>, <code>Rakefile</code> and @lib).</p>
 <h3>Review the Repository History</h3>
@@ -49,37 +37,30 @@ lib
 <pre class="instructions">git hist --all</pre>
 <p class="command">Output:</p>
 <pre class="sample">$ git hist --all
-* 5ead415 2010-12-28 | Updated Rakefile (HEAD, origin/master, origin/greet, origin/HEAD, master) [Jim Weirich]
-* 844015f 2010-12-28 | Hello uses Greeter [Jim Weirich]
-* 9a556c8 2010-12-28 | Added greeter class [Jim Weirich]
-* cdc2714 2010-12-28 | Added README [Jim Weirich]
-* d4258dd 2010-12-28 | Added a Rakefile. [Jim Weirich]
-* 0179abf 2010-12-28 | Moved hello.rb to lib [Jim Weirich]
-* f5505ca 2010-12-28 | Add an author/email comment [Jim Weirich]
-* 2d930c3 2010-12-28 | Added a comment (v1) [Jim Weirich]
-* 9ff05d6 2010-12-28 | Added a default value (v1-beta) [Jim Weirich]
-* 7ce3917 2010-12-28 | Using ARGV [Jim Weirich]
-* 8613c73 2010-12-28 | First Commit [Jim Weirich]</pre>
+* 51a6293 2010-06-21 | Updated Rakefile (HEAD, origin/master, origin/greet, origin/HEAD, master) [Jim Weirich]
+* 5e59e31 2010-06-21 | Hello uses Greeter [Jim Weirich]
+* 27bb225 2010-06-21 | Added greeter class [Jim Weirich]
+* f396c14 2010-06-21 | Added README [Jim Weirich]
+* 8547b5f 2010-06-21 | Added a Rakefile. [Jim Weirich]
+* c2ad33c 2010-06-21 | Moved hello.rb to lib [Jim Weirich]
+* 2ae006e 2010-06-21 | Add an author/email comment [Jim Weirich]
+* 7c5f85f 2010-06-21 | Added a comment (v1) [Jim Weirich]
+* 7d21264 2010-06-21 | Added a default value (v1-beta) [Jim Weirich]
+* 46d1c17 2010-06-21 | Using ARGV [Jim Weirich]
+* c97dcf3 2010-06-21 | First Commit [Jim Weirich]</pre>
 <p>You should now see a list of the all the commits in the new repository, and it should (more or less) match the history of commits in the original repository.  The only difference should be in the names of the branches.</p>
 <h3>Remote branches</h3>
 <p>You should see a <strong>master</strong> branch (along with <strong><span class="caps">HEAD</span></strong>) in the history list.  But you will also have number of strangely named branches (<strong>origin/master</strong>, <strong>origin/greet</strong> and <strong>origin/<span class="caps">HEAD</span></strong>).  We&#8217;ll talk about them in a bit.</p>
-      </article>
-    </section>
-    <footer>
-      <nav>
-  <ul>
-    <li>
-              <a href="lab_36.html">&laquo; Previous Lab</a>
-          </li>
-    <li>
-      <a href="index.html">Index</a>
-    </li>
-    <li>
-              <a href="lab_38.html">Next Lab &raquo;</a>
-          </li>
-  </ul>
-</nav>
-
-   </footer>
-  </body>
+</div>
+</div>
+<div id="footer">
+<div class="nav">
+<ul>
+<li><a href="lab_38.html">Next Lab</a></li>
+<li><a href="lab_36.html">Previous Lab</a></li>
+<li><a href="index.html">Index</a></li>
+</ul>
+</div>
+</div>
+</body>
 </html>

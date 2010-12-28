@@ -1,32 +1,24 @@
-<!doctype html>
 <html>
-  <head>
-    <link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <header>
-      <a href="http://edgecase.com">
-        <img id="logo" src="edgecase.gif"\ >
-      </a>
-      <div class="title">Git Immersion Labs</div>
-      <nav>
-  <ul>
-    <li>
-              <a href="lab_16.html">&laquo; Previous Lab</a>
-          </li>
-    <li>
-      <a href="index.html">Index</a>
-    </li>
-    <li>
-              <a href="lab_18.html">Next Lab &raquo;</a>
-          </li>
-  </ul>
-</nav>
-
-    </header>
-    <section id="main">
-      <article>
-        <h1>Lab 17:  Removing Commits from a Branch</h1>
+<head>
+<link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+<a href="http://edgecase.com">
+<img id="logo" src="edgecase.gif" >
+</a>
+<div class="title">Git Immersion Labs</div>
+<div class="nav">
+<ul>
+<li><a href="lab_18.html">Next Lab</a></li>
+<li><a href="lab_16.html">Previous Lab</a></li>
+<li><a href="index.html">Index</a></li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="content">
+<h1>Lab 17:  Removing Commits from a Branch</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Learn how to remove the most recent commits from a branch</li>
@@ -48,12 +40,12 @@
 <pre class="instructions">git hist</pre>
 <p class="command">Output:</p>
 <pre class="sample">$ git hist
-* 6c0b544 2010-12-28 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
-* e694e19 2010-12-28 | Oops, we didn't want this commit [Jim Weirich]
-* 2d930c3 2010-12-28 | Added a comment (v1) [Jim Weirich]
-* 9ff05d6 2010-12-28 | Added a default value (v1-beta) [Jim Weirich]
-* 7ce3917 2010-12-28 | Using ARGV [Jim Weirich]
-* 8613c73 2010-12-28 | First Commit [Jim Weirich]</pre>
+* 9958a9f 2010-06-21 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
+* 9c80344 2010-06-21 | Oops, we didn't want this commit [Jim Weirich]
+* 7c5f85f 2010-06-21 | Added a comment (v1) [Jim Weirich]
+* 7d21264 2010-06-21 | Added a default value (v1-beta) [Jim Weirich]
+* 46d1c17 2010-06-21 | Using ARGV [Jim Weirich]
+* c97dcf3 2010-06-21 | First Commit [Jim Weirich]</pre>
 <p>We see that we have an &#8220;Oops&#8221; commit and a &#8220;Revert Oops&#8221; commit as the last two commits made in this branch.  Let&#8217;s remove them using reset.</p>
 <h3>First, Mark this Branch</h3>
 <p>But before we remove the commits, let&#8217;s mark the latest commit with a tag so we can find it again.</p>
@@ -66,12 +58,12 @@
 git hist</pre>
 <p class="command">Output:</p>
 <pre class="sample">$ git reset --hard v1
-HEAD is now at 2d930c3 Added a comment
+HEAD is now at 7c5f85f Added a comment
 $ git hist
-* 2d930c3 2010-12-28 | Added a comment (HEAD, v1, master) [Jim Weirich]
-* 9ff05d6 2010-12-28 | Added a default value (v1-beta) [Jim Weirich]
-* 7ce3917 2010-12-28 | Using ARGV [Jim Weirich]
-* 8613c73 2010-12-28 | First Commit [Jim Weirich]</pre>
+* 7c5f85f 2010-06-21 | Added a comment (HEAD, v1, master) [Jim Weirich]
+* 7d21264 2010-06-21 | Added a default value (v1-beta) [Jim Weirich]
+* 46d1c17 2010-06-21 | Using ARGV [Jim Weirich]
+* c97dcf3 2010-06-21 | First Commit [Jim Weirich]</pre>
 <p>Our master branch now points to the v1 commit and the Oops commit and the Revert Oops commit are no longer in the branch.  The <code>--hard</code> parameter indicates that the working directory should be updated to be consistent with the new branch head.</p>
 <h3>Nothing is Ever Lost</h3>
 <p>But what happened to the bad commits?  It turns out that the commits are still in the repository.  In fact, we can still reference them.  Remember that at the beginning of this lab we tagged the reverting commit with the tag &#8220;oops&#8221;.  Lets look at <em>all</em> the commits.</p>
@@ -79,33 +71,26 @@ $ git hist
 <pre class="instructions">git hist --all</pre>
 <p class="command">Output:</p>
 <pre class="sample">$ git hist --all
-* 6c0b544 2010-12-28 | Revert "Oops, we didn't want this commit" (oops) [Jim Weirich]
-* e694e19 2010-12-28 | Oops, we didn't want this commit [Jim Weirich]
-* 2d930c3 2010-12-28 | Added a comment (HEAD, v1, master) [Jim Weirich]
-* 9ff05d6 2010-12-28 | Added a default value (v1-beta) [Jim Weirich]
-* 7ce3917 2010-12-28 | Using ARGV [Jim Weirich]
-* 8613c73 2010-12-28 | First Commit [Jim Weirich]</pre>
+* 9958a9f 2010-06-21 | Revert "Oops, we didn't want this commit" (oops) [Jim Weirich]
+* 9c80344 2010-06-21 | Oops, we didn't want this commit [Jim Weirich]
+* 7c5f85f 2010-06-21 | Added a comment (HEAD, v1, master) [Jim Weirich]
+* 7d21264 2010-06-21 | Added a default value (v1-beta) [Jim Weirich]
+* 46d1c17 2010-06-21 | Using ARGV [Jim Weirich]
+* c97dcf3 2010-06-21 | First Commit [Jim Weirich]</pre>
 <p>Here we see that the bad commits haven&#8217;t disappeared.  They are still in the repository.  It&#8217;s just that they are no longer listed in the master branch.  If we hadn&#8217;t tagged them, they would still be in the repository, but there would be no way to reference them other than using their hash names.  Commits that are unreferenced remain in the repository until the system runs the garbage collection software.</p>
 <h3>Dangers of Reset</h3>
 <p>Resets on local branches are generally safe.  Any &#8220;accidents&#8221; can usually be recovered from by just resetting again with the desired commit.</p>
 <p>However, if the branch is shared on remote repositories, resetting can confuse other users sharing the branch.</p>
-      </article>
-    </section>
-    <footer>
-      <nav>
-  <ul>
-    <li>
-              <a href="lab_16.html">&laquo; Previous Lab</a>
-          </li>
-    <li>
-      <a href="index.html">Index</a>
-    </li>
-    <li>
-              <a href="lab_18.html">Next Lab &raquo;</a>
-          </li>
-  </ul>
-</nav>
-
-   </footer>
-  </body>
+</div>
+</div>
+<div id="footer">
+<div class="nav">
+<ul>
+<li><a href="lab_18.html">Next Lab</a></li>
+<li><a href="lab_16.html">Previous Lab</a></li>
+<li><a href="index.html">Index</a></li>
+</ul>
+</div>
+</div>
+</body>
 </html>

@@ -1,32 +1,24 @@
-<!doctype html>
 <html>
-  <head>
-    <link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <header>
-      <a href="http://edgecase.com">
-        <img id="logo" src="edgecase.gif"\ >
-      </a>
-      <div class="title">Git Immersion Labs</div>
-      <nav>
-  <ul>
-    <li>
-              <a href="lab_29.html">&laquo; Previous Lab</a>
-          </li>
-    <li>
-      <a href="index.html">Index</a>
-    </li>
-    <li>
-              <a href="lab_31.html">Next Lab &raquo;</a>
-          </li>
-  </ul>
-</nav>
-
-    </header>
-    <section id="main">
-      <article>
-        <h1>Lab 30:  Resolving Conflicts</h1>
+<head>
+<link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+<a href="http://edgecase.com">
+<img id="logo" src="edgecase.gif" >
+</a>
+<div class="title">Git Immersion Labs</div>
+<div class="nav">
+<ul>
+<li><a href="lab_31.html">Next Lab</a></li>
+<li><a href="lab_29.html">Previous Lab</a></li>
+<li><a href="index.html">Index</a></li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="content">
+<h1>Lab 30:  Resolving Conflicts</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Learn how to handle conflicts during a merge</li>
@@ -70,6 +62,8 @@ puts "Hello, #{my_name}!"
 <p class="filename">File: lib/hello.rb</p>
 <pre class="file">require 'greeter'
 
+# Default is World
+
 puts "What's your name"
 my_name = gets.strip
 
@@ -83,28 +77,20 @@ git commit -m 'Merged master fixed conflict.'</pre>
 <p class="command">Output:</p>
 <pre class="sample">$ git add lib/hello.rb
 $ git commit -m 'Merged master fixed conflict.'
-Recorded resolution for 'lib/hello.rb'.
-[greet 84559c5] Merged master fixed conflict.
+[greet cf2b29c] Merged master fixed conflict.
 </pre>
 <h3>Advanced Merging</h3>
 <p>git doesn&#8217;t provide any graphical merge tools, but it will gladly work with any third party merge tool you wish to use.  See <a href="http://onestepback.org/index.cgi/Tech/Git/UsingP4MergeWithGit.red">http://onestepback.org/index.cgi/Tech/Git/UsingP4MergeWithGit.red</a> for a description of using the Perforce merge tool with git.</p>
-      </article>
-    </section>
-    <footer>
-      <nav>
-  <ul>
-    <li>
-              <a href="lab_29.html">&laquo; Previous Lab</a>
-          </li>
-    <li>
-      <a href="index.html">Index</a>
-    </li>
-    <li>
-              <a href="lab_31.html">Next Lab &raquo;</a>
-          </li>
-  </ul>
-</nav>
-
-   </footer>
-  </body>
+</div>
+</div>
+<div id="footer">
+<div class="nav">
+<ul>
+<li><a href="lab_31.html">Next Lab</a></li>
+<li><a href="lab_29.html">Previous Lab</a></li>
+<li><a href="index.html">Index</a></li>
+</ul>
+</div>
+</div>
+</body>
 </html>
