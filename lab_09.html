@@ -1,24 +1,32 @@
+<!doctype html>
 <html>
-<head>
-<link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div id="header">
-<a href="http://edgecase.com">
-<img id="logo" src="edgecase.gif" >
-</a>
-<div class="title">Git Immersion Labs</div>
-<div class="nav">
-<ul>
-<li><a href="lab_10.html">Next Lab</a></li>
-<li><a href="lab_08.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
-</div>
-</div>
-<div id="main">
-<div id="content">
-<h1>Lab 9:  Changes, not Files</h1>
+  <head>
+    <link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <a href="http://edgecase.com">
+        <img id="logo" src="edgecase.gif"\ >
+      </a>
+      <div class="title">Git Immersion Labs</div>
+      <nav>
+  <ul>
+    <li>
+              <a href="lab_08.html">&laquo; Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+    <li>
+              <a href="lab_10.html">Next Lab &raquo;</a>
+          </li>
+  </ul>
+</nav>
+
+    </header>
+    <section id="main">
+      <article>
+        <h1>Lab 9:  Changes, not Files</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Learn the git works with changes, not files.</li>
@@ -75,7 +83,7 @@ git status</pre>
 <p>You should see &#8230;</p>
 <p class="command">Output:</p>
 <pre class="sample">$ git commit -m 'Added a default value'
-[master 7d21264] Added a default value
+[master 9ff05d6] Added a default value
  1 files changed, 3 insertions(+), 1 deletions(-)
 $ git status
 # On branch master
@@ -93,7 +101,8 @@ no changes added to commit (use "git add" and/or "git commit -a")
 <p class="command">Execute:</p>
 <pre class="instructions">git add .
 git status</pre>
-<p style="padding-left:4em;" class="note"><b>Note:</b> We used the current directory (&#8216;.&#8217;) as the file to add.  This is a really convenient shortcut for adding in all the changes to the files in the current directory and below.  Since it adds everything, its a good idea to run the status before doing an &#8220;add .&#8221;.</p>
+<p style="padding-left:4em;" class="note"><b>Note:</b> We used the current directory (&#8216;.&#8217;) as the file to add.  This is a really convenient shortcut for adding in all the changes to the files in the current directory and below.  But since it adds everything, it is a <em>really</em> good idea to the status before doing an <tt>add .</tt>, just to make sure you don&#8217;t add any file that is not intended.</p>
+<p style="padding-left:4em;" class="note">I wanted you to see the &#8220;add .&#8221; trick, but we will continue to add explicit files in the rest of this tutorial just to be safe.</p>
 <p>You should see &#8230;</p>
 <p class="command">Output:</p>
 <pre class="sample">$ git status
@@ -108,16 +117,23 @@ git status</pre>
 <h3>Commit the Second Change</h3>
 <p class="command">Execute:</p>
 <pre class="instructions">git commit -m 'Added a comment'</pre>
-</div>
-</div>
-<div id="footer">
-<div class="nav">
-<ul>
-<li><a href="lab_10.html">Next Lab</a></li>
-<li><a href="lab_08.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
-</div>
-</div>
-</body>
+      </article>
+    </section>
+    <footer>
+      <nav>
+  <ul>
+    <li>
+              <a href="lab_08.html">&laquo; Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+    <li>
+              <a href="lab_10.html">Next Lab &raquo;</a>
+          </li>
+  </ul>
+</nav>
+
+   </footer>
+  </body>
 </html>

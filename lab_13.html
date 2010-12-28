@@ -1,24 +1,32 @@
+<!doctype html>
 <html>
-<head>
-<link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div id="header">
-<a href="http://edgecase.com">
-<img id="logo" src="edgecase.gif" >
-</a>
-<div class="title">Git Immersion Labs</div>
-<div class="nav">
-<ul>
-<li><a href="lab_14.html">Next Lab</a></li>
-<li><a href="lab_12.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
-</div>
-</div>
-<div id="main">
-<div id="content">
-<h1>Lab 13:  Tagging versions</h1>
+  <head>
+    <link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <a href="http://edgecase.com">
+        <img id="logo" src="edgecase.gif"\ >
+      </a>
+      <div class="title">Git Immersion Labs</div>
+      <nav>
+  <ul>
+    <li>
+              <a href="lab_12.html">&laquo; Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+    <li>
+              <a href="lab_14.html">Next Lab &raquo;</a>
+          </li>
+  </ul>
+</nav>
+
+    </header>
+    <section id="main">
+      <article>
+        <h1>Lab 13:  Tagging versions</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Learn how to tag commits with names for future reference</li>
@@ -36,11 +44,18 @@
 cat hello.rb</pre>
 <p class="command">Output:</p>
 <pre class="sample">$ git checkout v1^
-Note: moving to 'v1^' which isn't a local branch
-If you want to create a new branch from this checkout, you may do so
-(now or later) by using -b with the checkout command again. Example:
-  git checkout -b &lt;new_branch_name&gt;
-HEAD is now at 7d21264... Added a default value
+Note: checking out 'v1^'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 9ff05d6... Added a default value
 $ cat hello.rb
 name = ARGV.first || "World"
 
@@ -56,11 +71,11 @@ puts "Hello, #{name}!"
 git checkout v1-beta</pre>
 <p class="command">Output:</p>
 <pre class="sample">$ git checkout v1
-Previous HEAD position was 7d21264... Added a default value
-HEAD is now at 7c5f85f... Added a comment
+Previous HEAD position was 9ff05d6... Added a default value
+HEAD is now at 2d930c3... Added a comment
 $ git checkout v1-beta
-Previous HEAD position was 7c5f85f... Added a comment
-HEAD is now at 7d21264... Added a default value
+Previous HEAD position was 2d930c3... Added a comment
+HEAD is now at 9ff05d6... Added a default value
 </pre>
 <h3>Viewing Tags using the <code>tag</code> command</h3>
 <p>You can see what tags are available using the <code>git tag</code> command.</p>
@@ -77,21 +92,28 @@ v1-beta
 <pre class="instructions">git hist master --all</pre>
 <p class="command">Output:</p>
 <pre class="sample">$ git hist master --all
-* 7c5f85f 2010-06-21 | Added a comment (v1, master) [Jim Weirich]
-* 7d21264 2010-06-21 | Added a default value (HEAD, v1-beta) [Jim Weirich]
-* 46d1c17 2010-06-21 | Using ARGV [Jim Weirich]
-* c97dcf3 2010-06-21 | First Commit [Jim Weirich]</pre>
+* 2d930c3 2010-12-28 | Added a comment (v1, master) [Jim Weirich]
+* 9ff05d6 2010-12-28 | Added a default value (HEAD, v1-beta) [Jim Weirich]
+* 7ce3917 2010-12-28 | Using ARGV [Jim Weirich]
+* 8613c73 2010-12-28 | First Commit [Jim Weirich]</pre>
 <p>You can see both tags (<code>v1</code> and <code>v1-beta</code>) listed in the log output, along with the branch name (<code>master</code>).  Also <code>HEAD</code> shows you the currently checked out commit (which is <code>v1-beta</code> at the moment).</p>
-</div>
-</div>
-<div id="footer">
-<div class="nav">
-<ul>
-<li><a href="lab_14.html">Next Lab</a></li>
-<li><a href="lab_12.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
-</div>
-</div>
-</body>
+      </article>
+    </section>
+    <footer>
+      <nav>
+  <ul>
+    <li>
+              <a href="lab_12.html">&laquo; Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+    <li>
+              <a href="lab_14.html">Next Lab &raquo;</a>
+          </li>
+  </ul>
+</nav>
+
+   </footer>
+  </body>
 </html>

@@ -1,30 +1,38 @@
+<!doctype html>
 <html>
-<head>
-<link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div id="header">
-<a href="http://edgecase.com">
-<img id="logo" src="edgecase.gif" >
-</a>
-<div class="title">Git Immersion Labs</div>
-<div class="nav">
-<ul>
-<li><a href="lab_36.html">Next Lab</a></li>
-<li><a href="lab_34.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
-</div>
-</div>
-<div id="main">
-<div id="content">
-<h1>Lab 35:  Merging Back to Master</h1>
+  <head>
+    <link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <a href="http://edgecase.com">
+        <img id="logo" src="edgecase.gif"\ >
+      </a>
+      <div class="title">Git Immersion Labs</div>
+      <nav>
+  <ul>
+    <li>
+              <a href="lab_34.html">&laquo; Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+    <li>
+              <a href="lab_36.html">Next Lab &raquo;</a>
+          </li>
+  </ul>
+</nav>
+
+    </header>
+    <section id="main">
+      <article>
+        <h1>Lab 35:  Merging Back to Master</h1>
 <h2>Goals</h2>
 <ul>
 	<li>We&#8217;ve kept our greet branch up to date with master (via rebase), now lets merge the greet changes back into the master branch.</li>
 </ul>
 <h2>Steps</h2>
-<p>h3 Merge greet into master</p>
+<h3>Merge greet into master</h3>
 <p class="command">Execute:</p>
 <pre class="instructions">git checkout master
 git merge greet</pre>
@@ -33,15 +41,14 @@ git merge greet</pre>
 Switched to branch 'master'
 $
 $ git merge greet
-Updating f396c14..51a6293
+Updating cdc2714..5ead415
 Fast-forward
  Rakefile       |    2 +-
  lib/greeter.rb |    8 ++++++++
- lib/hello.rb   |    8 +++++---
- 3 files changed, 14 insertions(+), 4 deletions(-)
+ lib/hello.rb   |    6 ++++--
+ 3 files changed, 13 insertions(+), 3 deletions(-)
  create mode 100644 lib/greeter.rb
 </pre>
-
 <p>Because the head of master is a direct ancestor of the head of the greet branch, git is able to do a fast forward merge.  When fast-forwarding, the branch pointer is simply moved forward to point to same commit as the greeter branch.</p>
 <p>There will never be conflicts in a fast forward merge.</p>
 <h3>Review the logs</h3>
@@ -49,28 +56,35 @@ Fast-forward
 <pre class="instructions">git hist</pre>
 <p class="command">Output:</p>
 <pre class="sample">$ git hist
-* 51a6293 2010-06-21 | Updated Rakefile (HEAD, master, greet) [Jim Weirich]
-* 5e59e31 2010-06-21 | Hello uses Greeter [Jim Weirich]
-* 27bb225 2010-06-21 | Added greeter class [Jim Weirich]
-* f396c14 2010-06-21 | Added README [Jim Weirich]
-* 8547b5f 2010-06-21 | Added a Rakefile. [Jim Weirich]
-* c2ad33c 2010-06-21 | Moved hello.rb to lib [Jim Weirich]
-* 2ae006e 2010-06-21 | Add an author/email comment [Jim Weirich]
-* 7c5f85f 2010-06-21 | Added a comment (v1) [Jim Weirich]
-* 7d21264 2010-06-21 | Added a default value (v1-beta) [Jim Weirich]
-* 46d1c17 2010-06-21 | Using ARGV [Jim Weirich]
-* c97dcf3 2010-06-21 | First Commit [Jim Weirich]</pre>
+* 5ead415 2010-12-28 | Updated Rakefile (HEAD, master, greet) [Jim Weirich]
+* 844015f 2010-12-28 | Hello uses Greeter [Jim Weirich]
+* 9a556c8 2010-12-28 | Added greeter class [Jim Weirich]
+* cdc2714 2010-12-28 | Added README [Jim Weirich]
+* d4258dd 2010-12-28 | Added a Rakefile. [Jim Weirich]
+* 0179abf 2010-12-28 | Moved hello.rb to lib [Jim Weirich]
+* f5505ca 2010-12-28 | Add an author/email comment [Jim Weirich]
+* 2d930c3 2010-12-28 | Added a comment (v1) [Jim Weirich]
+* 9ff05d6 2010-12-28 | Added a default value (v1-beta) [Jim Weirich]
+* 7ce3917 2010-12-28 | Using ARGV [Jim Weirich]
+* 8613c73 2010-12-28 | First Commit [Jim Weirich]</pre>
 <p>The greet and master branches are now identical.</p>
-</div>
-</div>
-<div id="footer">
-<div class="nav">
-<ul>
-<li><a href="lab_36.html">Next Lab</a></li>
-<li><a href="lab_34.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
-</div>
-</div>
-</body>
+      </article>
+    </section>
+    <footer>
+      <nav>
+  <ul>
+    <li>
+              <a href="lab_34.html">&laquo; Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+    <li>
+              <a href="lab_36.html">Next Lab &raquo;</a>
+          </li>
+  </ul>
+</nav>
+
+   </footer>
+  </body>
 </html>

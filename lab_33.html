@@ -1,45 +1,53 @@
+<!doctype html>
 <html>
-<head>
-<link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div id="header">
-<a href="http://edgecase.com">
-<img id="logo" src="edgecase.gif" >
-</a>
-<div class="title">Git Immersion Labs</div>
-<div class="nav">
-<ul>
-<li><a href="lab_34.html">Next Lab</a></li>
-<li><a href="lab_32.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
-</div>
-</div>
-<div id="main">
-<div id="content">
-<h1>Lab 33:  Resetting the Master Branch</h1>
+  <head>
+    <link href="labs.css" media="screen,print" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <a href="http://edgecase.com">
+        <img id="logo" src="edgecase.gif"\ >
+      </a>
+      <div class="title">Git Immersion Labs</div>
+      <nav>
+  <ul>
+    <li>
+              <a href="lab_32.html">&laquo; Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+    <li>
+              <a href="lab_34.html">Next Lab &raquo;</a>
+          </li>
+  </ul>
+</nav>
+
+    </header>
+    <section id="main">
+      <article>
+        <h1>Lab 33:  Resetting the Master Branch</h1>
 <h2>Goals</h2>
 <ul>
 	<li>Reset the master branch to the point before the conflicting commit.</li>
 </ul>
 <h2>Steps</h2>
 <h3>Reset the master branch</h3>
-<p>When we added the interactive mode to the master branch, we made a change that conflicted with changes in the greed branch. Let&#8217;s rewind the master branch to a point before the conflicting change.  This allows us to demonstrate the rebase command without worrying about conflicts.</p>
+<p>When we added the interactive mode to the master branch, we made a change that conflicted with changes in the greet branch. Let&#8217;s rewind the master branch to a point before the conflicting change.  This allows us to demonstrate the rebase command without worrying about conflicts.</p>
 <p class="command">Execute:</p>
 <pre class="instructions">git checkout master
 git hist</pre>
 <p class="command">Output:</p>
 <pre class="sample">$ git hist
-* 936c45f 2010-06-21 | Made interactive (HEAD, master) [Jim Weirich]
-* f396c14 2010-06-21 | Added README [Jim Weirich]
-* 8547b5f 2010-06-21 | Added a Rakefile. [Jim Weirich]
-* c2ad33c 2010-06-21 | Moved hello.rb to lib [Jim Weirich]
-* 2ae006e 2010-06-21 | Add an author/email comment [Jim Weirich]
-* 7c5f85f 2010-06-21 | Added a comment (v1) [Jim Weirich]
-* 7d21264 2010-06-21 | Added a default value (v1-beta) [Jim Weirich]
-* 46d1c17 2010-06-21 | Using ARGV [Jim Weirich]
-* c97dcf3 2010-06-21 | First Commit [Jim Weirich]</pre>
+* 339d25d 2010-12-28 | Made interactive (HEAD, master) [Jim Weirich]
+* cdc2714 2010-12-28 | Added README [Jim Weirich]
+* d4258dd 2010-12-28 | Added a Rakefile. [Jim Weirich]
+* 0179abf 2010-12-28 | Moved hello.rb to lib [Jim Weirich]
+* f5505ca 2010-12-28 | Add an author/email comment [Jim Weirich]
+* 2d930c3 2010-12-28 | Added a comment (v1) [Jim Weirich]
+* 9ff05d6 2010-12-28 | Added a default value (v1-beta) [Jim Weirich]
+* 7ce3917 2010-12-28 | Using ARGV [Jim Weirich]
+* 8613c73 2010-12-28 | First Commit [Jim Weirich]</pre>
 <p>The &#8216;Added <span class="caps">README</span>&#8217; commit is the one directly before the conflicting interactive mode.  We will reset the master branch to &#8216;Added <span class="caps">README</span>&#8217; branch.</p>
 <p class="command">Execute:</p>
 <pre class="instructions">git reset --hard &lt;hash&gt;
@@ -47,28 +55,35 @@ git hist --all</pre>
 <p>Review the log.  It should look like the repository has been wound back in time to the point before we merged anything.</p>
 <p class="command">Output:</p>
 <pre class="sample">$ git hist --all
-* f396c14 2010-06-21 | Added README (HEAD, master) [Jim Weirich]
-| * 1b2b22d 2010-06-21 | Updated Rakefile (greet) [Jim Weirich]
-| * 8cc8712 2010-06-21 | Hello uses Greeter [Jim Weirich]
-| * 5563881 2010-06-21 | Added greeter class [Jim Weirich]
+* cdc2714 2010-12-28 | Added README (HEAD, master) [Jim Weirich]
+| * dad9364 2010-12-28 | Updated Rakefile (greet) [Jim Weirich]
+| * c4f32a5 2010-12-28 | Hello uses Greeter [Jim Weirich]
+| * 51d5c49 2010-12-28 | Added greeter class [Jim Weirich]
 |/  
-* 8547b5f 2010-06-21 | Added a Rakefile. [Jim Weirich]
-* c2ad33c 2010-06-21 | Moved hello.rb to lib [Jim Weirich]
-* 2ae006e 2010-06-21 | Add an author/email comment [Jim Weirich]
-* 7c5f85f 2010-06-21 | Added a comment (v1) [Jim Weirich]
-* 7d21264 2010-06-21 | Added a default value (v1-beta) [Jim Weirich]
-* 46d1c17 2010-06-21 | Using ARGV [Jim Weirich]
-* c97dcf3 2010-06-21 | First Commit [Jim Weirich]</pre>
-</div>
-</div>
-<div id="footer">
-<div class="nav">
-<ul>
-<li><a href="lab_34.html">Next Lab</a></li>
-<li><a href="lab_32.html">Previous Lab</a></li>
-<li><a href="index.html">Index</a></li>
-</ul>
-</div>
-</div>
-</body>
+* d4258dd 2010-12-28 | Added a Rakefile. [Jim Weirich]
+* 0179abf 2010-12-28 | Moved hello.rb to lib [Jim Weirich]
+* f5505ca 2010-12-28 | Add an author/email comment [Jim Weirich]
+* 2d930c3 2010-12-28 | Added a comment (v1) [Jim Weirich]
+* 9ff05d6 2010-12-28 | Added a default value (v1-beta) [Jim Weirich]
+* 7ce3917 2010-12-28 | Using ARGV [Jim Weirich]
+* 8613c73 2010-12-28 | First Commit [Jim Weirich]</pre>
+      </article>
+    </section>
+    <footer>
+      <nav>
+  <ul>
+    <li>
+              <a href="lab_32.html">&laquo; Previous Lab</a>
+          </li>
+    <li>
+      <a href="index.html">Index</a>
+    </li>
+    <li>
+              <a href="lab_34.html">Next Lab &raquo;</a>
+          </li>
+  </ul>
+</nav>
+
+   </footer>
+  </body>
 </html>
