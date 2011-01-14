@@ -49,8 +49,7 @@ header .arrow * {
   width       : 126px;
   height      : 57px;
   line-height : 55px;
-  text-align  : center;
-}
+  text-align  : center; }
 
 header .arrow span { color: #aaa; }
 
@@ -116,10 +115,10 @@ h1.lab_title em {
   font           : 28px 'BebasNeueRegular', helvetica, arial, sans-serif;
   text-transform : uppercase; }
 
-#main_content ul { margin : 0 0 40px 85px; }
+#main_content ul { margin: 0 0 40px 85px; }
 
 #main_content li {
-  margin-bottom : .5em;
+  margin-bottom : 0.5em;
   line-height   : 120%; }
 
 
@@ -170,8 +169,9 @@ h1.lab_title em {
   text-transform : lowercase;
   letter-spacing : 0; }
 
-div.instructions {
-  margin-bottom: 1em; }
+#main_content a { color: #d00; }
+
+div.instructions { margin-bottom: 1em; }
 
 div.instructions pre {
   display       : block;
@@ -217,9 +217,9 @@ div.instructions pre {
   background    : #fff; }
 
 #main_content p.note {
-  margin-left: 2em;
-  font-style: italic;
-  color: #555; }
+  margin-left : 2em;
+  font-style  : italic;
+  color       : #555; }
 
 
 #border_left {
@@ -236,11 +236,9 @@ div.instructions pre {
   color  : #cf0000;
   font   : 32px 'BebasNeueRegular', helvetica, arial, sans-serif; }
 
-#homepage h2 {
-  font : 21px 'BebasNeueRegular', helvetica, arial, sans-serif; }
+#homepage h2 { font: 21px 'BebasNeueRegular', helvetica, arial, sans-serif; }
 
-#homepage a {
-  color : #000; }
+#homepage a { color: #000; }
 
 #homepage .beep {
   float        : left;
@@ -394,6 +392,7 @@ div.instructions pre {
 ------------------------------------------------------------ */
 
 footer {
+  position   : relative;
   height     : 100px;
   margin-top : 50px;
   border-top : 4px double #adadad;
@@ -423,8 +422,7 @@ footer nav .arrow * {
   text-decoration : none;
   text-transform  : uppercase; }
 
-footer nav .arrow span {
-  color: #aaa; }
+footer nav .arrow span { color: #aaa; }
 
 footer nav .previous   { left: 0; }
 footer nav .previous * {
@@ -446,3 +444,13 @@ footer nav .index_button a {
   height      : 40px;
   text-indent : -999em;
   background  : url(index.png); }
+
+footer a#edgecase_link_small {
+  position    : absolute;
+  top         : 24px;
+  left        : 575px;
+  display     : block;
+  width       : 169px;
+  height      : 53px;
+  text-indent : -999em;
+  background  : url(edgecase_logo_small.png); }

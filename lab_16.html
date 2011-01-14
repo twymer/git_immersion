@@ -9,7 +9,7 @@
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <!--
+
   <script type="text/javascript">
    var _gaq = _gaq || [];
    _gaq.push(['_setAccount', 'UA-1142510-7']);
@@ -19,7 +19,7 @@
      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
    })();
-  </script> -->
+  </script>
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="html5.js"></script>
   <script type="text/javascript" src="UI.js"></script>
@@ -46,7 +46,7 @@
   </header>
 
   <div id="main_content">
-    <h1 class="lab_title"><em>lab 16</em>  Reverting Committed Changes</h1>
+    <h1 class="lab_title"><em>lab 16</em>  Undoing Committed Changes</h1>
 <h3>Goals</h3>
 <ul>
 	<li>Learn how to revert changes that have been committed to a local repository.</li>
@@ -69,11 +69,11 @@ git commit -m "Oops, we didn't want this commit"</pre>
 <p>To undo a committed change, we need to generate a commit that removes the changes introduced by our unwanted commit.</p>
 <h4>Execute:</h4>
 <pre class="instructions">git revert head</pre>
-<p>This will pop you into the editor.  Edit the commit message and close the file.  You should see &#8230;</p>
+<p>This will pop you into the editor.  You can edit the default commit message or leave it as is.  Save and close the file. You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git revert head --no-edit
 Finished one revert.
-[master 94b8cd7] Revert "Oops, we didn't want this commit"
+[master 86b874b] Revert "Oops, we didn't want this commit"
  1 files changed, 1 insertions(+), 1 deletions(-)
 </pre>
 <p>Since we were undoing the very last commit we made We were able to use <code>head</code> as the argument to revert.  We can revert any arbitrary commit earlier in history by simply specifying its hash value.</p>
@@ -84,12 +84,12 @@ Finished one revert.
 <pre class="instructions">git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* 94b8cd7 2011-01-12 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
-* c5deb6e 2011-01-12 | Oops, we didn't want this commit [Jim Weirich]
-* 06e0390 2011-01-12 | Added a comment (v1) [Jim Weirich]
-* 35eacc4 2011-01-12 | Added a default value (v1-beta) [Jim Weirich]
-* 2be2244 2011-01-12 | Using ARGV [Jim Weirich]
-* c4c6adf 2011-01-12 | First Commit [Jim Weirich]</pre>
+* 86b874b 2011-01-13 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
+* afb8bda 2011-01-13 | Oops, we didn't want this commit [Jim Weirich]
+* 0b7bcb1 2011-01-13 | Added a comment (v1) [Jim Weirich]
+* a8c1f08 2011-01-13 | Added a default value (v1-beta) [Jim Weirich]
+* e319160 2011-01-13 | Using ARGV [Jim Weirich]
+* 1016879 2011-01-13 | First Commit [Jim Weirich]</pre>
 <p>This technique will work with any commit (although you may have to resolve conflicts).  It is safe to use even on branches that are publicly shared on remote repositories.</p>
 <h2>Up Next <em>05</em></h2>
 <p>Next, let&#8217;s look at a technique that can be used to remove the most recent commits from the repository history.</p>
@@ -113,9 +113,9 @@ Finished one revert.
           <li data-lab-id="11"><a href="lab_11.html"><span>11:</span> Aliases</a></li>
           <li data-lab-id="12"><a href="lab_12.html"><span>12:</span> Getting Old Versions</a></li>
           <li data-lab-id="13"><a href="lab_13.html"><span>13:</span> Tagging versions</a></li>
-          <li data-lab-id="14"><a href="lab_14.html"><span>14:</span> Reverting Local Changes (before staging)</a></li>
-          <li data-lab-id="15"><a href="lab_15.html"><span>15:</span> Reverting Staged Changes (before committing)</a></li>
-          <li data-lab-id="16"><a href="lab_16.html"><span>16:</span> Reverting Committed Changes</a></li>
+          <li data-lab-id="14"><a href="lab_14.html"><span>14:</span> Undoing Local Changes (before staging)</a></li>
+          <li data-lab-id="15"><a href="lab_15.html"><span>15:</span> Undoing Staged Changes (before committing)</a></li>
+          <li data-lab-id="16"><a href="lab_16.html"><span>16:</span> Undoing Committed Changes</a></li>
           <li data-lab-id="17"><a href="lab_17.html"><span>17:</span> Removing Commits from a Branch</a></li>
           <li data-lab-id="18"><a href="lab_18.html"><span>18:</span> Remove the oops tag</a></li>
           <li data-lab-id="19"><a href="lab_19.html"><span>19:</span> Amending Commits</a></li>
@@ -170,6 +170,7 @@ Finished one revert.
 </ul>
 
     </nav>
+    <a href="http://edgecase.com" target="_blank" id="edgecase_link_small">EdgeCase</a>
   </footer>
 </body>
 </html>

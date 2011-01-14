@@ -9,7 +9,7 @@
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <!--
+
   <script type="text/javascript">
    var _gaq = _gaq || [];
    _gaq.push(['_setAccount', 'UA-1142510-7']);
@@ -19,7 +19,7 @@
      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
    })();
-  </script> -->
+  </script>
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="html5.js"></script>
   <script type="text/javascript" src="UI.js"></script>
@@ -49,7 +49,7 @@
     <h1 class="lab_title"><em>lab 28</em>  Merging</h1>
 <h3>Goals</h3>
 <ul>
-	<li>Learning who to merge two diverging branches to bring the changes back into a single branch.</li>
+	<li>Learn how to merge two diverging branches to bring the changes back into a single branch.</li>
 </ul>
 <h2>Merge the branches <em>01</em></h2>
 <p>Merging brings the changes in two branches together.  Let&#8217;s go back to the greet branch and merge master onto greet.</p>
@@ -66,20 +66,20 @@ Merge made by recursive.
  1 files changed, 1 insertions(+), 0 deletions(-)
  create mode 100644 README
 $ git hist --all
-*   899ca06 2011-01-12 | Merge branch 'master' into greet (HEAD, greet) [Jim Weirich]
+*   3a3178e 2011-01-13 | Merge branch 'master' into greet (HEAD, greet) [Jim Weirich]
 |\  
-| * 89ec6a5 2011-01-12 | Added README (master) [Jim Weirich]
-* | 5135446 2011-01-12 | Updated Rakefile [Jim Weirich]
-* | 41595b9 2011-01-12 | Hello uses Greeter [Jim Weirich]
-* | fddcdf0 2011-01-12 | Added greeter class [Jim Weirich]
+| * bb41f18 2011-01-13 | Added README (master) [Jim Weirich]
+* | 140d8c1 2011-01-13 | Updated Rakefile [Jim Weirich]
+* | c03a898 2011-01-13 | Hello uses Greeter [Jim Weirich]
+* | 4f95c6f 2011-01-13 | Added greeter class [Jim Weirich]
 |/  
-* 1449695 2011-01-12 | Added a Rakefile. [Jim Weirich]
-* 068cc3e 2011-01-12 | Moved hello.rb to lib [Jim Weirich]
-* e8033cd 2011-01-12 | Add an author/email comment [Jim Weirich]
-* 06e0390 2011-01-12 | Added a comment (v1) [Jim Weirich]
-* 35eacc4 2011-01-12 | Added a default value (v1-beta) [Jim Weirich]
-* 2be2244 2011-01-12 | Using ARGV [Jim Weirich]
-* c4c6adf 2011-01-12 | First Commit [Jim Weirich]</pre>
+* 9aa96ea 2011-01-13 | Added a Rakefile. [Jim Weirich]
+* db7f5ff 2011-01-13 | Moved hello.rb to lib [Jim Weirich]
+* ac56345 2011-01-13 | Add an author/email comment [Jim Weirich]
+* 0b7bcb1 2011-01-13 | Added a comment (v1) [Jim Weirich]
+* a8c1f08 2011-01-13 | Added a default value (v1-beta) [Jim Weirich]
+* e319160 2011-01-13 | Using ARGV [Jim Weirich]
+* 1016879 2011-01-13 | First Commit [Jim Weirich]</pre>
 <p>By merging master into your greet branch periodically, you can pick up any changes to master and keep your changes in greet compatible with changes in the mainline.</p>
 <p>However, it does produce ugly commit graphs. Latter we will look at the option of rebasing rather than merging.</p>
 <h2>Up Next <em>02</em></h2>
@@ -104,9 +104,9 @@ $ git hist --all
           <li data-lab-id="11"><a href="lab_11.html"><span>11:</span> Aliases</a></li>
           <li data-lab-id="12"><a href="lab_12.html"><span>12:</span> Getting Old Versions</a></li>
           <li data-lab-id="13"><a href="lab_13.html"><span>13:</span> Tagging versions</a></li>
-          <li data-lab-id="14"><a href="lab_14.html"><span>14:</span> Reverting Local Changes (before staging)</a></li>
-          <li data-lab-id="15"><a href="lab_15.html"><span>15:</span> Reverting Staged Changes (before committing)</a></li>
-          <li data-lab-id="16"><a href="lab_16.html"><span>16:</span> Reverting Committed Changes</a></li>
+          <li data-lab-id="14"><a href="lab_14.html"><span>14:</span> Undoing Local Changes (before staging)</a></li>
+          <li data-lab-id="15"><a href="lab_15.html"><span>15:</span> Undoing Staged Changes (before committing)</a></li>
+          <li data-lab-id="16"><a href="lab_16.html"><span>16:</span> Undoing Committed Changes</a></li>
           <li data-lab-id="17"><a href="lab_17.html"><span>17:</span> Removing Commits from a Branch</a></li>
           <li data-lab-id="18"><a href="lab_18.html"><span>18:</span> Remove the oops tag</a></li>
           <li data-lab-id="19"><a href="lab_19.html"><span>19:</span> Amending Commits</a></li>
@@ -161,6 +161,7 @@ $ git hist --all
 </ul>
 
     </nav>
+    <a href="http://edgecase.com" target="_blank" id="edgecase_link_small">EdgeCase</a>
   </footer>
 </body>
 </html>
