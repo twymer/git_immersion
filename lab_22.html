@@ -67,9 +67,9 @@ MERGE_RR	config		index		objects
 <pre class="instructions">ls -C .git/objects</pre>
 <h4>Output:</h4>
 <pre class="sample">$ ls -C .git/objects
-09	27	3c	69	82	9c	b7	df	f3	pack
-11	28	43	6b	90	af	c4	e4	f6
-24	2f	59	78	97	b5	cf	e7	info
+09	27	43	5d	6b	97	b4	c1	e4	pack
+11	28	53	62	78	9c	b5	c4	e7
+24	39	59	69	7d	af	ba	d3	info
 </pre>
 <p>You should see a bunch of directories with 2 letter names.  The directory names are the first two letters of the sha1 hash of the object stored in git.</p>
 <h2>Deeper into the Object Store <em>03</em></h2>
@@ -112,7 +112,7 @@ $ ls .git/refs/tags
 v1
 v1-beta
 $ cat .git/refs/tags/v1
-f6238aaacb7cf937b8a2d28976eafaf2f2bd7597
+b48270e2ed41b1f000a8b7c70fda8c851bb1952a
 </pre>
 <p>You should recogize the files in the tags subdirectory.  Each file corresponds to a tag you created with the <code>git tag</code> command earlier. It&#8217;s content is just the hash of the commit tied to the tag.</p>
 <p>The heads directory is similar, but is used for branches rather than tags.  We only have one branch at the moment, so all you will see is master in this directory.</p>
