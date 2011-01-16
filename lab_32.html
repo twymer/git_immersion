@@ -61,30 +61,30 @@ git hist</pre>
 <pre class="sample">$ git checkout greet
 Already on 'greet'
 $ git hist
-*   88242a4 2011-01-15 | Merged master fixed conflict. (HEAD, greet) [Jim Weirich]
+*   48b8ab9 2011-01-16 | Merged master fixed conflict. (HEAD, greet) [Jim Weirich]
 |\  
-| * b6a09ed 2011-01-15 | Made interactive (master) [Jim Weirich]
-* |   6b88ee1 2011-01-15 | Merge branch 'master' into greet [Jim Weirich]
+| * e5fa830 2011-01-16 | Made interactive (master) [Jim Weirich]
+* |   e32cd23 2011-01-16 | Merge branch 'master' into greet [Jim Weirich]
 |\ \  
 | |/  
-| * 663efaf 2011-01-15 | Added README [Jim Weirich]
-* | 46761dc 2011-01-15 | Updated Rakefile [Jim Weirich]
-* | 908e60f 2011-01-15 | Hello uses Greeter [Jim Weirich]
-* | 89ca48d 2011-01-15 | Added greeter class [Jim Weirich]
+| * 8963247 2011-01-16 | Added README [Jim Weirich]
+* | 031114b 2011-01-16 | Updated Rakefile [Jim Weirich]
+* | a5721d2 2011-01-16 | Hello uses Greeter [Jim Weirich]
+* | c4c7d8c 2011-01-16 | Added greeter class [Jim Weirich]
 |/  
-* 8634702 2011-01-15 | Added a Rakefile. [Jim Weirich]
-* 34943f9 2011-01-15 | Moved hello.rb to lib [Jim Weirich]
-* e720fa3 2011-01-15 | Add an author/email comment [Jim Weirich]
-* ce5cd7a 2011-01-15 | Added a comment (v1) [Jim Weirich]
-* c001137 2011-01-15 | Added a default value (v1-beta) [Jim Weirich]
-* f2c8431 2011-01-15 | Using ARGV [Jim Weirich]
-* 3fc57ff 2011-01-15 | First Commit [Jim Weirich]</pre>
+* ccedd44 2011-01-16 | Added a Rakefile. [Jim Weirich]
+* 276d90e 2011-01-16 | Moved hello.rb to lib [Jim Weirich]
+* 017c351 2011-01-16 | Add an author/email comment [Jim Weirich]
+* 0f72e3f 2011-01-16 | Added a comment (v1) [Jim Weirich]
+* bce4d48 2011-01-16 | Added a default value (v1-beta) [Jim Weirich]
+* 88b99c0 2011-01-16 | Using ARGV [Jim Weirich]
+* 827473f 2011-01-16 | First Commit [Jim Weirich]</pre>
 <p>That&#8217;s a bit hard to read, but looking at the data we see that the &#8220;Updated Rakefile&#8221; commit was the last commit on the greet branch before merging.  Let&#8217;s reset the greet branch to that commit.</p>
 <h4>Execute:</h4>
 <pre class="instructions">git reset --hard &lt;hash&gt;</pre>
 <h4>Output:</h4>
-<pre class="sample">$ git reset --hard 46761dc
-HEAD is now at 46761dc Updated Rakefile
+<pre class="sample">$ git reset --hard 031114b
+HEAD is now at 031114b Updated Rakefile
 </pre>
 <h2>Check the branch. <em>02</em></h2>
 <p>Look at the log for the greet branch.  We no longer have the merge commits in its history.</p>
@@ -92,19 +92,19 @@ HEAD is now at 46761dc Updated Rakefile
 <pre class="instructions">git hist --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --all
-* b6a09ed 2011-01-15 | Made interactive (master) [Jim Weirich]
-* 663efaf 2011-01-15 | Added README [Jim Weirich]
-| * 46761dc 2011-01-15 | Updated Rakefile (HEAD, greet) [Jim Weirich]
-| * 908e60f 2011-01-15 | Hello uses Greeter [Jim Weirich]
-| * 89ca48d 2011-01-15 | Added greeter class [Jim Weirich]
+* e5fa830 2011-01-16 | Made interactive (master) [Jim Weirich]
+* 8963247 2011-01-16 | Added README [Jim Weirich]
+| * 031114b 2011-01-16 | Updated Rakefile (HEAD, greet) [Jim Weirich]
+| * a5721d2 2011-01-16 | Hello uses Greeter [Jim Weirich]
+| * c4c7d8c 2011-01-16 | Added greeter class [Jim Weirich]
 |/  
-* 8634702 2011-01-15 | Added a Rakefile. [Jim Weirich]
-* 34943f9 2011-01-15 | Moved hello.rb to lib [Jim Weirich]
-* e720fa3 2011-01-15 | Add an author/email comment [Jim Weirich]
-* ce5cd7a 2011-01-15 | Added a comment (v1) [Jim Weirich]
-* c001137 2011-01-15 | Added a default value (v1-beta) [Jim Weirich]
-* f2c8431 2011-01-15 | Using ARGV [Jim Weirich]
-* 3fc57ff 2011-01-15 | First Commit [Jim Weirich]</pre>
+* ccedd44 2011-01-16 | Added a Rakefile. [Jim Weirich]
+* 276d90e 2011-01-16 | Moved hello.rb to lib [Jim Weirich]
+* 017c351 2011-01-16 | Add an author/email comment [Jim Weirich]
+* 0f72e3f 2011-01-16 | Added a comment (v1) [Jim Weirich]
+* bce4d48 2011-01-16 | Added a default value (v1-beta) [Jim Weirich]
+* 88b99c0 2011-01-16 | Using ARGV [Jim Weirich]
+* 827473f 2011-01-16 | First Commit [Jim Weirich]</pre>
   </div>
 
   <div id="index">
@@ -112,6 +112,7 @@ HEAD is now at 46761dc Updated Rakefile
   <div id="show_bookmarks"></div>
   <div id="no_bookmarks"></div>
   <ul>
+    <li data-lab-id="0"><a href="index.html"><span>&nbsp;</span>Cover Page</a></li>
           <li data-lab-id="1"><a href="lab_01.html"><span>1:</span> Setup</a></li>
           <li data-lab-id="2"><a href="lab_02.html"><span>2:</span> More Setup</a></li>
           <li data-lab-id="3"><a href="lab_03.html"><span>3:</span> Create a Project</a></li>

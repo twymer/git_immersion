@@ -57,18 +57,18 @@
 <pre class="instructions">git hist --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --all
-* 46761dc 2011-01-15 | Updated Rakefile (greet) [Jim Weirich]
-* 908e60f 2011-01-15 | Hello uses Greeter [Jim Weirich]
-* 89ca48d 2011-01-15 | Added greeter class [Jim Weirich]
-| * 663efaf 2011-01-15 | Added README (HEAD, master) [Jim Weirich]
+* 031114b 2011-01-16 | Updated Rakefile (greet) [Jim Weirich]
+* a5721d2 2011-01-16 | Hello uses Greeter [Jim Weirich]
+* c4c7d8c 2011-01-16 | Added greeter class [Jim Weirich]
+| * 8963247 2011-01-16 | Added README (HEAD, master) [Jim Weirich]
 |/  
-* 8634702 2011-01-15 | Added a Rakefile. [Jim Weirich]
-* 34943f9 2011-01-15 | Moved hello.rb to lib [Jim Weirich]
-* e720fa3 2011-01-15 | Add an author/email comment [Jim Weirich]
-* ce5cd7a 2011-01-15 | Added a comment (v1) [Jim Weirich]
-* c001137 2011-01-15 | Added a default value (v1-beta) [Jim Weirich]
-* f2c8431 2011-01-15 | Using ARGV [Jim Weirich]
-* 3fc57ff 2011-01-15 | First Commit [Jim Weirich]</pre>
+* ccedd44 2011-01-16 | Added a Rakefile. [Jim Weirich]
+* 276d90e 2011-01-16 | Moved hello.rb to lib [Jim Weirich]
+* 017c351 2011-01-16 | Add an author/email comment [Jim Weirich]
+* 0f72e3f 2011-01-16 | Added a comment (v1) [Jim Weirich]
+* bce4d48 2011-01-16 | Added a default value (v1-beta) [Jim Weirich]
+* 88b99c0 2011-01-16 | Using ARGV [Jim Weirich]
+* 827473f 2011-01-16 | First Commit [Jim Weirich]</pre>
 <p>Here is our first chance to see the <code>--graph</code> option on <code>git hist</code> in action. Adding the <code>--graph</code> option to <code>git log</code> causes it to draw the commit tree using simple <span class="caps">ASCII</span> characters.  We can see both branches (greet and master), and that the master branch is the current <span class="caps">HEAD</span>. The common ancestor to both branches is the &#8220;Added a Rakefile&#8221; branch.</p>
 <p>The <code>--all</code> flag makes sure that we see all the branches.  The default is to show only the current branch.</p>
   </div>
@@ -78,6 +78,7 @@
   <div id="show_bookmarks"></div>
   <div id="no_bookmarks"></div>
   <ul>
+    <li data-lab-id="0"><a href="index.html"><span>&nbsp;</span>Cover Page</a></li>
           <li data-lab-id="1"><a href="lab_01.html"><span>1:</span> Setup</a></li>
           <li data-lab-id="2"><a href="lab_02.html"><span>2:</span> More Setup</a></li>
           <li data-lab-id="3"><a href="lab_03.html"><span>3:</span> Create a Project</a></li>

@@ -67,19 +67,19 @@ MERGE_RR	config		index		objects
 <pre class="instructions">ls -C .git/objects</pre>
 <h4>Output:</h4>
 <pre class="sample">$ ls -C .git/objects
-09	27	3f	69	86	9c	c0	e4	info
-11	28	43	6b	8e	af	c4	e7	pack
-24	34	59	78	97	b5	ce	f2
+01	0f	27	59	6b	88	a6	bc	e4	pack
+06	11	28	69	78	97	af	c4	e7
+09	24	43	6a	82	9c	b5	cc	info
 </pre>
 <p>You should see a bunch of directories with 2 letter names.  The directory names are the first two letters of the sha1 hash of the object stored in git.</p>
 <h2>Deeper into the Object Store <em>03</em></h2>
 <h4>Execute:</h4>
 <pre class="instructions">ls -C .git/objects/&lt;dir&gt;</pre>
 <h4>Output:</h4>
-<pre class="sample">$ ls -C .git/objects/09
-6b74c56bfc6b40e754fc0725b8c70b2038b91e	9fb6f9d3a104feb32fcac22354c4d0e8a182c1
+<pre class="sample">$ ls -C .git/objects/01
+7c351335f682943f8062db183fc3be627b09c2
 </pre>
-<p>Look in one of the two-letter directories.  You should see some files with 38 character names.  These are the files that contain the objects stored in git.  These files are compressed and encoded, so looking at their contents directly won&#8217;t be very helpful, but we will take a closer look in a bit.</p>
+<p>Look in one of the two-letter directories.  You should see some files with 38-character names.  These are the files that contain the objects stored in git.  These files are compressed and encoded, so looking at their contents directly won&#8217;t be very helpful, but we will take a closer look in a bit.</p>
 <h2>Config File <em>04</em></h2>
 <h4>Execute:</h4>
 <pre class="instructions">cat .git/config</pre>
@@ -112,9 +112,9 @@ $ ls .git/refs/tags
 v1
 v1-beta
 $ cat .git/refs/tags/v1
-ce5cd7a3971149ee625e4c373358aae8f41212e1
+0f72e3fa33888a4abbf43c0db61f3e12610ba85e
 </pre>
-<p>You should recogize the files in the tags subdirectory.  Each file corresponds to a tag you created with the <code>git tag</code> command earlier. It&#8217;s content is just the hash of the commit tied to the tag.</p>
+<p>You should recognize the files in the tags subdirectory.  Each file corresponds to a tag you created with the <code>git tag</code> command earlier. Its content is just the hash of the commit tied to the tag.</p>
 <p>The heads directory is similar, but is used for branches rather than tags.  We only have one branch at the moment, so all you will see is master in this directory.</p>
 <h2>The <span class="caps">HEAD</span> File <em>06</em></h2>
 <h4>Execute:</h4>
@@ -123,7 +123,7 @@ ce5cd7a3971149ee625e4c373358aae8f41212e1
 <pre class="sample">$ cat .git/HEAD
 ref: refs/heads/master
 </pre>
-<p>The <span class="caps">HEAD</span> file contains a reference to the current branch.  Should be a reference to master at this point.</p>
+<p>The <span class="caps">HEAD</span> file contains a reference to the current branch.  It should be a reference to master at this point.</p>
   </div>
 
   <div id="index">
@@ -131,6 +131,7 @@ ref: refs/heads/master
   <div id="show_bookmarks"></div>
   <div id="no_bookmarks"></div>
   <ul>
+    <li data-lab-id="0"><a href="index.html"><span>&nbsp;</span>Cover Page</a></li>
           <li data-lab-id="1"><a href="lab_01.html"><span>1:</span> Setup</a></li>
           <li data-lab-id="2"><a href="lab_02.html"><span>2:</span> More Setup</a></li>
           <li data-lab-id="3"><a href="lab_03.html"><span>3:</span> Create a Project</a></li>

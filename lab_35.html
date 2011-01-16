@@ -60,7 +60,7 @@ git merge greet</pre>
 Switched to branch 'master'
 $
 $ git merge greet
-Updating 663efaf..311b0a8
+Updating 8963247..b377662
 Fast-forward
  Rakefile       |    2 +-
  lib/greeter.rb |    8 ++++++++
@@ -68,24 +68,24 @@ Fast-forward
  3 files changed, 13 insertions(+), 3 deletions(-)
  create mode 100644 lib/greeter.rb
 </pre>
-<p>Because the head of master is a direct ancestor of the head of the greet branch, git is able to do a fast forward merge.  When fast-forwarding, the branch pointer is simply moved forward to point to same commit as the greeter branch.</p>
-<p>There will never be conflicts in a fast forward merge.</p>
+<p>Because the head of master is a direct ancestor of the head of the greet branch, git is able to do a fast-forward merge.  When fast-forwarding, the branch pointer is simply moved forward to point to the same commit as the greeter branch.</p>
+<p>There will never be conflicts in a fast-forward merge.</p>
 <h2>Review the logs <em>02</em></h2>
 <h4>Execute:</h4>
 <pre class="instructions">git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* 311b0a8 2011-01-15 | Updated Rakefile (HEAD, master, greet) [Jim Weirich]
-* ad25654 2011-01-15 | Hello uses Greeter [Jim Weirich]
-* e43a9f8 2011-01-15 | Added greeter class [Jim Weirich]
-* 663efaf 2011-01-15 | Added README [Jim Weirich]
-* 8634702 2011-01-15 | Added a Rakefile. [Jim Weirich]
-* 34943f9 2011-01-15 | Moved hello.rb to lib [Jim Weirich]
-* e720fa3 2011-01-15 | Add an author/email comment [Jim Weirich]
-* ce5cd7a 2011-01-15 | Added a comment (v1) [Jim Weirich]
-* c001137 2011-01-15 | Added a default value (v1-beta) [Jim Weirich]
-* f2c8431 2011-01-15 | Using ARGV [Jim Weirich]
-* 3fc57ff 2011-01-15 | First Commit [Jim Weirich]</pre>
+* b377662 2011-01-16 | Updated Rakefile (HEAD, master, greet) [Jim Weirich]
+* d78c2a7 2011-01-16 | Hello uses Greeter [Jim Weirich]
+* 2e855c1 2011-01-16 | Added greeter class [Jim Weirich]
+* 8963247 2011-01-16 | Added README [Jim Weirich]
+* ccedd44 2011-01-16 | Added a Rakefile. [Jim Weirich]
+* 276d90e 2011-01-16 | Moved hello.rb to lib [Jim Weirich]
+* 017c351 2011-01-16 | Add an author/email comment [Jim Weirich]
+* 0f72e3f 2011-01-16 | Added a comment (v1) [Jim Weirich]
+* bce4d48 2011-01-16 | Added a default value (v1-beta) [Jim Weirich]
+* 88b99c0 2011-01-16 | Using ARGV [Jim Weirich]
+* 827473f 2011-01-16 | First Commit [Jim Weirich]</pre>
 <p>The greet and master branches are now identical.</p>
   </div>
 
@@ -94,6 +94,7 @@ Fast-forward
   <div id="show_bookmarks"></div>
   <div id="no_bookmarks"></div>
   <ul>
+    <li data-lab-id="0"><a href="index.html"><span>&nbsp;</span>Cover Page</a></li>
           <li data-lab-id="1"><a href="lab_01.html"><span>1:</span> Setup</a></li>
           <li data-lab-id="2"><a href="lab_02.html"><span>2:</span> More Setup</a></li>
           <li data-lab-id="3"><a href="lab_03.html"><span>3:</span> Create a Project</a></li>

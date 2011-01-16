@@ -52,7 +52,7 @@
 	<li>Learn how to revert changes that have been committed to a local repository.</li>
 </ul>
 <h2>Undoing Commits <em>01</em></h2>
-<p>Sometimes you realized that a change that you have already committed was not correct and you wish to undo that commit.  There are several ways of handling that issue, and the way we are going to use in this lab is always safe to use.</p>
+<p>Sometimes you realized that a change that you have already committed was not correct and you wish to undo that commit.  There are several ways of handling that issue, and the way we are going to use in this lab is always safe.</p>
 <p>Essentially we will undo the commit by creating a new commit that reverses the unwanted changes.</p>
 <h2>Change the file and commit it. <em>02</em></h2>
 <p>Change the <code>hello.rb</code> file to the following.</p>
@@ -73,7 +73,7 @@ git commit -m "Oops, we didn't want this commit"</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git revert HEAD --no-edit
 Finished one revert.
-[master e772f09] Revert "Oops, we didn't want this commit"
+[master a6accd7] Revert "Oops, we didn't want this commit"
  1 files changed, 1 insertions(+), 1 deletions(-)
 </pre>
 <p>Since we were undoing the very last commit we made, we were able to use <code>HEAD</code> as the argument to revert.  We can revert any arbitrary commit earlier in history by simply specifying its hash value.</p>
@@ -84,12 +84,12 @@ Finished one revert.
 <pre class="instructions">git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* e772f09 2011-01-15 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
-* 8ec96b0 2011-01-15 | Oops, we didn't want this commit [Jim Weirich]
-* ce5cd7a 2011-01-15 | Added a comment (v1) [Jim Weirich]
-* c001137 2011-01-15 | Added a default value (v1-beta) [Jim Weirich]
-* f2c8431 2011-01-15 | Using ARGV [Jim Weirich]
-* 3fc57ff 2011-01-15 | First Commit [Jim Weirich]</pre>
+* a6accd7 2011-01-16 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
+* 064abc0 2011-01-16 | Oops, we didn't want this commit [Jim Weirich]
+* 0f72e3f 2011-01-16 | Added a comment (v1) [Jim Weirich]
+* bce4d48 2011-01-16 | Added a default value (v1-beta) [Jim Weirich]
+* 88b99c0 2011-01-16 | Using ARGV [Jim Weirich]
+* 827473f 2011-01-16 | First Commit [Jim Weirich]</pre>
 <p>This technique will work with any commit (although you may have to resolve conflicts).  It is safe to use even on branches that are publicly shared on remote repositories.</p>
 <h2>Up Next <em>05</em></h2>
 <p>Next, let&#8217;s look at a technique that can be used to remove the most recent commits from the repository history.</p>
@@ -100,6 +100,7 @@ Finished one revert.
   <div id="show_bookmarks"></div>
   <div id="no_bookmarks"></div>
   <ul>
+    <li data-lab-id="0"><a href="index.html"><span>&nbsp;</span>Cover Page</a></li>
           <li data-lab-id="1"><a href="lab_01.html"><span>1:</span> Setup</a></li>
           <li data-lab-id="2"><a href="lab_02.html"><span>2:</span> More Setup</a></li>
           <li data-lab-id="3"><a href="lab_03.html"><span>3:</span> Create a Project</a></li>

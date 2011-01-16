@@ -57,27 +57,27 @@
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git log
-commit ce5cd7a3971149ee625e4c373358aae8f41212e1
+commit 0f72e3fa33888a4abbf43c0db61f3e12610ba85e
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Sat Jan 15 22:53:59 2011 -0500
+Date:   Sun Jan 16 12:49:54 2011 -0500
 
     Added a comment
 
-commit c001137e19dbe7fc2dbaf556b1753aa70c56b23e
+commit bce4d4893c90a00641e6ea149ad73ab7fb965dd3
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Sat Jan 15 22:53:59 2011 -0500
+Date:   Sun Jan 16 12:49:53 2011 -0500
 
     Added a default value
 
-commit f2c843100a787ff26c18ed0a232a87dffdef1982
+commit 88b99c05bc8104fd9f742644f15c68841646db7e
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Sat Jan 15 22:53:58 2011 -0500
+Date:   Sun Jan 16 12:49:53 2011 -0500
 
     Using ARGV
 
-commit 3fc57ff2d85a5652970592bcd41bdd53bd848c5c
+commit 827473fefc51b60a0728e27b3e8a739aad4c598d
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Sat Jan 15 22:53:58 2011 -0500
+Date:   Sun Jan 16 12:49:52 2011 -0500
 
     First Commit
 </pre>
@@ -89,10 +89,10 @@ Date:   Sat Jan 15 22:53:58 2011 -0500
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git log --pretty=oneline
-ce5cd7a3971149ee625e4c373358aae8f41212e1 Added a comment
-c001137e19dbe7fc2dbaf556b1753aa70c56b23e Added a default value
-f2c843100a787ff26c18ed0a232a87dffdef1982 Using ARGV
-3fc57ff2d85a5652970592bcd41bdd53bd848c5c First Commit
+0f72e3fa33888a4abbf43c0db61f3e12610ba85e Added a comment
+bce4d4893c90a00641e6ea149ad73ab7fb965dd3 Added a default value
+88b99c05bc8104fd9f742644f15c68841646db7e Using ARGV
+827473fefc51b60a0728e27b3e8a739aad4c598d First Commit
 </pre>
 <h2>Controlling Which Entries are Displayed <em>02</em></h2>
 <p>There are a lot of options for selecting which entries are displayed in the log.  Play around with the following options:</p>
@@ -112,10 +112,10 @@ git log --pretty=oneline --all</pre>
 <p>It looks like this:</p>
 <h4>Output:</h4>
 <pre class="sample">$ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
-* ce5cd7a 2011-01-15 | Added a comment (HEAD, master) [Jim Weirich]
-* c001137 2011-01-15 | Added a default value [Jim Weirich]
-* f2c8431 2011-01-15 | Using ARGV [Jim Weirich]
-* 3fc57ff 2011-01-15 | First Commit [Jim Weirich]</pre>
+* 0f72e3f 2011-01-16 | Added a comment (HEAD, master) [Jim Weirich]
+* bce4d48 2011-01-16 | Added a default value [Jim Weirich]
+* 88b99c0 2011-01-16 | Using ARGV [Jim Weirich]
+* 827473f 2011-01-16 | First Commit [Jim Weirich]</pre>
 <p>Let&#8217;s look at it in detail:</p>
 <ul>
 	<li><code>--pretty="..."</code> defines the format of the output.</li>
@@ -127,7 +127,7 @@ git log --pretty=oneline --all</pre>
 	<li><code>--graph</code> informs git to display the commit tree in an <span class="caps">ASCII</span> graph layout</li>
 	<li><code>--date=short</code> keeps the date format nice and short</li>
 </ul>
-<p>This is a lot to type everytime you want to see the log. Fortunately we will learn about git aliases in the next lab.</p>
+<p>This is a lot to type every time you want to see the log. Fortunately we will learn about git aliases in the next lab.</p>
 <h2>Other Tools <em>05</em></h2>
 <p>Both <code>gitx</code> (for Macs) and <code>gitk</code> (any platform) are useful in exploring log history.</p>
   </div>
@@ -137,6 +137,7 @@ git log --pretty=oneline --all</pre>
   <div id="show_bookmarks"></div>
   <div id="no_bookmarks"></div>
   <ul>
+    <li data-lab-id="0"><a href="index.html"><span>&nbsp;</span>Cover Page</a></li>
           <li data-lab-id="1"><a href="lab_01.html"><span>1:</span> Setup</a></li>
           <li data-lab-id="2"><a href="lab_02.html"><span>2:</span> More Setup</a></li>
           <li data-lab-id="3"><a href="lab_03.html"><span>3:</span> Create a Project</a></li>
