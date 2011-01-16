@@ -93,16 +93,16 @@ puts "Hello, #{name}!"
 #
 </pre>
 <p>Notice how <code>hello.rb</code> is listed twice in the status.  The first change (adding a default) is staged and is ready to be committed.  The second change (adding a comment) is unstaged.  If you were to commit right now, the comment would not be saved in the repository.</p>
-<p>Let&#8217;s try that</p>
-<h2>Commiting <em>05</em></h2>
-<p>Commit the stage change (the default value), and then recheck the status.</p>
+<p>Let&#8217;s try that.</p>
+<h2>Committing <em>05</em></h2>
+<p>Commit the staged change (the default value), and then recheck the status.</p>
 <h4>Execute:</h4>
 <pre class="instructions">git commit -m 'Added a default value'
 git status</pre>
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git commit -m 'Added a default value'
-[master 48d6d8d] Added a default value
+[master c001137] Added a default value
  1 files changed, 3 insertions(+), 1 deletions(-)
 $ git status
 # On branch master
@@ -114,7 +114,7 @@ $ git status
 #
 no changes added to commit (use "git add" and/or "git commit -a")
 </pre>
-<p>The status command is telling you that <code>hello.rb</code> has unrecorded changes, but is no longer in the staging area.  The</p>
+<p>The status command is telling you that <code>hello.rb</code> has unrecorded changes, but is no longer in the staging area.</p>
 <h2>Add the Second Change <em>06</em></h2>
 <p>Now add the second change to staging area, then run git status.</p>
 <h4>Execute:</h4>

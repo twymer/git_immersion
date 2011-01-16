@@ -58,15 +58,15 @@
 git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* 41d7fa5 2011-01-15 | Made interactive (HEAD, master) [Jim Weirich]
-* c44077e 2011-01-15 | Added README [Jim Weirich]
-* 463a59e 2011-01-15 | Added a Rakefile. [Jim Weirich]
-* 5c5c0a0 2011-01-15 | Moved hello.rb to lib [Jim Weirich]
-* e3ca0b7 2011-01-15 | Add an author/email comment [Jim Weirich]
-* 87e353e 2011-01-15 | Added a comment (v1) [Jim Weirich]
-* 48d6d8d 2011-01-15 | Added a default value (v1-beta) [Jim Weirich]
-* 0c22d2b 2011-01-15 | Using ARGV [Jim Weirich]
-* f03dfd0 2011-01-15 | First Commit [Jim Weirich]</pre>
+* b6a09ed 2011-01-15 | Made interactive (HEAD, master) [Jim Weirich]
+* 663efaf 2011-01-15 | Added README [Jim Weirich]
+* 8634702 2011-01-15 | Added a Rakefile. [Jim Weirich]
+* 34943f9 2011-01-15 | Moved hello.rb to lib [Jim Weirich]
+* e720fa3 2011-01-15 | Add an author/email comment [Jim Weirich]
+* ce5cd7a 2011-01-15 | Added a comment (v1) [Jim Weirich]
+* c001137 2011-01-15 | Added a default value (v1-beta) [Jim Weirich]
+* f2c8431 2011-01-15 | Using ARGV [Jim Weirich]
+* 3fc57ff 2011-01-15 | First Commit [Jim Weirich]</pre>
 <p>The &#8216;Added <span class="caps">README</span>&#8217; commit is the one directly before the conflicting interactive mode.  We will reset the master branch to &#8216;Added <span class="caps">README</span>&#8217; branch.</p>
 <h4>Execute:</h4>
 <pre class="instructions">git reset --hard &lt;hash&gt;
@@ -74,18 +74,18 @@ git hist --all</pre>
 <p>Review the log.  It should look like the repository has been wound back in time to the point before we merged anything.</p>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --all
-* c44077e 2011-01-15 | Added README (HEAD, master) [Jim Weirich]
-| * c433541 2011-01-15 | Updated Rakefile (greet) [Jim Weirich]
-| * 612cf66 2011-01-15 | Hello uses Greeter [Jim Weirich]
-| * f6dffa5 2011-01-15 | Added greeter class [Jim Weirich]
+* 46761dc 2011-01-15 | Updated Rakefile (greet) [Jim Weirich]
+* 908e60f 2011-01-15 | Hello uses Greeter [Jim Weirich]
+* 89ca48d 2011-01-15 | Added greeter class [Jim Weirich]
+| * 663efaf 2011-01-15 | Added README (HEAD, master) [Jim Weirich]
 |/  
-* 463a59e 2011-01-15 | Added a Rakefile. [Jim Weirich]
-* 5c5c0a0 2011-01-15 | Moved hello.rb to lib [Jim Weirich]
-* e3ca0b7 2011-01-15 | Add an author/email comment [Jim Weirich]
-* 87e353e 2011-01-15 | Added a comment (v1) [Jim Weirich]
-* 48d6d8d 2011-01-15 | Added a default value (v1-beta) [Jim Weirich]
-* 0c22d2b 2011-01-15 | Using ARGV [Jim Weirich]
-* f03dfd0 2011-01-15 | First Commit [Jim Weirich]</pre>
+* 8634702 2011-01-15 | Added a Rakefile. [Jim Weirich]
+* 34943f9 2011-01-15 | Moved hello.rb to lib [Jim Weirich]
+* e720fa3 2011-01-15 | Add an author/email comment [Jim Weirich]
+* ce5cd7a 2011-01-15 | Added a comment (v1) [Jim Weirich]
+* c001137 2011-01-15 | Added a default value (v1-beta) [Jim Weirich]
+* f2c8431 2011-01-15 | Using ARGV [Jim Weirich]
+* 3fc57ff 2011-01-15 | First Commit [Jim Weirich]</pre>
   </div>
 
   <div id="index">

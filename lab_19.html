@@ -52,7 +52,7 @@
 	<li>Learn how to amend an existing commit</li>
 </ul>
 <h2>Change the program then commit <em>01</em></h2>
-<p>Add an author commit to the program.</p>
+<p>Add an author comment to the program.</p>
 <h4>File: <em>hello.rb</em></h4>
 <pre class="file"># Default is World
 # Author: Jim Weirich
@@ -80,7 +80,7 @@ git commit --amend -m 'Add an author/email comment'</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git add hello.rb
 $ git commit --amend -m 'Add an author/email comment'
-[master e3ca0b7] Add an author/email comment
+[master e720fa3] Add an author/email comment
  1 files changed, 2 insertions(+), 1 deletions(-)
 </pre>
 <h2>Review the History <em>04</em></h2>
@@ -88,11 +88,11 @@ $ git commit --amend -m 'Add an author/email comment'
 <pre class="instructions">git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* e3ca0b7 2011-01-15 | Add an author/email comment (HEAD, master) [Jim Weirich]
-* 87e353e 2011-01-15 | Added a comment (v1) [Jim Weirich]
-* 48d6d8d 2011-01-15 | Added a default value (v1-beta) [Jim Weirich]
-* 0c22d2b 2011-01-15 | Using ARGV [Jim Weirich]
-* f03dfd0 2011-01-15 | First Commit [Jim Weirich]</pre>
+* e720fa3 2011-01-15 | Add an author/email comment (HEAD, master) [Jim Weirich]
+* ce5cd7a 2011-01-15 | Added a comment (v1) [Jim Weirich]
+* c001137 2011-01-15 | Added a default value (v1-beta) [Jim Weirich]
+* f2c8431 2011-01-15 | Using ARGV [Jim Weirich]
+* 3fc57ff 2011-01-15 | First Commit [Jim Weirich]</pre>
 <p>We can see the original &#8220;author&#8221; commit is now gone, and it is replaced by the &#8220;author/email&#8221; commit.  You can achieve the same effect by resetting the branch back one commit and then recommitting the new changes.</p>
   </div>
 
