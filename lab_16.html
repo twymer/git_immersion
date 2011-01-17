@@ -73,7 +73,7 @@ git commit -m "Oops, we didn't want this commit"</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git revert HEAD --no-edit
 Finished one revert.
-[master 26d92da] Revert "Oops, we didn't want this commit"
+[master 1c19ad2] Revert "Oops, we didn't want this commit"
  1 files changed, 1 insertions(+), 1 deletions(-)
 </pre>
 <p>Since we were undoing the very last commit we made, we were able to use <code>HEAD</code> as the argument to revert.  We can revert any arbitrary commit earlier in history by simply specifying its hash value.</p>
@@ -84,12 +84,12 @@ Finished one revert.
 <pre class="instructions">git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* 26d92da 2011-01-16 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
-* ad3164f 2011-01-16 | Oops, we didn't want this commit [Jim Weirich]
-* d5a0336 2011-01-16 | Added a comment (v1) [Jim Weirich]
-* 143b864 2011-01-16 | Added a default value (v1-beta) [Jim Weirich]
-* a472109 2011-01-16 | Using ARGV [Jim Weirich]
-* c2369d6 2011-01-16 | First Commit [Jim Weirich]</pre>
+* 1c19ad2 2011-01-16 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
+* 139df9a 2011-01-16 | Oops, we didn't want this commit [Jim Weirich]
+* ebd6e19 2011-01-16 | Added a comment (v1) [Jim Weirich]
+* 729e2a1 2011-01-16 | Added a default value (v1-beta) [Jim Weirich]
+* 42b7e71 2011-01-16 | Using ARGV [Jim Weirich]
+* 9a7ed4c 2011-01-16 | First Commit [Jim Weirich]</pre>
 <p>This technique will work with any commit (although you may have to resolve conflicts).  It is safe to use even on branches that are publicly shared on remote repositories.</p>
 <h2>Up Next <em>05</em></h2>
 <p>Next, let&#8217;s look at a technique that can be used to remove the most recent commits from the repository history.</p>
