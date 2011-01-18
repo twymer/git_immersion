@@ -56,7 +56,7 @@
 <h4>Execute:</h4>
 <pre class="instructions">git branch --track greet origin/greet
 git branch -a
-git hist --max-count=1</pre>
+git hist --max-count=2</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git branch --track greet origin/greet
 Branch greet set up to track remote branch greet from origin.
@@ -66,8 +66,9 @@ $ git branch -a
   remotes/origin/HEAD -&gt; origin/master
   remotes/origin/greet
   remotes/origin/master
-$ git hist --max-count=1
-* cc7237e 2011-01-17 | Changed README in original repo (HEAD, origin/master, origin/HEAD, master) [Jim Weirich]</pre>
+$ git hist --max-count=2
+* 21b74d5 2011-01-18 | Changed README in original repo (HEAD, origin/master, origin/HEAD, master) [Jim Weirich]
+* 2bc0e23 2011-01-18 | Updated Rakefile (origin/greet, greet) [Jim Weirich]</pre>
 <p>We can now see the greet branch in the branch list and in the log.</p>
   </div>
 
