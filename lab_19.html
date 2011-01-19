@@ -62,7 +62,7 @@ puts "Hello, #{name}!"
 </pre>
 <h4>Execute:</h4>
 <pre class="instructions">git add hello.rb
-git commit -m 'Add an author comment'</pre>
+git commit -m "Add an author comment"</pre>
 <h2>Oops, Should have an Email <em>02</em></h2>
 <p>After you make the commit, you realize that any good author comment should have an email included.  Update the hello program to include an email.</p>
 <h4>File: <em>hello.rb</em></h4>
@@ -76,11 +76,11 @@ puts "Hello, #{name}!"
 <p>We really don&#8217;t want a separate commit for just the email.  Let&#8217;s amend the previous commit to include the email change.</p>
 <h4>Execute:</h4>
 <pre class="instructions">git add hello.rb
-git commit --amend -m 'Add an author/email comment'</pre>
+git commit --amend -m "Add an author/email comment"</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git add hello.rb
-$ git commit --amend -m 'Add an author/email comment'
-[master 7328a8d] Add an author/email comment
+$ git commit --amend -m "Add an author/email comment"
+[master c2e6835] Add an author/email comment
  1 files changed, 2 insertions(+), 1 deletions(-)
 </pre>
 <h2>Review the History <em>04</em></h2>
@@ -88,11 +88,11 @@ $ git commit --amend -m 'Add an author/email comment'
 <pre class="instructions">git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* 7328a8d 2011-01-18 | Add an author/email comment (HEAD, master) [Jim Weirich]
-* fc8c737 2011-01-18 | Added a comment (v1) [Jim Weirich]
-* 8dd2b86 2011-01-18 | Added a default value (v1-beta) [Jim Weirich]
-* 4b3b712 2011-01-18 | Using ARGV [Jim Weirich]
-* 6783a79 2011-01-18 | First Commit [Jim Weirich]</pre>
+* c2e6835 2011-01-19 | Add an author/email comment (HEAD, master) [Jim Weirich]
+* 88976c6 2011-01-19 | Added a comment (v1) [Jim Weirich]
+* b819ef8 2011-01-19 | Added a default value (v1-beta) [Jim Weirich]
+* ff07fc9 2011-01-19 | Using ARGV [Jim Weirich]
+* b73dc5c 2011-01-19 | First Commit [Jim Weirich]</pre>
 <p>We can see the original &#8220;author&#8221; commit is now gone, and it is replaced by the &#8220;author/email&#8221; commit.  You can achieve the same effect by resetting the branch back one commit and then recommitting the new changes.</p>
   </div>
 

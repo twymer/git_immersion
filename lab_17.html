@@ -67,12 +67,12 @@
 <pre class="instructions">git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* c308185 2011-01-18 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
-* 2414bbe 2011-01-18 | Oops, we didn't want this commit [Jim Weirich]
-* fc8c737 2011-01-18 | Added a comment (v1) [Jim Weirich]
-* 8dd2b86 2011-01-18 | Added a default value (v1-beta) [Jim Weirich]
-* 4b3b712 2011-01-18 | Using ARGV [Jim Weirich]
-* 6783a79 2011-01-18 | First Commit [Jim Weirich]</pre>
+* 774363a 2011-01-19 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
+* 24becc9 2011-01-19 | Oops, we didn't want this commit [Jim Weirich]
+* 88976c6 2011-01-19 | Added a comment (v1) [Jim Weirich]
+* b819ef8 2011-01-19 | Added a default value (v1-beta) [Jim Weirich]
+* ff07fc9 2011-01-19 | Using ARGV [Jim Weirich]
+* b73dc5c 2011-01-19 | First Commit [Jim Weirich]</pre>
 <p>We see that we have an &#8220;Oops&#8221; commit and a &#8220;Revert Oops&#8221; commit as the last two commits made in this branch.  Let&#8217;s remove them using reset.</p>
 <h2>First, Mark this Branch <em>03</em></h2>
 <p>But before we remove the commits, let&#8217;s mark the latest commit with a tag so we can find it again.</p>
@@ -85,12 +85,12 @@
 git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git reset --hard v1
-HEAD is now at fc8c737 Added a comment
+HEAD is now at 88976c6 Added a comment
 $ git hist
-* fc8c737 2011-01-18 | Added a comment (HEAD, v1, master) [Jim Weirich]
-* 8dd2b86 2011-01-18 | Added a default value (v1-beta) [Jim Weirich]
-* 4b3b712 2011-01-18 | Using ARGV [Jim Weirich]
-* 6783a79 2011-01-18 | First Commit [Jim Weirich]</pre>
+* 88976c6 2011-01-19 | Added a comment (HEAD, v1, master) [Jim Weirich]
+* b819ef8 2011-01-19 | Added a default value (v1-beta) [Jim Weirich]
+* ff07fc9 2011-01-19 | Using ARGV [Jim Weirich]
+* b73dc5c 2011-01-19 | First Commit [Jim Weirich]</pre>
 <p>Our master branch now points to the v1 commit and the Oops commit and the Revert Oops commit are no longer in the branch.  The <code>--hard</code> parameter indicates that the working directory should be updated to be consistent with the new branch head.</p>
 <h2>Nothing is Ever Lost <em>05</em></h2>
 <p>But what happened to the bad commits?  It turns out that the commits are still in the repository.  In fact, we can still reference them.  Remember that at the beginning of this lab we tagged the reverting commit with the tag &#8220;oops&#8221;.  Let&#8217;s look at <em>all</em> the commits.</p>
@@ -98,12 +98,12 @@ $ git hist
 <pre class="instructions">git hist --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --all
-* c308185 2011-01-18 | Revert "Oops, we didn't want this commit" (oops) [Jim Weirich]
-* 2414bbe 2011-01-18 | Oops, we didn't want this commit [Jim Weirich]
-* fc8c737 2011-01-18 | Added a comment (HEAD, v1, master) [Jim Weirich]
-* 8dd2b86 2011-01-18 | Added a default value (v1-beta) [Jim Weirich]
-* 4b3b712 2011-01-18 | Using ARGV [Jim Weirich]
-* 6783a79 2011-01-18 | First Commit [Jim Weirich]</pre>
+* 774363a 2011-01-19 | Revert "Oops, we didn't want this commit" (oops) [Jim Weirich]
+* 24becc9 2011-01-19 | Oops, we didn't want this commit [Jim Weirich]
+* 88976c6 2011-01-19 | Added a comment (HEAD, v1, master) [Jim Weirich]
+* b819ef8 2011-01-19 | Added a default value (v1-beta) [Jim Weirich]
+* ff07fc9 2011-01-19 | Using ARGV [Jim Weirich]
+* b73dc5c 2011-01-19 | First Commit [Jim Weirich]</pre>
 <p>Here we see that the bad commits haven&#8217;t disappeared.  They are still in the repository.  It&#8217;s just that they are no longer listed in the master branch.  If we hadn&#8217;t tagged them, they would still be in the repository, but there would be no way to reference them other than using their hash names.  Commits that are unreferenced remain in the repository until the system runs the garbage collection software.</p>
 <h2>Dangers of Reset <em>06</em></h2>
 <p>Resets on local branches are generally safe.  Any &#8220;accidents&#8221; can usually be recovered from by just resetting again with the desired commit.</p>
