@@ -165,8 +165,7 @@ h1.lab_title em {
 
 #main_content h4 em {
   padding-left   : 5px;
-  font           : 14px arial, sans-serif;
-  text-transform : lowercase;
+  font           : 14px helvetica, arial, sans-serif;
   letter-spacing : 0; }
 
 #main_content a { color: #d00; }
