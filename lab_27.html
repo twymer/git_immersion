@@ -57,18 +57,18 @@
 <pre class="instructions">git hist --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --all
-* 9ab3040 2011-03-09 | Updated Rakefile (greet) [Jim Weirich]
-* fe03a87 2011-03-09 | Hello uses Greeter [Jim Weirich]
-* 421be6e 2011-03-09 | Added greeter class [Jim Weirich]
-| * c245cd8 2011-03-09 | Added README (HEAD, master) [Jim Weirich]
+* 3d2425b 2011-03-09 | Added README (HEAD, master) [Jim Weirich]
+| * 0c0a54d 2011-03-09 | Updated Rakefile (greet) [Jim Weirich]
+| * 173ab41 2011-03-09 | Hello uses Greeter [Jim Weirich]
+| * 1306d4b 2011-03-09 | Added greeter class [Jim Weirich]
 |/  
-* e808491 2011-03-09 | Added a Rakefile. [Jim Weirich]
-* e942f77 2011-03-09 | Moved hello.rb to lib [Jim Weirich]
-* f1ffad4 2011-03-09 | Add an author/email comment [Jim Weirich]
-* 19e506f 2011-03-09 | Added a comment (v1) [Jim Weirich]
-* c9b4c54 2011-03-09 | Added a default value (v1-beta) [Jim Weirich]
-* f27f51a 2011-03-09 | Using ARGV [Jim Weirich]
-* 0645677 2011-03-09 | First Commit [Jim Weirich]</pre>
+* 1b79818 2011-03-09 | Added a Rakefile. [Jim Weirich]
+* 59c82a9 2011-03-09 | Moved hello.rb to lib [Jim Weirich]
+* 2271591 2011-03-09 | Add an author/email comment [Jim Weirich]
+* ee7937f 2011-03-09 | Added a comment (v1) [Jim Weirich]
+* 1f16f7e 2011-03-09 | Added a default value (v1-beta) [Jim Weirich]
+* c194b8f 2011-03-09 | Using ARGV [Jim Weirich]
+* 4b39ac2 2011-03-09 | First Commit [Jim Weirich]</pre>
 <p>Here is our first chance to see the <code>--graph</code> option on <code>git hist</code> in action. Adding the <code>--graph</code> option to <code>git log</code> causes it to draw the commit tree using simple <span class="caps">ASCII</span> characters.  We can see both branches (greet and master), and that the master branch is the current <span class="caps">HEAD</span>. The common ancestor to both branches is the &#8220;Added a Rakefile&#8221; branch.</p>
 <p>The <code>--all</code> flag makes sure that we see all the branches.  The default is to show only the current branch.</p>
   </div>
