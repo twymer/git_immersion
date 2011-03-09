@@ -57,9 +57,8 @@
 <pre class="instructions">ls -C .git</pre>
 <h4>Output:</h4>
 <pre class="sample">$ ls -C .git
-COMMIT_EDITMSG	ORIG_HEAD	description	info		refs
-HEAD		branches	hooks		logs		rr-cache
-MERGE_RR	config		index		objects
+COMMIT_EDITMSG	MERGE_RR	config		hooks		info		objects		rr-cache
+HEAD		ORIG_HEAD	description	index		logs		refs
 </pre>
 <p>This is the magic directory where all the git &#8220;stuff&#8221; is stored. Let&#8217;s peek in the objects directory.</p>
 <h2>The Object Store <em>02</em></h2>
@@ -67,17 +66,17 @@ MERGE_RR	config		index		objects
 <pre class="instructions">ls -C .git/objects</pre>
 <h4>Output:</h4>
 <pre class="sample">$ ls -C .git/objects
-09	27	43	5a	6b	93	9d	af	e4	pack
-11	28	52	61	78	97	a9	b5	e7
-24	3e	59	69	82	9c	aa	c4	info
+06	19	28	69	97	af	c9	e4	e9	info
+09	24	43	6b	9c	b5	ca	e7	f1	pack
+11	27	59	78	a1	c4	de	e8	f2
 </pre>
 <p>You should see a bunch of directories with 2 letter names.  The directory names are the first two letters of the sha1 hash of the object stored in git.</p>
 <h2>Deeper into the Object Store <em>03</em></h2>
 <h4>Execute:</h4>
 <pre class="instructions">ls -C .git/objects/&lt;dir&gt;</pre>
 <h4>Output:</h4>
-<pre class="sample">$ ls -C .git/objects/09
-6b74c56bfc6b40e754fc0725b8c70b2038b91e	9fb6f9d3a104feb32fcac22354c4d0e8a182c1
+<pre class="sample">$ ls -C .git/objects/06
+456772417fb649b626e20ac23d310338f27e87
 </pre>
 <p>Look in one of the two-letter directories.  You should see some files with 38-character names.  These are the files that contain the objects stored in git.  These files are compressed and encoded, so looking at their contents directly won&#8217;t be very helpful, but we will take a closer look in a bit.</p>
 <h2>Config File <em>04</em></h2>
@@ -112,7 +111,7 @@ $ ls .git/refs/tags
 v1
 v1-beta
 $ cat .git/refs/tags/v1
-3e33ed405ff585ad6138af25ecfcd1dd040bbcef
+19e506f64417c3a93648ab7fff52b7286d2706ba
 </pre>
 <p>You should recognize the files in the tags subdirectory.  Each file corresponds to a tag you created with the <code>git tag</code> command earlier. Its content is just the hash of the commit tied to the tag.</p>
 <p>The heads directory is similar, but is used for branches rather than tags.  We only have one branch at the moment, so all you will see is master in this directory.</p>
@@ -127,11 +126,11 @@ ref: refs/heads/master
   </div>
 
   <div id="index">
-  <h1>Labs Index</h1>
+  <h1>Table of Contents</h1>
   <div id="show_bookmarks"></div>
   <div id="no_bookmarks"></div>
   <ul>
-    <li data-lab-id="0"><a href="index.html"><span>&nbsp;</span>Cover Page</a></li>
+    <li data-lab-id="0"><a href="index.html"><span>&nbsp;</span>Home Cover Page</a></li>
           <li data-lab-id="1"><a href="lab_01.html"><span>1:</span> Setup</a></li>
           <li data-lab-id="2"><a href="lab_02.html"><span>2:</span> More Setup</a></li>
           <li data-lab-id="3"><a href="lab_03.html"><span>3:</span> Create a Project</a></li>

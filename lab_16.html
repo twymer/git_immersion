@@ -72,8 +72,7 @@ git commit -m "Oops, we didn't want this commit"</pre>
 <p>This will pop you into the editor.  You can edit the default commit message or leave it as is.  Save and close the file. You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git revert HEAD --no-edit
-Finished one revert.
-[master 9ddf545] Revert "Oops, we didn't want this commit"
+[master cab3563] Revert "Oops, we didn't want this commit"
  1 files changed, 1 insertions(+), 1 deletions(-)
 </pre>
 <p>Since we were undoing the very last commit we made, we were able to use <code>HEAD</code> as the argument to revert.  We can revert any arbitrary commit earlier in history by simply specifying its hash value.</p>
@@ -84,23 +83,23 @@ Finished one revert.
 <pre class="instructions">git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* 9ddf545 2011-02-14 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
-* aa120d5 2011-02-14 | Oops, we didn't want this commit [Jim Weirich]
-* 3e33ed4 2011-02-14 | Added a comment (v1) [Jim Weirich]
-* 52495db 2011-02-14 | Added a default value (v1-beta) [Jim Weirich]
-* 82d3e08 2011-02-14 | Using ARGV [Jim Weirich]
-* 61f009a 2011-02-14 | First Commit [Jim Weirich]</pre>
+* cab3563 2011-03-09 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
+* a197029 2011-03-09 | Oops, we didn't want this commit [Jim Weirich]
+* 19e506f 2011-03-09 | Added a comment (v1) [Jim Weirich]
+* c9b4c54 2011-03-09 | Added a default value (v1-beta) [Jim Weirich]
+* f27f51a 2011-03-09 | Using ARGV [Jim Weirich]
+* 0645677 2011-03-09 | First Commit [Jim Weirich]</pre>
 <p>This technique will work with any commit (although you may have to resolve conflicts).  It is safe to use even on branches that are publicly shared on remote repositories.</p>
 <h2>Up Next <em>05</em></h2>
 <p>Next, let&#8217;s look at a technique that can be used to remove the most recent commits from the repository history.</p>
   </div>
 
   <div id="index">
-  <h1>Labs Index</h1>
+  <h1>Table of Contents</h1>
   <div id="show_bookmarks"></div>
   <div id="no_bookmarks"></div>
   <ul>
-    <li data-lab-id="0"><a href="index.html"><span>&nbsp;</span>Cover Page</a></li>
+    <li data-lab-id="0"><a href="index.html"><span>&nbsp;</span>Home Cover Page</a></li>
           <li data-lab-id="1"><a href="lab_01.html"><span>1:</span> Setup</a></li>
           <li data-lab-id="2"><a href="lab_02.html"><span>2:</span> More Setup</a></li>
           <li data-lab-id="3"><a href="lab_03.html"><span>3:</span> Create a Project</a></li>

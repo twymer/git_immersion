@@ -75,7 +75,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b new_branch_name
 
-HEAD is now at 52495db... Added a default value
+HEAD is now at c9b4c54... Added a default value
 $ cat hello.rb
 name = ARGV.first || "World"
 
@@ -91,11 +91,11 @@ puts "Hello, #{name}!"
 git checkout v1-beta</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git checkout v1
-Previous HEAD position was 52495db... Added a default value
-HEAD is now at 3e33ed4... Added a comment
+Previous HEAD position was c9b4c54... Added a default value
+HEAD is now at 19e506f... Added a comment
 $ git checkout v1-beta
-Previous HEAD position was 3e33ed4... Added a comment
-HEAD is now at 52495db... Added a default value
+Previous HEAD position was 19e506f... Added a comment
+HEAD is now at c9b4c54... Added a default value
 </pre>
 <h2>Viewing Tags using the <code>tag</code> command <em>04</em></h2>
 <p>You can see what tags are available using the <code>git tag</code> command.</p>
@@ -112,19 +112,19 @@ v1-beta
 <pre class="instructions">git hist master --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist master --all
-* 3e33ed4 2011-02-14 | Added a comment (v1, master) [Jim Weirich]
-* 52495db 2011-02-14 | Added a default value (HEAD, v1-beta) [Jim Weirich]
-* 82d3e08 2011-02-14 | Using ARGV [Jim Weirich]
-* 61f009a 2011-02-14 | First Commit [Jim Weirich]</pre>
+* 19e506f 2011-03-09 | Added a comment (v1, master) [Jim Weirich]
+* c9b4c54 2011-03-09 | Added a default value (HEAD, v1-beta) [Jim Weirich]
+* f27f51a 2011-03-09 | Using ARGV [Jim Weirich]
+* 0645677 2011-03-09 | First Commit [Jim Weirich]</pre>
 <p>You can see both tags (<code>v1</code> and <code>v1-beta</code>) listed in the log output, along with the branch name (<code>master</code>).  Also <code>HEAD</code> shows you the currently checked out commit (which is <code>v1-beta</code> at the moment).</p>
   </div>
 
   <div id="index">
-  <h1>Labs Index</h1>
+  <h1>Table of Contents</h1>
   <div id="show_bookmarks"></div>
   <div id="no_bookmarks"></div>
   <ul>
-    <li data-lab-id="0"><a href="index.html"><span>&nbsp;</span>Cover Page</a></li>
+    <li data-lab-id="0"><a href="index.html"><span>&nbsp;</span>Home Cover Page</a></li>
           <li data-lab-id="1"><a href="lab_01.html"><span>1:</span> Setup</a></li>
           <li data-lab-id="2"><a href="lab_02.html"><span>2:</span> More Setup</a></li>
           <li data-lab-id="3"><a href="lab_03.html"><span>3:</span> Create a Project</a></li>

@@ -249,6 +249,8 @@ div.instructions pre {
   padding-left : 346px;
   background   : url(install_circle.png) no-repeat 0 8px; }
 
+#homepage #gui_clients { padding-top: 32px; }
+
 #homepage #brought_to_you_by {
   position      : relative;
   top           : -117px;
@@ -267,12 +269,29 @@ div.instructions pre {
 
 #homepage #other_resources {
   position      : relative;
-  top           : -30px;
+  top           : -90px;
   left          : -27px;
   width         : 300px;
   margin-bottom : 20px;
   padding-left  : 27px;
   background    : url(circle.png) no-repeat 0 8px; }
+
+#homepage #other_resources li {
+  list-style   : none;
+  line-height  : 18px; }
+
+#homepage #license {
+  position      : relative;
+  top           : -90px;
+  left          : -27px;
+  width         : 300px;
+  margin-bottom : 20px;
+  padding-left  : 27px;
+  background    : url(circle.png) no-repeat 0 8px; }
+
+#homepage #license li {
+  list-style   : none;
+  line-height  : 18px; }
 
 #intro p {
   position     : relative;
