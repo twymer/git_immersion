@@ -90,7 +90,8 @@ $(function() {
 
 
   $('#header .arrow a').click(function(e){
-    window.location = '/' + $(this).attr('href') + '#main_content';
+    var anchor = location.href.match('main_content') ? '' : '#main_content'
+    window.location = '/' + $(this).attr('href') + anchor;
   });
 
   function incrementCurrentSection(down){
