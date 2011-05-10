@@ -22,21 +22,22 @@
   </script>
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="html5.js"></script>
+  <script type="text/javascript" src="jquery.hotkeys.js"></script>
   <script type="text/javascript" src="UI.js"></script>
 </head>
 
 <body data-lab-id="19">
-  <header>
+  <header id="header">
     <a href="index.html" id="home_link">Git Immersion</a>
     <a href="http://edgecase.com" target="_blank" id="edgecase_link">Brought to you by EdgeCase</a>
 
     <nav>
       <ul>
   <li class="arrow next">
-          <a href="lab_20.html">Next</a>
+          <a href="lab_20.html#main_content">Next</a>
       </li>
   <li class="arrow previous">
-          <a href="lab_18.html">Previous</a>
+          <a href="lab_18.html#main_content">Previous</a>
       </li>
   <li class="index_button"><a href="#">Index</a></li>
 </ul>
@@ -80,7 +81,7 @@ git commit --amend -m "Add an author/email comment"</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git add hello.rb
 $ git commit --amend -m "Add an author/email comment"
-[master 6a78635] Add an author/email comment
+[master c5d5cdb] Add an author/email comment
  1 files changed, 2 insertions(+), 1 deletions(-)
 </pre>
 <h2>Review the History <em>04</em></h2>
@@ -88,11 +89,11 @@ $ git commit --amend -m "Add an author/email comment"
 <pre class="instructions">git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* 6a78635 2011-03-09 | Add an author/email comment (HEAD, master) [Jim Weirich]
-* fa3c141 2011-03-09 | Added a comment (v1) [Jim Weirich]
-* 8c32287 2011-03-09 | Added a default value (v1-beta) [Jim Weirich]
-* 43628f7 2011-03-09 | Using ARGV [Jim Weirich]
-* 911e8c9 2011-03-09 | First Commit [Jim Weirich]</pre>
+git: 'hist' is not a git command. See 'git --help'.
+
+Did you mean this?
+	bisect
+</pre>
 <p>We can see the original &#8220;author&#8221; commit is now gone, and it is replaced by the &#8220;author/email&#8221; commit.  You can achieve the same effect by resetting the branch back one commit and then recommitting the new changes.</p>
   </div>
 
@@ -159,14 +160,14 @@ $ git commit --amend -m "Add an author/email comment"
 </div>
 
 
-  <footer>
+  <footer id="footer">
     <nav>
       <ul>
   <li class="arrow next">
-          <a href="lab_20.html">Next</a>
+          <a href="lab_20.html#main_content">Next</a>
       </li>
   <li class="arrow previous">
-          <a href="lab_18.html">Previous</a>
+          <a href="lab_18.html#main_content">Previous</a>
       </li>
   <li class="index_button"><a href="#">Index</a></li>
 </ul>

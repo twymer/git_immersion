@@ -22,21 +22,22 @@
   </script>
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="html5.js"></script>
+  <script type="text/javascript" src="jquery.hotkeys.js"></script>
   <script type="text/javascript" src="UI.js"></script>
 </head>
 
 <body data-lab-id="32">
-  <header>
+  <header id="header">
     <a href="index.html" id="home_link">Git Immersion</a>
     <a href="http://edgecase.com" target="_blank" id="edgecase_link">Brought to you by EdgeCase</a>
 
     <nav>
       <ul>
   <li class="arrow next">
-          <a href="lab_33.html">Next</a>
+          <a href="lab_33.html#main_content">Next</a>
       </li>
   <li class="arrow previous">
-          <a href="lab_31.html">Previous</a>
+          <a href="lab_31.html#main_content">Previous</a>
       </li>
   <li class="index_button"><a href="#">Index</a></li>
 </ul>
@@ -61,30 +62,17 @@ git hist</pre>
 <pre class="sample">$ git checkout greet
 Already on 'greet'
 $ git hist
-*   645c4e6 2011-03-09 | Merged master fixed conflict. (HEAD, greet) [Jim Weirich]
-|\  
-| * 454ec68 2011-03-09 | Made interactive (master) [Jim Weirich]
-* |   5813a3f 2011-03-09 | Merge branch 'master' into greet [Jim Weirich]
-|\ \  
-| |/  
-| * 6c0f848 2011-03-09 | Added README [Jim Weirich]
-* | 07a2a46 2011-03-09 | Updated Rakefile [Jim Weirich]
-* | 649d26c 2011-03-09 | Hello uses Greeter [Jim Weirich]
-* | 1f3cbd2 2011-03-09 | Added greeter class [Jim Weirich]
-|/  
-* 8029c07 2011-03-09 | Added a Rakefile. [Jim Weirich]
-* 567948a 2011-03-09 | Moved hello.rb to lib [Jim Weirich]
-* 6a78635 2011-03-09 | Add an author/email comment [Jim Weirich]
-* fa3c141 2011-03-09 | Added a comment (v1) [Jim Weirich]
-* 8c32287 2011-03-09 | Added a default value (v1-beta) [Jim Weirich]
-* 43628f7 2011-03-09 | Using ARGV [Jim Weirich]
-* 911e8c9 2011-03-09 | First Commit [Jim Weirich]</pre>
+git: 'hist' is not a git command. See 'git --help'.
+
+Did you mean this?
+	bisect
+</pre>
 <p>That&#8217;s a bit hard to read, but looking at the data we see that the &#8220;Updated Rakefile&#8221; commit was the last commit on the greet branch before merging.  Let&#8217;s reset the greet branch to that commit.</p>
 <h4>Execute:</h4>
 <pre class="instructions">git reset --hard &lt;hash&gt;</pre>
 <h4>Output:</h4>
-<pre class="sample">$ git reset --hard 07a2a46
-HEAD is now at 07a2a46 Updated Rakefile
+<pre class="sample">$ git reset --hard bae276a
+HEAD is now at bae276a Updated Rakefile
 </pre>
 <h2>Check the branch. <em>02</em></h2>
 <p>Look at the log for the greet branch.  We no longer have the merge commits in its history.</p>
@@ -92,19 +80,11 @@ HEAD is now at 07a2a46 Updated Rakefile
 <pre class="instructions">git hist --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --all
-* 07a2a46 2011-03-09 | Updated Rakefile (HEAD, greet) [Jim Weirich]
-* 649d26c 2011-03-09 | Hello uses Greeter [Jim Weirich]
-* 1f3cbd2 2011-03-09 | Added greeter class [Jim Weirich]
-| * 454ec68 2011-03-09 | Made interactive (master) [Jim Weirich]
-| * 6c0f848 2011-03-09 | Added README [Jim Weirich]
-|/  
-* 8029c07 2011-03-09 | Added a Rakefile. [Jim Weirich]
-* 567948a 2011-03-09 | Moved hello.rb to lib [Jim Weirich]
-* 6a78635 2011-03-09 | Add an author/email comment [Jim Weirich]
-* fa3c141 2011-03-09 | Added a comment (v1) [Jim Weirich]
-* 8c32287 2011-03-09 | Added a default value (v1-beta) [Jim Weirich]
-* 43628f7 2011-03-09 | Using ARGV [Jim Weirich]
-* 911e8c9 2011-03-09 | First Commit [Jim Weirich]</pre>
+git: 'hist' is not a git command. See 'git --help'.
+
+Did you mean this?
+	bisect
+</pre>
   </div>
 
   <div id="index">
@@ -170,14 +150,14 @@ HEAD is now at 07a2a46 Updated Rakefile
 </div>
 
 
-  <footer>
+  <footer id="footer">
     <nav>
       <ul>
   <li class="arrow next">
-          <a href="lab_33.html">Next</a>
+          <a href="lab_33.html#main_content">Next</a>
       </li>
   <li class="arrow previous">
-          <a href="lab_31.html">Previous</a>
+          <a href="lab_31.html#main_content">Previous</a>
       </li>
   <li class="index_button"><a href="#">Index</a></li>
 </ul>

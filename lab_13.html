@@ -22,21 +22,22 @@
   </script>
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="html5.js"></script>
+  <script type="text/javascript" src="jquery.hotkeys.js"></script>
   <script type="text/javascript" src="UI.js"></script>
 </head>
 
 <body data-lab-id="13">
-  <header>
+  <header id="header">
     <a href="index.html" id="home_link">Git Immersion</a>
     <a href="http://edgecase.com" target="_blank" id="edgecase_link">Brought to you by EdgeCase</a>
 
     <nav>
       <ul>
   <li class="arrow next">
-          <a href="lab_14.html">Next</a>
+          <a href="lab_14.html#main_content">Next</a>
       </li>
   <li class="arrow previous">
-          <a href="lab_12.html">Previous</a>
+          <a href="lab_12.html#main_content">Previous</a>
       </li>
   <li class="index_button"><a href="#">Index</a></li>
 </ul>
@@ -75,7 +76,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b new_branch_name
 
-HEAD is now at 8c32287... Added a default value
+HEAD is now at ff32354... Added a default value
 $ cat hello.rb
 name = ARGV.first || "World"
 
@@ -91,11 +92,11 @@ puts "Hello, #{name}!"
 git checkout v1-beta</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git checkout v1
-Previous HEAD position was 8c32287... Added a default value
-HEAD is now at fa3c141... Added a comment
+Previous HEAD position was ff32354... Added a default value
+HEAD is now at 6c087a1... Added a comment
 $ git checkout v1-beta
-Previous HEAD position was fa3c141... Added a comment
-HEAD is now at 8c32287... Added a default value
+Previous HEAD position was 6c087a1... Added a comment
+HEAD is now at ff32354... Added a default value
 </pre>
 <h2>Viewing Tags using the <code>tag</code> command <em>04</em></h2>
 <p>You can see what tags are available using the <code>git tag</code> command.</p>
@@ -112,10 +113,11 @@ v1-beta
 <pre class="instructions">git hist master --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist master --all
-* fa3c141 2011-03-09 | Added a comment (v1, master) [Jim Weirich]
-* 8c32287 2011-03-09 | Added a default value (HEAD, v1-beta) [Jim Weirich]
-* 43628f7 2011-03-09 | Using ARGV [Jim Weirich]
-* 911e8c9 2011-03-09 | First Commit [Jim Weirich]</pre>
+git: 'hist' is not a git command. See 'git --help'.
+
+Did you mean this?
+	bisect
+</pre>
 <p>You can see both tags (<code>v1</code> and <code>v1-beta</code>) listed in the log output, along with the branch name (<code>master</code>).  Also <code>HEAD</code> shows you the currently checked out commit (which is <code>v1-beta</code> at the moment).</p>
   </div>
 
@@ -182,14 +184,14 @@ v1-beta
 </div>
 
 
-  <footer>
+  <footer id="footer">
     <nav>
       <ul>
   <li class="arrow next">
-          <a href="lab_14.html">Next</a>
+          <a href="lab_14.html#main_content">Next</a>
       </li>
   <li class="arrow previous">
-          <a href="lab_12.html">Previous</a>
+          <a href="lab_12.html#main_content">Previous</a>
       </li>
   <li class="index_button"><a href="#">Index</a></li>
 </ul>

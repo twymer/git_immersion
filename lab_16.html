@@ -22,21 +22,22 @@
   </script>
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="html5.js"></script>
+  <script type="text/javascript" src="jquery.hotkeys.js"></script>
   <script type="text/javascript" src="UI.js"></script>
 </head>
 
 <body data-lab-id="16">
-  <header>
+  <header id="header">
     <a href="index.html" id="home_link">Git Immersion</a>
     <a href="http://edgecase.com" target="_blank" id="edgecase_link">Brought to you by EdgeCase</a>
 
     <nav>
       <ul>
   <li class="arrow next">
-          <a href="lab_17.html">Next</a>
+          <a href="lab_17.html#main_content">Next</a>
       </li>
   <li class="arrow previous">
-          <a href="lab_15.html">Previous</a>
+          <a href="lab_15.html#main_content">Previous</a>
       </li>
   <li class="index_button"><a href="#">Index</a></li>
 </ul>
@@ -72,7 +73,7 @@ git commit -m "Oops, we didn't want this commit"</pre>
 <p>This will pop you into the editor.  You can edit the default commit message or leave it as is.  Save and close the file. You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git revert HEAD --no-edit
-[master 45fa96b] Revert "Oops, we didn't want this commit"
+[master 51e9829] Revert "Oops, we didn't want this commit"
  1 files changed, 1 insertions(+), 1 deletions(-)
 </pre>
 <p>Since we were undoing the very last commit we made, we were able to use <code>HEAD</code> as the argument to revert.  We can revert any arbitrary commit earlier in history by simply specifying its hash value.</p>
@@ -83,12 +84,11 @@ git commit -m "Oops, we didn't want this commit"</pre>
 <pre class="instructions">git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* 45fa96b 2011-03-09 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
-* 846b90c 2011-03-09 | Oops, we didn't want this commit [Jim Weirich]
-* fa3c141 2011-03-09 | Added a comment (v1) [Jim Weirich]
-* 8c32287 2011-03-09 | Added a default value (v1-beta) [Jim Weirich]
-* 43628f7 2011-03-09 | Using ARGV [Jim Weirich]
-* 911e8c9 2011-03-09 | First Commit [Jim Weirich]</pre>
+git: 'hist' is not a git command. See 'git --help'.
+
+Did you mean this?
+	bisect
+</pre>
 <p>This technique will work with any commit (although you may have to resolve conflicts).  It is safe to use even on branches that are publicly shared on remote repositories.</p>
 <h2>Up Next <em>05</em></h2>
 <p>Next, let&#8217;s look at a technique that can be used to remove the most recent commits from the repository history.</p>
@@ -157,14 +157,14 @@ git commit -m "Oops, we didn't want this commit"</pre>
 </div>
 
 
-  <footer>
+  <footer id="footer">
     <nav>
       <ul>
   <li class="arrow next">
-          <a href="lab_17.html">Next</a>
+          <a href="lab_17.html#main_content">Next</a>
       </li>
   <li class="arrow previous">
-          <a href="lab_15.html">Previous</a>
+          <a href="lab_15.html#main_content">Previous</a>
       </li>
   <li class="index_button"><a href="#">Index</a></li>
 </ul>

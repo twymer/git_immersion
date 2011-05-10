@@ -22,21 +22,22 @@
   </script>
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="html5.js"></script>
+  <script type="text/javascript" src="jquery.hotkeys.js"></script>
   <script type="text/javascript" src="UI.js"></script>
 </head>
 
 <body data-lab-id="10">
-  <header>
+  <header id="header">
     <a href="index.html" id="home_link">Git Immersion</a>
     <a href="http://edgecase.com" target="_blank" id="edgecase_link">Brought to you by EdgeCase</a>
 
     <nav>
       <ul>
   <li class="arrow next">
-          <a href="lab_11.html">Next</a>
+          <a href="lab_11.html#main_content">Next</a>
       </li>
   <li class="arrow previous">
-          <a href="lab_09.html">Previous</a>
+          <a href="lab_09.html#main_content">Previous</a>
       </li>
   <li class="index_button"><a href="#">Index</a></li>
 </ul>
@@ -57,27 +58,27 @@
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git log
-commit fa3c1411aa09441695a9e645d4371e8d749da1dc
+commit 6c087a1a127f207f63d482381059e6edd6813604
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Wed Mar 9 10:27:54 2011 -0500
+Date:   Mon May 9 13:09:06 2011 -0400
 
     Added a comment
 
-commit 8c3228730ed03116815a5cc682e8105e7d981928
+commit ff32354d05320da011147dc4cca8a6d9b2eb34b1
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Wed Mar 9 10:27:54 2011 -0500
+Date:   Mon May 9 13:09:06 2011 -0400
 
     Added a default value
 
-commit 43628f779cb333dd30d78186499f93638107f70b
+commit cc2e44afe6ff63647e577cf5608ac050bce39cd8
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Wed Mar 9 10:27:54 2011 -0500
+Date:   Mon May 9 13:09:06 2011 -0400
 
     Using ARGV
 
-commit 911e8c91caeab8d30ad16d56746cbd6eef72dc4c
+commit 746bac040be71dc4bbcbd5e54826f79da946a782
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Wed Mar 9 10:27:54 2011 -0500
+Date:   Mon May 9 13:09:06 2011 -0400
 
     First Commit
 </pre>
@@ -89,10 +90,10 @@ Date:   Wed Mar 9 10:27:54 2011 -0500
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git log --pretty=oneline
-fa3c1411aa09441695a9e645d4371e8d749da1dc Added a comment
-8c3228730ed03116815a5cc682e8105e7d981928 Added a default value
-43628f779cb333dd30d78186499f93638107f70b Using ARGV
-911e8c91caeab8d30ad16d56746cbd6eef72dc4c First Commit
+6c087a1a127f207f63d482381059e6edd6813604 Added a comment
+ff32354d05320da011147dc4cca8a6d9b2eb34b1 Added a default value
+cc2e44afe6ff63647e577cf5608ac050bce39cd8 Using ARGV
+746bac040be71dc4bbcbd5e54826f79da946a782 First Commit
 </pre>
 <h2>Controlling Which Entries are Displayed <em>02</em></h2>
 <p>There are a lot of options for selecting which entries are displayed in the log.  Play around with the following options:</p>
@@ -112,10 +113,10 @@ git log --pretty=oneline --all</pre>
 <p>It looks like this:</p>
 <h4>Output:</h4>
 <pre class="sample">$ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
-* fa3c141 2011-03-09 | Added a comment (HEAD, master) [Jim Weirich]
-* 8c32287 2011-03-09 | Added a default value [Jim Weirich]
-* 43628f7 2011-03-09 | Using ARGV [Jim Weirich]
-* 911e8c9 2011-03-09 | First Commit [Jim Weirich]</pre>
+* 6c087a1 2011-05-09 | Added a comment (HEAD, master) [Jim Weirich]
+* ff32354 2011-05-09 | Added a default value [Jim Weirich]
+* cc2e44a 2011-05-09 | Using ARGV [Jim Weirich]
+* 746bac0 2011-05-09 | First Commit [Jim Weirich]</pre>
 <p>Let&#8217;s look at it in detail:</p>
 <ul>
 	<li><code>--pretty="..."</code> defines the format of the output.</li>
@@ -195,14 +196,14 @@ git log --pretty=oneline --all</pre>
 </div>
 
 
-  <footer>
+  <footer id="footer">
     <nav>
       <ul>
   <li class="arrow next">
-          <a href="lab_11.html">Next</a>
+          <a href="lab_11.html#main_content">Next</a>
       </li>
   <li class="arrow previous">
-          <a href="lab_09.html">Previous</a>
+          <a href="lab_09.html#main_content">Previous</a>
       </li>
   <li class="index_button"><a href="#">Index</a></li>
 </ul>

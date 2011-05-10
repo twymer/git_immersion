@@ -1,0 +1,11 @@
+build
+clean
+clean_samples
+clobber
+labs
+package
+publish
+repackage
+run[last_lab]
+upload
+view

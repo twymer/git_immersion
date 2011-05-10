@@ -19,23 +19,22 @@ function readCookie(name) {
   return null;
 }
 
-function eraseCookie(name) {
-  createCookie(name,"",-1);
-}
+function eraseCookie(name) { createCookie(name,"",-1); }
 
 function switchBookmarkOn() {
   $('#bookmark').addClass('active')
-                .css({ backgroundPosition: '-69px 0'})
                 .animate({ top: -45, }, 100);
 }
+
 function switchBookmarkOff() {
   $('#bookmark').removeClass('active')
-                .css({ backgroundPosition: '-38px 0'})
                 .animate({ top: -75, }, 100);
 }
 
+var current_section = {element:'#main_content', index:0};
 
 $(function() {
+  var h2_ceil = $("h2").length -1;
   // Bookmark
   var currentLabID = $('body').data('lab-id');
   if(readCookie(currentLabID)) { switchBookmarkOn(); }
@@ -62,14 +61,12 @@ $(function() {
     var bookmark = $(this);
     if(bookmark.hasClass('active')) {
       bookmark.removeClass('active')
-              .css({ backgroundPosition: '0 0'})
               .animate({ top: -20, }, 100);
 
       $('#no_bookmarks').fadeOut(100);
       $('#index li').fadeIn(100);
     } else {
       bookmark.addClass('active')
-              .css({ backgroundPosition: '-19px 0'})
               .animate({ top: 0, }, 100);
 
       $('#index li:not(.bookmark)').fadeOut(100);
@@ -81,7 +78,7 @@ $(function() {
 
 
   // Lab Index
-  $('.index_button a').click(function(e) {
+  $('#header .index_button a, #footer .index_button a').click(function(e) {
     e.preventDefault();
     $('#index').fadeToggle(200);
   });
@@ -92,15 +89,72 @@ $(function() {
   );
 
 
+  $('#header .arrow a').click(function(e){
+    window.location = '/' + $(this).attr('href') + '#main_content';
+  });
+
+  function incrementCurrentSection(down){
+    if(current_section.element == "#main_content"){
+      current_section.element = "h2";
+      current_section.index = (down) ? 0 : h2_ceil;
+    } else {
+      if(down){
+        current_section.index++;
+        if(current_section.index > h2_ceil){
+          current_section.element = "#main_content";
+          current_section.index = 0;
+        }
+      } else {
+        current_section.index--;
+        if(current_section.index < 0){
+          if(current_section.element == "#main_content"){
+            current_section.element = "h2";
+            current_section.index = h2_ceil+1;
+          } else {
+            current_section.element = "#main_content";
+            current_section.index = 1;
+          }
+        }
+      }
+    }
+  }
+
+  function scrollTo(location) {
+    $('body, html').animate({scrollTop: location}, 250);
+  }
+
+  function nextPage()     { $('header .next a').click(); }
+  function previousPage() { $('header .previous a').click(); }
+  function pageDown()     {
+    incrementCurrentSection(true);
+    var target;
+    if(current_section.element == '#main_content') { target = $(current_section.element); }
+    else { target = $(current_section.element+":eq("+current_section.index+")"); }
+    scrollTo(target.offset().top);
+  }
+
+  function pageUp(){
+    incrementCurrentSection(false);
+    var target;
+    if(current_section.element == '#main_content') { target = $(current_section.element); }
+    else { target = $(current_section.element+":eq("+current_section.index+")"); }
+    scrollTo(target.offset().top);
+  }
+
+
   $(document).click(function(e) {
     if (!$(e.target).closest('#index, .index_button').length) {
       $('#index').fadeOut(100);
     }
   }).keyup(function(e) {
-    if(e.keyCode == 27) { $('#index').fadeOut(100); }
+    if(e.keyCode == 27)                    { /* escape key */       $('#index').fadeOut(100); }
+    if(e.keyCode == 76 || e.keyCode == 39) { /* l or right arrow */ nextPage(); }
+    if(e.keyCode == 72 || e.keyCode == 37) { /* h or left arrow */  previousPage(); }
+    if(e.keyCode == 74 || e.keyCode == 40) { /* j or down arrow */  pageDown(); }
+    if(e.keyCode == 75 || e.keyCode == 38) { /* k or up arrow */    pageUp(); }
   });
 
-  $('pre.instructions').each(function(i, pre) { 
+  $('#main_content pre.instructions').each(function(i, pre) {
     var lines = pre.innerHTML.split("\n")
         container = $('<div class="instructions">');
 
@@ -111,3 +165,4 @@ $(function() {
     $(pre).replaceWith(container);
   });
 });
+

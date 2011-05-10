@@ -22,21 +22,22 @@
   </script>
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="html5.js"></script>
+  <script type="text/javascript" src="jquery.hotkeys.js"></script>
   <script type="text/javascript" src="UI.js"></script>
 </head>
 
 <body data-lab-id="12">
-  <header>
+  <header id="header">
     <a href="index.html" id="home_link">Git Immersion</a>
     <a href="http://edgecase.com" target="_blank" id="edgecase_link">Brought to you by EdgeCase</a>
 
     <nav>
       <ul>
   <li class="arrow next">
-          <a href="lab_13.html">Next</a>
+          <a href="lab_13.html#main_content">Next</a>
       </li>
   <li class="arrow previous">
-          <a href="lab_11.html">Previous</a>
+          <a href="lab_11.html#main_content">Previous</a>
       </li>
   <li class="index_button"><a href="#">Index</a></li>
 </ul>
@@ -58,10 +59,11 @@
 <p class="note"><strong>Note:</strong> You did remember to define <code>hist</code> in your <code>.gitconfig</code> file, right?  If not, review the lab on aliases.</p>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* fa3c141 2011-03-09 | Added a comment (HEAD, master) [Jim Weirich]
-* 8c32287 2011-03-09 | Added a default value [Jim Weirich]
-* 43628f7 2011-03-09 | Using ARGV [Jim Weirich]
-* 911e8c9 2011-03-09 | First Commit [Jim Weirich]</pre>
+git: 'hist' is not a git command. See 'git --help'.
+
+Did you mean this?
+	bisect
+</pre>
 <p>Examine the log output and find the hash for the first commit.  It should be the last line of the <code>git hist</code> output.  Use that hash code (the first 7 characters are enough) in the command below.  Then check the contents of the hello.rb file.</p>
 <h4>Execute:</h4>
 <pre class="instructions">git checkout &lt;hash&gt;
@@ -70,8 +72,8 @@ cat hello.rb</pre>
 <p class="note"><strong>Note:</strong> Many commands depend on the hash values in the repository.  Since your hash values will vary from mine, whenever you see something like &lt;hash&gt; or &lt;treehash&gt; in the command, substitute in the proper hash value for your repository.</p>
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
-<pre class="sample">$ git checkout 911e8c9
-Note: checking out '911e8c9'.
+<pre class="sample">$ git checkout 746bac0
+Note: checking out '746bac0'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
@@ -82,7 +84,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b new_branch_name
 
-HEAD is now at 911e8c9... First Commit
+HEAD is now at 746bac0... First Commit
 $ cat hello.rb
 puts "Hello, World"
 </pre>
@@ -95,7 +97,7 @@ cat hello.rb</pre>
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git checkout master
-Previous HEAD position was 911e8c9... First Commit
+Previous HEAD position was 746bac0... First Commit
 Switched to branch 'master'
 $ cat hello.rb
 # Default is "World"
@@ -169,14 +171,14 @@ puts "Hello, #{name}!"
 </div>
 
 
-  <footer>
+  <footer id="footer">
     <nav>
       <ul>
   <li class="arrow next">
-          <a href="lab_13.html">Next</a>
+          <a href="lab_13.html#main_content">Next</a>
       </li>
   <li class="arrow previous">
-          <a href="lab_11.html">Previous</a>
+          <a href="lab_11.html#main_content">Previous</a>
       </li>
   <li class="index_button"><a href="#">Index</a></li>
 </ul>

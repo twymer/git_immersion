@@ -18,7 +18,7 @@ header {
   position       : relative;
   width          : 688px;
   height         : 179px;
-  margin         : 45px 0;
+  margin         : 45px 0 25px 0;
   font-size      : 14px;
   font-style     : italic;
   text-transform : uppercase;
@@ -78,6 +78,8 @@ header #bookmark {
   cursor      : pointer;
   background  : url(bookmarks.png) no-repeat -38px 0; }
 
+header #bookmark.active { background-position: -69px 0; }
+
 
 
 /* Lab Title
@@ -126,6 +128,8 @@ h1.lab_title em {
 
 /* Main Content
 ------------------------------------------------------------ */
+
+#main_content { padding-top: 20px; }
 
 #main_content h2 {
   position      : relative;
@@ -209,8 +213,8 @@ div.instructions pre {
 #main_content pre.file {
   display       : block;
   margin-bottom : 1em;
-  border-top    : 1px solid #b6b6b6;
-  border-bottom : 1px solid #b6b6b6;
+  border-top    : 1px solid #ddd;
+  border-bottom : 1px solid #ddd;
   padding       : 10px 0 10px 85px;
   font          : 13px courier, monospace;
   background    : #fff; }
@@ -336,6 +340,8 @@ div.instructions pre {
   cursor     : pointer;
   background : url(bookmarks.png) no-repeat;
   z-index    : 2; }
+
+#index #show_bookmarks.active { background-position: -19px 0; }
 
 #index #no_bookmarks {
   display     : none;

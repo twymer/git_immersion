@@ -22,21 +22,22 @@
   </script>
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="html5.js"></script>
+  <script type="text/javascript" src="jquery.hotkeys.js"></script>
   <script type="text/javascript" src="UI.js"></script>
 </head>
 
 <body data-lab-id="25">
-  <header>
+  <header id="header">
     <a href="index.html" id="home_link">Git Immersion</a>
     <a href="http://edgecase.com" target="_blank" id="edgecase_link">Brought to you by EdgeCase</a>
 
     <nav>
       <ul>
   <li class="arrow next">
-          <a href="lab_26.html">Next</a>
+          <a href="lab_26.html#main_content">Next</a>
       </li>
   <li class="arrow previous">
-          <a href="lab_24.html">Previous</a>
+          <a href="lab_24.html#main_content">Previous</a>
       </li>
   <li class="index_button"><a href="#">Index</a></li>
 </ul>
@@ -56,16 +57,11 @@
 <pre class="instructions">git hist --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --all
-* 07a2a46 2011-03-09 | Updated Rakefile (HEAD, greet) [Jim Weirich]
-* 649d26c 2011-03-09 | Hello uses Greeter [Jim Weirich]
-* 1f3cbd2 2011-03-09 | Added greeter class [Jim Weirich]
-* 8029c07 2011-03-09 | Added a Rakefile. (master) [Jim Weirich]
-* 567948a 2011-03-09 | Moved hello.rb to lib [Jim Weirich]
-* 6a78635 2011-03-09 | Add an author/email comment [Jim Weirich]
-* fa3c141 2011-03-09 | Added a comment (v1) [Jim Weirich]
-* 8c32287 2011-03-09 | Added a default value (v1-beta) [Jim Weirich]
-* 43628f7 2011-03-09 | Using ARGV [Jim Weirich]
-* 911e8c9 2011-03-09 | First Commit [Jim Weirich]</pre>
+git: 'hist' is not a git command. See 'git --help'.
+
+Did you mean this?
+	bisect
+</pre>
 <h2>Switch to the Master Branch <em>01</em></h2>
 <p>Just use the <code>git checkout</code> command to switch between branches.</p>
 <h4>Execute:</h4>
@@ -164,14 +160,14 @@ puts greeter.greet
 </div>
 
 
-  <footer>
+  <footer id="footer">
     <nav>
       <ul>
   <li class="arrow next">
-          <a href="lab_26.html">Next</a>
+          <a href="lab_26.html#main_content">Next</a>
       </li>
   <li class="arrow previous">
-          <a href="lab_24.html">Previous</a>
+          <a href="lab_24.html#main_content">Previous</a>
       </li>
   <li class="index_button"><a href="#">Index</a></li>
 </ul>

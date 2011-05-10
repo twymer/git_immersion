@@ -22,21 +22,22 @@
   </script>
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="html5.js"></script>
+  <script type="text/javascript" src="jquery.hotkeys.js"></script>
   <script type="text/javascript" src="UI.js"></script>
 </head>
 
 <body data-lab-id="22">
-  <header>
+  <header id="header">
     <a href="index.html" id="home_link">Git Immersion</a>
     <a href="http://edgecase.com" target="_blank" id="edgecase_link">Brought to you by EdgeCase</a>
 
     <nav>
       <ul>
   <li class="arrow next">
-          <a href="lab_23.html">Next</a>
+          <a href="lab_23.html#main_content">Next</a>
       </li>
   <li class="arrow previous">
-          <a href="lab_21.html">Previous</a>
+          <a href="lab_21.html#main_content">Previous</a>
       </li>
   <li class="index_button"><a href="#">Index</a></li>
 </ul>
@@ -57,8 +58,9 @@
 <pre class="instructions">ls -C .git</pre>
 <h4>Output:</h4>
 <pre class="sample">$ ls -C .git
-COMMIT_EDITMSG	MERGE_RR	config		hooks		info		objects		rr-cache
-HEAD		ORIG_HEAD	description	index		logs		refs
+COMMIT_EDITMSG	branches	hooks		logs
+HEAD		config		index		objects
+ORIG_HEAD	description	info		refs
 </pre>
 <p>This is the magic directory where all the git &#8220;stuff&#8221; is stored. Let&#8217;s peek in the objects directory.</p>
 <h2>The Object Store <em>02</em></h2>
@@ -66,8 +68,9 @@ HEAD		ORIG_HEAD	description	index		logs		refs
 <pre class="instructions">ls -C .git/objects</pre>
 <h4>Output:</h4>
 <pre class="sample">$ ls -C .git/objects
-09	24	28	45	59	6a	77	80	8c	97	af	c4	e7	info
-11	27	43	56	69	6b	78	84	91	9c	b5	e4	fa	pack
+09	27	43	59	6c	78	af	c5	e5	info
+11	28	4e	69	74	97	b5	cc	e7	pack
+24	33	51	6b	75	9c	c4	e4	ff
 </pre>
 <p>You should see a bunch of directories with 2 letter names.  The directory names are the first two letters of the sha1 hash of the object stored in git.</p>
 <h2>Deeper into the Object Store <em>03</em></h2>
@@ -110,7 +113,7 @@ $ ls .git/refs/tags
 v1
 v1-beta
 $ cat .git/refs/tags/v1
-fa3c1411aa09441695a9e645d4371e8d749da1dc
+6c087a1a127f207f63d482381059e6edd6813604
 </pre>
 <p>You should recognize the files in the tags subdirectory.  Each file corresponds to a tag you created with the <code>git tag</code> command earlier. Its content is just the hash of the commit tied to the tag.</p>
 <p>The heads directory is similar, but is used for branches rather than tags.  We only have one branch at the moment, so all you will see is master in this directory.</p>
@@ -187,14 +190,14 @@ ref: refs/heads/master
 </div>
 
 
-  <footer>
+  <footer id="footer">
     <nav>
       <ul>
   <li class="arrow next">
-          <a href="lab_23.html">Next</a>
+          <a href="lab_23.html#main_content">Next</a>
       </li>
   <li class="arrow previous">
-          <a href="lab_21.html">Previous</a>
+          <a href="lab_21.html#main_content">Previous</a>
       </li>
   <li class="index_button"><a href="#">Index</a></li>
 </ul>
