@@ -80,17 +80,17 @@ ORIG_HEAD	description	info		refs
 <pre class="instructions">ls -C .git/objects</pre>
 <h4>Output:</h4>
 <pre class="sample">$ ls -C .git/objects
-09	1d	28	4b	5a	78	a0	c3	d1	info
-0e	24	35	52	69	97	af	c4	e4	pack
-11	27	43	59	6b	9c	b5	c8	e7
+04	12	28	59	78	99	af	d2	e4	pack
+09	24	3f	69	82	9c	b5	d4	e7
+11	27	43	6b	97	ae	c4	d8	info
 </pre>
 <p>You should see a bunch of directories with 2 letter names.  The directory names are the first two letters of the sha1 hash of the object stored in git.</p>
 <h2>Deeper into the Object Store <em>03</em></h2>
 <h4>Execute:</h4>
 <pre class="instructions">ls -C .git/objects/&lt;dir&gt;</pre>
 <h4>Output:</h4>
-<pre class="sample">$ ls -C .git/objects/09
-6b74c56bfc6b40e754fc0725b8c70b2038b91e	9fb6f9d3a104feb32fcac22354c4d0e8a182c1
+<pre class="sample">$ ls -C .git/objects/04
+fe00d054db2885b1a83e6127b128ae0d295136
 </pre>
 <p>Look in one of the two-letter directories.  You should see some files with 38-character names.  These are the files that contain the objects stored in git.  These files are compressed and encoded, so looking at their contents directly won&#8217;t be very helpful, but we will take a closer look in a bit.</p>
 <h2>Config File <em>04</em></h2>
@@ -125,7 +125,7 @@ $ ls .git/refs/tags
 v1
 v1-beta
 $ cat .git/refs/tags/v1
-4b5e137180b6af9ece2012994a70bda86bdbae74
+04fe00d054db2885b1a83e6127b128ae0d295136
 </pre>
 <p>You should recognize the files in the tags subdirectory.  Each file corresponds to a tag you created with the <code>git tag</code> command earlier. Its content is just the hash of the commit tied to the tag.</p>
 <p>The heads directory is similar, but is used for branches rather than tags.  We only have one branch at the moment, so all you will see is master in this directory.</p>
