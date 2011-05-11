@@ -417,20 +417,33 @@ div.instructions pre {
 /* Pager
 ------------------------------------------------------------ */
 
-#pager {
-  position   : fixed;
-  top        : 15px;
-  right      : 15px;
-  width      : 124px;
-  height     : 44px;
-  background : url(pager.png); }
+#pager ul {
+  list-style-type : none;
+  position        : fixed;
+  top             : 15px;
+  right           : 15px;
+  width           : 124px;
+  height          : 44px;
+  background      : url(pager.png);
+  z-index         : 3; }
 
-#pager a {
-  position : absolute;
-  top      : 0;
-  left     : 0;
-  bottom   : 0;
-  width    : 20px;
+#pager li a {
+  position    : absolute;
+  top         : 0;
+  left        : 0;
+  bottom      : 0;
+  width       : 32px;
+  text-indent : -999em;
+}
+
+#pager .next a {
+  left  : auto;
+  right : 0;
+}
+
+#pager .index_button a {
+  left  : 40px;
+  width : 44px;
 }
 
 
@@ -501,3 +514,5 @@ footer a#edgecase_link_small {
   height      : 53px;
   text-indent : -999em;
   background  : url(edgecase_logo_small.png); }
+
+
