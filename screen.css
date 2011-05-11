@@ -22,7 +22,8 @@ header {
   font-size      : 14px;
   font-style     : italic;
   text-transform : uppercase;
-  background     : url(heading.png) no-repeat 100% 0; }
+  background     : url(heading.png) no-repeat 100% 0;
+  z-index        : 2; }
 
 header a,
 header span {
@@ -409,6 +410,28 @@ div.instructions pre {
   width        : 25px;
   font-weight  : normal;
   text-align   : right; }
+
+
+
+
+/* Pager
+------------------------------------------------------------ */
+
+#pager {
+  position   : fixed;
+  top        : 15px;
+  right      : 15px;
+  width      : 124px;
+  height     : 44px
+  background : url(pager.png); }
+
+#pager a {
+  position : absolute;
+  top      : 0;
+  left     : 0;
+  bottom   : 0;
+  width    : 20px;
+}
 
 
 
