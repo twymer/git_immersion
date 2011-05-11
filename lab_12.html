@@ -27,6 +27,18 @@
 </head>
 
 <body data-lab-id="12">
+  <div id="pager">
+    <ul>
+  <li class="arrow next">
+          <a href="lab_13.html#main_content">Next</a>
+      </li>
+  <li class="arrow previous">
+          <a href="lab_11.html#main_content">Previous</a>
+      </li>
+  <li class="index_button"><a href="#">Index</a></li>
+</ul>
+
+  </div>
   <header id="header">
     <a href="index.html" id="home_link">Git Immersion</a>
     <a href="http://edgecase.com" target="_blank" id="edgecase_link">Brought to you by EdgeCase</a>
@@ -72,8 +84,8 @@ cat hello.rb</pre>
 <p class="note"><strong>Note:</strong> Many commands depend on the hash values in the repository.  Since your hash values will vary from mine, whenever you see something like &lt;hash&gt; or &lt;treehash&gt; in the command, substitute in the proper hash value for your repository.</p>
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
-<pre class="sample">$ git checkout fb82e08
-Note: checking out 'fb82e08'.
+<pre class="sample">$ git checkout 5a60783
+Note: checking out '5a60783'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
@@ -84,7 +96,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b new_branch_name
 
-HEAD is now at fb82e08... First Commit
+HEAD is now at 5a60783... First Commit
 $ cat hello.rb
 puts "Hello, World"
 </pre>
@@ -97,7 +109,7 @@ cat hello.rb</pre>
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git checkout master
-Previous HEAD position was fb82e08... First Commit
+Previous HEAD position was 5a60783... First Commit
 Switched to branch 'master'
 $ cat hello.rb
 # Default is "World"

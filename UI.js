@@ -78,7 +78,7 @@ $(function() {
 
 
   // Lab Index
-  $('#header .index_button a, #footer .index_button a').click(function(e) {
+  $('#header .index_button a, #footer .index_button a, #pager .index_button a').click(function(e) {
     e.preventDefault();
     $('#index').fadeToggle(200);
   });
@@ -164,6 +164,19 @@ $(function() {
     });
 
     $(pre).replaceWith(container);
+  });
+
+  window.pager = $('#pager');
+  window.pager.hide();
+  window.pagerShouldBeVisible = function(){
+    return $(document).scrollTop() > 215;
+  };
+  $(window).scroll(function(e) {
+    if(pagerShouldBeVisible()) {
+      pager.fadeIn(200);
+    } else {
+      pager.fadeOut(200);
+    }
   });
 });
 

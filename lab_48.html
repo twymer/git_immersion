@@ -27,6 +27,18 @@
 </head>
 
 <body data-lab-id="48">
+  <div id="pager">
+    <ul>
+  <li class="arrow next">
+          <a href="lab_49.html#main_content">Next</a>
+      </li>
+  <li class="arrow previous">
+          <a href="lab_47.html#main_content">Previous</a>
+      </li>
+  <li class="index_button"><a href="#">Index</a></li>
+</ul>
+
+  </div>
   <header id="header">
     <a href="index.html" id="home_link">Git Immersion</a>
     <a href="http://edgecase.com" target="_blank" id="edgecase_link">Brought to you by EdgeCase</a>
@@ -69,7 +81,7 @@ git commit -m "Added shared comment to readme"</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git push shared master
 To ../hello.git
-   3eb39e4..730e76a  master -&gt; master
+   c7b5fb3..761d52f  master -&gt; master
 </pre>
 <p class="note"><strong><span class="caps">NOTE</span>:</strong> We had to explicitly name the branch master that was receiving the push.  It is possible to set it up automatically, but I <em>never</em> remember the commands to do that.  Check out the &#8220;Git Remote Branch&#8221; gem for easy management of remote branches.</p>
   </div>
