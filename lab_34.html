@@ -81,11 +81,17 @@ Applying: hello uses Greeter
 Applying: updated Rakefile
 $
 $ git hist
-git: 'hist' is not a git command. See 'git --help'.
-
-Did you mean this?
-	bisect
-</pre>
+* 6ac47a1 2011-05-13 | Updated Rakefile (HEAD, greet) [Jim Weirich]
+* e86b8f8 2011-05-13 | Hello uses Greeter [Jim Weirich]
+* 920d724 2011-05-13 | Added greeter class [Jim Weirich]
+* fee4404 2011-05-13 | Added README (master) [Jim Weirich]
+* 7627cf5 2011-05-13 | Added a Rakefile. [Jim Weirich]
+* 0e056fb 2011-05-13 | Moved hello.rb to lib [Jim Weirich]
+* e8d763e 2011-05-13 | Add an author/email comment [Jim Weirich]
+* 22ac36b 2011-05-13 | Added a comment (v1) [Jim Weirich]
+* 8f4c526 2011-05-13 | Added a default value (v1-beta) [Jim Weirich]
+* 74cc61e 2011-05-13 | Using ARGV [Jim Weirich]
+* d528edc 2011-05-13 | First Commit [Jim Weirich]</pre>
 <h2>Merge VS Rebase <em>01</em></h2>
 <p>The final result of the rebase is very similar to the merge.  The greet branch now contains all of its changes, as well as all the changes from the master branch.  However, the commit tree is quite different.  The commit tree for the greet branch has been rewritten so that the master branch is a part of the commit history.  This leaves the chain of commits linear and much easier to read.</p>
 <h2>When to Rebase, When to Merge? <em>02</em></h2>

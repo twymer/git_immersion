@@ -85,7 +85,7 @@ git commit -m "Oops, we didn't want this commit"</pre>
 <p>This will pop you into the editor.  You can edit the default commit message or leave it as is.  Save and close the file. You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git revert HEAD --no-edit
-[master 692b118] Revert "Oops, we didn't want this commit"
+[master c450c28] Revert "Oops, we didn't want this commit"
  1 files changed, 1 insertions(+), 1 deletions(-)
 </pre>
 <p>Since we were undoing the very last commit we made, we were able to use <code>HEAD</code> as the argument to revert.  We can revert any arbitrary commit earlier in history by simply specifying its hash value.</p>
@@ -96,11 +96,12 @@ git commit -m "Oops, we didn't want this commit"</pre>
 <pre class="instructions">git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-git: 'hist' is not a git command. See 'git --help'.
-
-Did you mean this?
-	bisect
-</pre>
+* c450c28 2011-05-13 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
+* 8f71375 2011-05-13 | Oops, we didn't want this commit [Jim Weirich]
+* 22ac36b 2011-05-13 | Added a comment (v1) [Jim Weirich]
+* 8f4c526 2011-05-13 | Added a default value (v1-beta) [Jim Weirich]
+* 74cc61e 2011-05-13 | Using ARGV [Jim Weirich]
+* d528edc 2011-05-13 | First Commit [Jim Weirich]</pre>
 <p>This technique will work with any commit (although you may have to resolve conflicts).  It is safe to use even on branches that are publicly shared on remote repositories.</p>
 <h2>Up Next <em>05</em></h2>
 <p>Next, let&#8217;s look at a technique that can be used to remove the most recent commits from the repository history.</p>
