@@ -74,30 +74,30 @@ git hist</pre>
 <pre class="sample">$ git checkout greet
 Already on 'greet'
 $ git hist
-*   c7105c7 2011-08-12 | Merged master fixed conflict. (HEAD, greet) [Jim Weirich]
+*   6e851be 2011-08-12 | Merged master fixed conflict. (HEAD, greet) [Jim Weirich]
 |\  
-| * b57259b 2011-08-12 | Made interactive (master) [Jim Weirich]
-* |   5c004e1 2011-08-12 | Merge branch 'master' into greet [Jim Weirich]
+| * 7f78d34 2011-08-12 | Made interactive (master) [Jim Weirich]
+* |   ded9082 2011-08-12 | Merge branch 'master' into greet [Jim Weirich]
 |\ \  
 | |/  
-| * e58ef45 2011-08-12 | Added README [Jim Weirich]
-* | 5433050 2011-08-12 | Updated Rakefile [Jim Weirich]
-* | 9fa8804 2011-08-12 | Hello uses Greeter [Jim Weirich]
-* | 5213fa9 2011-08-12 | Added greeter class [Jim Weirich]
+| * 240c2f1 2011-08-12 | Added README [Jim Weirich]
+* | 8676948 2011-08-12 | Updated Rakefile [Jim Weirich]
+* | 57e37cd 2011-08-12 | Hello uses Greeter [Jim Weirich]
+* | 9b9c518 2011-08-12 | Added greeter class [Jim Weirich]
 |/  
-* bb2c44d 2011-08-12 | Added a Rakefile. [Jim Weirich]
-* 16673c8 2011-08-12 | Moved hello.rb to lib [Jim Weirich]
-* 46134dc 2011-08-12 | Add an author/email comment [Jim Weirich]
-* 9ce4a69 2011-08-12 | Added a comment (v1) [Jim Weirich]
-* 7736085 2011-08-12 | Added a default value (v1-beta) [Jim Weirich]
-* 25352d5 2011-08-12 | Using ARGV [Jim Weirich]
-* 13e42f8 2011-08-12 | First Commit [Jim Weirich]</pre>
+* 2e5aaa8 2011-08-12 | Added a Rakefile. [Jim Weirich]
+* ee71c0c 2011-08-12 | Moved hello.rb to lib [Jim Weirich]
+* 6a3ce06 2011-08-12 | Add an author/email comment [Jim Weirich]
+* 328ce3f 2011-08-12 | Added a comment (v1) [Jim Weirich]
+* 86589dc 2011-08-12 | Added a default value (v1-beta) [Jim Weirich]
+* d74e780 2011-08-12 | Using ARGV [Jim Weirich]
+* 6494c77 2011-08-12 | First Commit [Jim Weirich]</pre>
 <p>That&#8217;s a bit hard to read, but looking at the data we see that the &#8220;Updated Rakefile&#8221; commit was the last commit on the greet branch before merging.  Let&#8217;s reset the greet branch to that commit.</p>
 <h4>Execute:</h4>
 <pre class="instructions">git reset --hard &lt;hash&gt;</pre>
 <h4>Output:</h4>
-<pre class="sample">$ git reset --hard 5433050
-HEAD is now at 5433050 Updated Rakefile
+<pre class="sample">$ git reset --hard 8676948
+HEAD is now at 8676948 Updated Rakefile
 </pre>
 <h2>Check the branch. <em>02</em></h2>
 <p>Look at the log for the greet branch.  We no longer have the merge commits in its history.</p>
@@ -105,19 +105,19 @@ HEAD is now at 5433050 Updated Rakefile
 <pre class="instructions">git hist --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --all
-* 5433050 2011-08-12 | Updated Rakefile (HEAD, greet) [Jim Weirich]
-* 9fa8804 2011-08-12 | Hello uses Greeter [Jim Weirich]
-* 5213fa9 2011-08-12 | Added greeter class [Jim Weirich]
-| * b57259b 2011-08-12 | Made interactive (master) [Jim Weirich]
-| * e58ef45 2011-08-12 | Added README [Jim Weirich]
+* 8676948 2011-08-12 | Updated Rakefile (HEAD, greet) [Jim Weirich]
+* 57e37cd 2011-08-12 | Hello uses Greeter [Jim Weirich]
+* 9b9c518 2011-08-12 | Added greeter class [Jim Weirich]
+| * 7f78d34 2011-08-12 | Made interactive (master) [Jim Weirich]
+| * 240c2f1 2011-08-12 | Added README [Jim Weirich]
 |/  
-* bb2c44d 2011-08-12 | Added a Rakefile. [Jim Weirich]
-* 16673c8 2011-08-12 | Moved hello.rb to lib [Jim Weirich]
-* 46134dc 2011-08-12 | Add an author/email comment [Jim Weirich]
-* 9ce4a69 2011-08-12 | Added a comment (v1) [Jim Weirich]
-* 7736085 2011-08-12 | Added a default value (v1-beta) [Jim Weirich]
-* 25352d5 2011-08-12 | Using ARGV [Jim Weirich]
-* 13e42f8 2011-08-12 | First Commit [Jim Weirich]</pre>
+* 2e5aaa8 2011-08-12 | Added a Rakefile. [Jim Weirich]
+* ee71c0c 2011-08-12 | Moved hello.rb to lib [Jim Weirich]
+* 6a3ce06 2011-08-12 | Add an author/email comment [Jim Weirich]
+* 328ce3f 2011-08-12 | Added a comment (v1) [Jim Weirich]
+* 86589dc 2011-08-12 | Added a default value (v1-beta) [Jim Weirich]
+* d74e780 2011-08-12 | Using ARGV [Jim Weirich]
+* 6494c77 2011-08-12 | First Commit [Jim Weirich]</pre>
   </div>
 
   <div id="index">
