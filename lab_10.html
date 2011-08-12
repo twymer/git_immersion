@@ -70,27 +70,27 @@
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git log
-commit 22ac36b618d47af4f60c93d6de06df168e26cad4
+commit 9ce4a69b473772a55149c2b2c931e3e63a57ce93
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Fri May 13 10:51:07 2011 -0400
+Date:   Fri Aug 12 10:06:20 2011 -0400
 
     Added a comment
 
-commit 8f4c526454ba43c38bcdbad5e8f7e8ff39438b2d
+commit 7736085378b6bfaf63e16cf4994509d70c32daad
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Fri May 13 10:51:07 2011 -0400
+Date:   Fri Aug 12 10:06:20 2011 -0400
 
     Added a default value
 
-commit 74cc61ef6f3265e1e87a919b2ef7774b2e21a987
+commit 25352d5b8de6f6fc3b10dba68995b02a8345014a
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Fri May 13 10:51:07 2011 -0400
+Date:   Fri Aug 12 10:06:20 2011 -0400
 
     Using ARGV
 
-commit d528edcd21d36cccc0aa03119d6776d060b06c2f
+commit 13e42f8034167b1ac26c8bfba8590ad000660210
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Fri May 13 10:51:07 2011 -0400
+Date:   Fri Aug 12 10:06:20 2011 -0400
 
     First Commit
 </pre>
@@ -102,10 +102,10 @@ Date:   Fri May 13 10:51:07 2011 -0400
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git log --pretty=oneline
-22ac36b618d47af4f60c93d6de06df168e26cad4 Added a comment
-8f4c526454ba43c38bcdbad5e8f7e8ff39438b2d Added a default value
-74cc61ef6f3265e1e87a919b2ef7774b2e21a987 Using ARGV
-d528edcd21d36cccc0aa03119d6776d060b06c2f First Commit
+9ce4a69b473772a55149c2b2c931e3e63a57ce93 Added a comment
+7736085378b6bfaf63e16cf4994509d70c32daad Added a default value
+25352d5b8de6f6fc3b10dba68995b02a8345014a Using ARGV
+13e42f8034167b1ac26c8bfba8590ad000660210 First Commit
 </pre>
 <h2>Controlling Which Entries are Displayed <em>02</em></h2>
 <p>There are a lot of options for selecting which entries are displayed in the log.  Play around with the following options:</p>
@@ -125,10 +125,10 @@ git log --pretty=oneline --all</pre>
 <p>It looks like this:</p>
 <h4>Output:</h4>
 <pre class="sample">$ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
-* 22ac36b 2011-05-13 | Added a comment (HEAD, master) [Jim Weirich]
-* 8f4c526 2011-05-13 | Added a default value [Jim Weirich]
-* 74cc61e 2011-05-13 | Using ARGV [Jim Weirich]
-* d528edc 2011-05-13 | First Commit [Jim Weirich]</pre>
+* 9ce4a69 2011-08-12 | Added a comment (HEAD, master) [Jim Weirich]
+* 7736085 2011-08-12 | Added a default value [Jim Weirich]
+* 25352d5 2011-08-12 | Using ARGV [Jim Weirich]
+* 13e42f8 2011-08-12 | First Commit [Jim Weirich]</pre>
 <p>Let&#8217;s look at it in detail:</p>
 <ul>
 	<li><code>--pretty="..."</code> defines the format of the output.</li>
@@ -158,7 +158,7 @@ git log --pretty=oneline --all</pre>
           <li data-lab-id="5"><a href="lab_05.html"><span>5:</span> Making Changes</a></li>
           <li data-lab-id="6"><a href="lab_06.html"><span>6:</span> Staging Changes</a></li>
           <li data-lab-id="7"><a href="lab_07.html"><span>7:</span> Staging and Committing</a></li>
-          <li data-lab-id="8"><a href="lab_08.html"><span>8:</span> Commiting Changes</a></li>
+          <li data-lab-id="8"><a href="lab_08.html"><span>8:</span> Committing Changes</a></li>
           <li data-lab-id="9"><a href="lab_09.html"><span>9:</span> Changes, not Files</a></li>
           <li data-lab-id="10"><a href="lab_10.html"><span>10:</span> History</a></li>
           <li data-lab-id="11"><a href="lab_11.html"><span>11:</span> Aliases</a></li>
@@ -186,7 +186,7 @@ git log --pretty=oneline --all</pre>
           <li data-lab-id="33"><a href="lab_33.html"><span>33:</span> Resetting the Master Branch</a></li>
           <li data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebasing</a></li>
           <li data-lab-id="35"><a href="lab_35.html"><span>35:</span> Merging Back to Master</a></li>
-          <li data-lab-id="36"><a href="lab_36.html"><span>36:</span> Mutliple Repositories</a></li>
+          <li data-lab-id="36"><a href="lab_36.html"><span>36:</span> Multiple Repositories</a></li>
           <li data-lab-id="37"><a href="lab_37.html"><span>37:</span> Cloning Repositories</a></li>
           <li data-lab-id="38"><a href="lab_38.html"><span>38:</span> Review the Cloned Repository</a></li>
           <li data-lab-id="39"><a href="lab_39.html"><span>39:</span> What is Origin?</a></li>

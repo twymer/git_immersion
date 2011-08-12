@@ -65,7 +65,7 @@
 	<li>Learn that git works with changes, not files.</li>
 </ul>
 <p>Most source control systems work with files.  You add a file to source control and the system will track changes to the file from that point on.</p>
-<p>Git focuses on the changes to a file rather than the file itself. When you say <code>git add file</code>, you are not telling git to add the file to the repository.  Rather you are saying that git should make note of the current state of that file to be commited later.</p>
+<p>Git focuses on the changes to a file rather than the file itself. When you say <code>git add file</code>, you are not telling git to add the file to the repository.  Rather you are saying that git should make note of the current state of that file to be committed later.</p>
 <p>We will attempt to explore that difference in this lab.</p>
 <h2>First Change: Allow a default name <em>01</em></h2>
 <p>Change the &#8220;Hello, World&#8221; program to have a default value if a command line argument is not supplied.</p>
@@ -98,7 +98,7 @@ puts "Hello, #{name}!"
 #
 #	modified:   hello.rb
 #
-# Changed but not updated:
+# Changes not staged for commit:
 #   (use "git add &lt;file&gt;..." to update what will be committed)
 #   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
 #
@@ -115,11 +115,11 @@ git status</pre>
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git commit -m "Added a default value"
-[master 8f4c526] Added a default value
+[master 7736085] Added a default value
  1 files changed, 3 insertions(+), 1 deletions(-)
 $ git status
 # On branch master
-# Changed but not updated:
+# Changes not staged for commit:
 #   (use "git add &lt;file&gt;..." to update what will be committed)
 #   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
 #
@@ -164,7 +164,7 @@ git status</pre>
           <li data-lab-id="5"><a href="lab_05.html"><span>5:</span> Making Changes</a></li>
           <li data-lab-id="6"><a href="lab_06.html"><span>6:</span> Staging Changes</a></li>
           <li data-lab-id="7"><a href="lab_07.html"><span>7:</span> Staging and Committing</a></li>
-          <li data-lab-id="8"><a href="lab_08.html"><span>8:</span> Commiting Changes</a></li>
+          <li data-lab-id="8"><a href="lab_08.html"><span>8:</span> Committing Changes</a></li>
           <li data-lab-id="9"><a href="lab_09.html"><span>9:</span> Changes, not Files</a></li>
           <li data-lab-id="10"><a href="lab_10.html"><span>10:</span> History</a></li>
           <li data-lab-id="11"><a href="lab_11.html"><span>11:</span> Aliases</a></li>
@@ -192,7 +192,7 @@ git status</pre>
           <li data-lab-id="33"><a href="lab_33.html"><span>33:</span> Resetting the Master Branch</a></li>
           <li data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebasing</a></li>
           <li data-lab-id="35"><a href="lab_35.html"><span>35:</span> Merging Back to Master</a></li>
-          <li data-lab-id="36"><a href="lab_36.html"><span>36:</span> Mutliple Repositories</a></li>
+          <li data-lab-id="36"><a href="lab_36.html"><span>36:</span> Multiple Repositories</a></li>
           <li data-lab-id="37"><a href="lab_37.html"><span>37:</span> Cloning Repositories</a></li>
           <li data-lab-id="38"><a href="lab_38.html"><span>38:</span> Review the Cloned Repository</a></li>
           <li data-lab-id="39"><a href="lab_39.html"><span>39:</span> What is Origin?</a></li>

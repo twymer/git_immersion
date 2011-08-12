@@ -94,54 +94,8 @@ $(function() {
     window.location = '/' + $(this).attr('href') + anchor;
   });
 
-  function incrementCurrentSection(down){
-    if(current_section.element == "#main_content"){
-      current_section.element = "h2";
-      current_section.index = (down) ? 0 : h2_ceil;
-    } else {
-      if(down){
-        current_section.index++;
-        if(current_section.index > h2_ceil){
-          current_section.element = "#main_content";
-          current_section.index = 0;
-        }
-      } else {
-        current_section.index--;
-        if(current_section.index < 0){
-          if(current_section.element == "#main_content"){
-            current_section.element = "h2";
-            current_section.index = h2_ceil+1;
-          } else {
-            current_section.element = "#main_content";
-            current_section.index = 1;
-          }
-        }
-      }
-    }
-  }
-
-  function scrollTo(location) {
-    $('body, html').animate({scrollTop: location}, 250);
-  }
-
   function nextPage()     { $('header .next a').click(); }
   function previousPage() { $('header .previous a').click(); }
-  function pageDown()     {
-    incrementCurrentSection(true);
-    var target;
-    if(current_section.element == '#main_content') { target = $(current_section.element); }
-    else { target = $(current_section.element+":eq("+current_section.index+")"); }
-    scrollTo(target.offset().top);
-  }
-
-  function pageUp(){
-    incrementCurrentSection(false);
-    var target;
-    if(current_section.element == '#main_content') { target = $(current_section.element); }
-    else { target = $(current_section.element+":eq("+current_section.index+")"); }
-    scrollTo(target.offset().top);
-  }
-
 
   $(document).click(function(e) {
     if (!$(e.target).closest('#index, .index_button').length) {
@@ -151,8 +105,6 @@ $(function() {
     if(e.keyCode == 27)                    { /* escape key */       $('#index').fadeOut(100); }
     if(e.keyCode == 76 || e.keyCode == 39) { /* l or right arrow */ nextPage(); }
     if(e.keyCode == 72 || e.keyCode == 37) { /* h or left arrow */  previousPage(); }
-    if(e.keyCode == 74 || e.keyCode == 40) { /* j or down arrow */  pageDown(); }
-    if(e.keyCode == 75 || e.keyCode == 38) { /* k or up arrow */    pageUp(); }
   });
 
   $('#main_content pre.instructions').each(function(i, pre) {

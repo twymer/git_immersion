@@ -71,21 +71,21 @@ git hist --all</pre>
 <p style="color:red;"><strong><span class="caps">NOTE</span>: Now in the <em>cloned_hello</em> repo</strong></p>
 <h4>Output:</h4>
 <pre class="sample">$ git fetch
-From /Volumes/Macintosh HD/Users/nummi/Projects/edgecase/git_immersion/auto/hello
-   6ac47a1..1f875c9  master     -&gt; origin/master
+From /Users/adam/projects/git_immersion/auto/hello
+   b4c6dfd..f1ef768  master     -&gt; origin/master
 $ git hist --all
-* 1f875c9 2011-05-13 | Changed README in original repo (origin/master, origin/HEAD) [Jim Weirich]
-* 6ac47a1 2011-05-13 | Updated Rakefile (HEAD, origin/greet, master) [Jim Weirich]
-* e86b8f8 2011-05-13 | Hello uses Greeter [Jim Weirich]
-* 920d724 2011-05-13 | Added greeter class [Jim Weirich]
-* fee4404 2011-05-13 | Added README [Jim Weirich]
-* 7627cf5 2011-05-13 | Added a Rakefile. [Jim Weirich]
-* 0e056fb 2011-05-13 | Moved hello.rb to lib [Jim Weirich]
-* e8d763e 2011-05-13 | Add an author/email comment [Jim Weirich]
-* 22ac36b 2011-05-13 | Added a comment (v1) [Jim Weirich]
-* 8f4c526 2011-05-13 | Added a default value (v1-beta) [Jim Weirich]
-* 74cc61e 2011-05-13 | Using ARGV [Jim Weirich]
-* d528edc 2011-05-13 | First Commit [Jim Weirich]</pre>
+* f1ef768 2011-08-12 | Changed README in original repo (origin/master, origin/HEAD) [Jim Weirich]
+* b4c6dfd 2011-08-12 | Updated Rakefile (HEAD, origin/greet, master) [Jim Weirich]
+* ccc48a3 2011-08-12 | Hello uses Greeter [Jim Weirich]
+* 6804e33 2011-08-12 | Added greeter class [Jim Weirich]
+* e58ef45 2011-08-12 | Added README [Jim Weirich]
+* bb2c44d 2011-08-12 | Added a Rakefile. [Jim Weirich]
+* 16673c8 2011-08-12 | Moved hello.rb to lib [Jim Weirich]
+* 46134dc 2011-08-12 | Add an author/email comment [Jim Weirich]
+* 9ce4a69 2011-08-12 | Added a comment (v1) [Jim Weirich]
+* 7736085 2011-08-12 | Added a default value (v1-beta) [Jim Weirich]
+* 25352d5 2011-08-12 | Using ARGV [Jim Weirich]
+* 13e42f8 2011-08-12 | First Commit [Jim Weirich]</pre>
 <p>At this point the repository has all the commits from the original repository, but they are not integrated into the the cloned repository&#8217;s local branches.</p>
 <p>Find the &#8220;Changed <span class="caps">README</span> in original repo&#8221; commit in the history above.  Notice that the commit includes &#8220;origin/master&#8221; and &#8220;origin/<span class="caps">HEAD</span>&#8221;.</p>
 <p>Now look at the &#8220;Updated Rakefile&#8221; commit.  You will see that it the local master branch points to this commit, not to the new commit that we just fetched.</p>
@@ -114,7 +114,7 @@ This is the Hello World example from the git tutorial.
           <li data-lab-id="5"><a href="lab_05.html"><span>5:</span> Making Changes</a></li>
           <li data-lab-id="6"><a href="lab_06.html"><span>6:</span> Staging Changes</a></li>
           <li data-lab-id="7"><a href="lab_07.html"><span>7:</span> Staging and Committing</a></li>
-          <li data-lab-id="8"><a href="lab_08.html"><span>8:</span> Commiting Changes</a></li>
+          <li data-lab-id="8"><a href="lab_08.html"><span>8:</span> Committing Changes</a></li>
           <li data-lab-id="9"><a href="lab_09.html"><span>9:</span> Changes, not Files</a></li>
           <li data-lab-id="10"><a href="lab_10.html"><span>10:</span> History</a></li>
           <li data-lab-id="11"><a href="lab_11.html"><span>11:</span> Aliases</a></li>
@@ -142,7 +142,7 @@ This is the Hello World example from the git tutorial.
           <li data-lab-id="33"><a href="lab_33.html"><span>33:</span> Resetting the Master Branch</a></li>
           <li data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebasing</a></li>
           <li data-lab-id="35"><a href="lab_35.html"><span>35:</span> Merging Back to Master</a></li>
-          <li data-lab-id="36"><a href="lab_36.html"><span>36:</span> Mutliple Repositories</a></li>
+          <li data-lab-id="36"><a href="lab_36.html"><span>36:</span> Multiple Repositories</a></li>
           <li data-lab-id="37"><a href="lab_37.html"><span>37:</span> Cloning Repositories</a></li>
           <li data-lab-id="38"><a href="lab_38.html"><span>38:</span> Review the Cloned Repository</a></li>
           <li data-lab-id="39"><a href="lab_39.html"><span>39:</span> What is Origin?</a></li>

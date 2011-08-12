@@ -80,12 +80,12 @@
 <pre class="instructions">git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* c450c28 2011-05-13 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
-* 8f71375 2011-05-13 | Oops, we didn't want this commit [Jim Weirich]
-* 22ac36b 2011-05-13 | Added a comment (v1) [Jim Weirich]
-* 8f4c526 2011-05-13 | Added a default value (v1-beta) [Jim Weirich]
-* 74cc61e 2011-05-13 | Using ARGV [Jim Weirich]
-* d528edc 2011-05-13 | First Commit [Jim Weirich]</pre>
+* 0095294 2011-08-12 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
+* 735a3bc 2011-08-12 | Oops, we didn't want this commit [Jim Weirich]
+* 9ce4a69 2011-08-12 | Added a comment (v1) [Jim Weirich]
+* 7736085 2011-08-12 | Added a default value (v1-beta) [Jim Weirich]
+* 25352d5 2011-08-12 | Using ARGV [Jim Weirich]
+* 13e42f8 2011-08-12 | First Commit [Jim Weirich]</pre>
 <p>We see that we have an &#8220;Oops&#8221; commit and a &#8220;Revert Oops&#8221; commit as the last two commits made in this branch.  Let&#8217;s remove them using reset.</p>
 <h2>First, Mark this Branch <em>03</em></h2>
 <p>But before we remove the commits, let&#8217;s mark the latest commit with a tag so we can find it again.</p>
@@ -98,12 +98,12 @@
 git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git reset --hard v1
-HEAD is now at 22ac36b Added a comment
+HEAD is now at 9ce4a69 Added a comment
 $ git hist
-* 22ac36b 2011-05-13 | Added a comment (HEAD, v1, master) [Jim Weirich]
-* 8f4c526 2011-05-13 | Added a default value (v1-beta) [Jim Weirich]
-* 74cc61e 2011-05-13 | Using ARGV [Jim Weirich]
-* d528edc 2011-05-13 | First Commit [Jim Weirich]</pre>
+* 9ce4a69 2011-08-12 | Added a comment (HEAD, v1, master) [Jim Weirich]
+* 7736085 2011-08-12 | Added a default value (v1-beta) [Jim Weirich]
+* 25352d5 2011-08-12 | Using ARGV [Jim Weirich]
+* 13e42f8 2011-08-12 | First Commit [Jim Weirich]</pre>
 <p>Our master branch now points to the v1 commit and the Oops commit and the Revert Oops commit are no longer in the branch.  The <code>--hard</code> parameter indicates that the working directory should be updated to be consistent with the new branch head.</p>
 <h2>Nothing is Ever Lost <em>05</em></h2>
 <p>But what happened to the bad commits?  It turns out that the commits are still in the repository.  In fact, we can still reference them.  Remember that at the beginning of this lab we tagged the reverting commit with the tag &#8220;oops&#8221;.  Let&#8217;s look at <em>all</em> the commits.</p>
@@ -111,12 +111,12 @@ $ git hist
 <pre class="instructions">git hist --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --all
-* c450c28 2011-05-13 | Revert "Oops, we didn't want this commit" (oops) [Jim Weirich]
-* 8f71375 2011-05-13 | Oops, we didn't want this commit [Jim Weirich]
-* 22ac36b 2011-05-13 | Added a comment (HEAD, v1, master) [Jim Weirich]
-* 8f4c526 2011-05-13 | Added a default value (v1-beta) [Jim Weirich]
-* 74cc61e 2011-05-13 | Using ARGV [Jim Weirich]
-* d528edc 2011-05-13 | First Commit [Jim Weirich]</pre>
+* 0095294 2011-08-12 | Revert "Oops, we didn't want this commit" (oops) [Jim Weirich]
+* 735a3bc 2011-08-12 | Oops, we didn't want this commit [Jim Weirich]
+* 9ce4a69 2011-08-12 | Added a comment (HEAD, v1, master) [Jim Weirich]
+* 7736085 2011-08-12 | Added a default value (v1-beta) [Jim Weirich]
+* 25352d5 2011-08-12 | Using ARGV [Jim Weirich]
+* 13e42f8 2011-08-12 | First Commit [Jim Weirich]</pre>
 <p>Here we see that the bad commits haven&#8217;t disappeared.  They are still in the repository.  It&#8217;s just that they are no longer listed in the master branch.  If we hadn&#8217;t tagged them, they would still be in the repository, but there would be no way to reference them other than using their hash names.  Commits that are unreferenced remain in the repository until the system runs the garbage collection software.</p>
 <h2>Dangers of Reset <em>06</em></h2>
 <p>Resets on local branches are generally safe.  Any &#8220;accidents&#8221; can usually be recovered from by just resetting again with the desired commit.</p>
@@ -136,7 +136,7 @@ $ git hist
           <li data-lab-id="5"><a href="lab_05.html"><span>5:</span> Making Changes</a></li>
           <li data-lab-id="6"><a href="lab_06.html"><span>6:</span> Staging Changes</a></li>
           <li data-lab-id="7"><a href="lab_07.html"><span>7:</span> Staging and Committing</a></li>
-          <li data-lab-id="8"><a href="lab_08.html"><span>8:</span> Commiting Changes</a></li>
+          <li data-lab-id="8"><a href="lab_08.html"><span>8:</span> Committing Changes</a></li>
           <li data-lab-id="9"><a href="lab_09.html"><span>9:</span> Changes, not Files</a></li>
           <li data-lab-id="10"><a href="lab_10.html"><span>10:</span> History</a></li>
           <li data-lab-id="11"><a href="lab_11.html"><span>11:</span> Aliases</a></li>
@@ -164,7 +164,7 @@ $ git hist
           <li data-lab-id="33"><a href="lab_33.html"><span>33:</span> Resetting the Master Branch</a></li>
           <li data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebasing</a></li>
           <li data-lab-id="35"><a href="lab_35.html"><span>35:</span> Merging Back to Master</a></li>
-          <li data-lab-id="36"><a href="lab_36.html"><span>36:</span> Mutliple Repositories</a></li>
+          <li data-lab-id="36"><a href="lab_36.html"><span>36:</span> Multiple Repositories</a></li>
           <li data-lab-id="37"><a href="lab_37.html"><span>37:</span> Cloning Repositories</a></li>
           <li data-lab-id="38"><a href="lab_38.html"><span>38:</span> Review the Cloned Repository</a></li>
           <li data-lab-id="39"><a href="lab_39.html"><span>39:</span> What is Origin?</a></li>
