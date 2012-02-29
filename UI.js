@@ -31,7 +31,7 @@ $(function() {
     , followHREF             = function(e) {
       var href = $(this).attr('href');
       if(href) {
-        window.location = '/' + $(this).attr('href');
+        window.location = './' + $(this).attr('href');
       }
     }
     , showIndex              = function() {
