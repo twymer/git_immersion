@@ -32,7 +32,7 @@
     <img src="pager_blur.png">
   </div>
   <header id="header">
-    <a href="./" id="home_link">Git Immersion</a>
+    <a href="index.html" id="home_link">Git Immersion</a>
     <nav id="pager">
       <a id="arrow_next" class="arrow" href="lab_34.html">Next</a>
   
@@ -43,6 +43,7 @@
   <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
 </nav>
     <h1 class="lab_title"><em>lab 33</em> Resetting the Master Branch</h1>
+    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
   </header>
 
   <div id="main_content">
@@ -58,15 +59,15 @@
 git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* a3627a9 2012-02-16 | Made interactive (HEAD, master) [Jim Weirich]
-* 31ccaec 2012-02-16 | Added README [Jim Weirich]
-* d4c45e4 2012-02-16 | Added a Rakefile. [Jim Weirich]
-* 695b7e6 2012-02-16 | Moved hello.rb to lib [Jim Weirich]
-* f4454aa 2012-02-16 | Add an author/email comment [Jim Weirich]
-* 1202254 2012-02-16 | Added a comment (v1) [Jim Weirich]
-* ce718d7 2012-02-16 | Added a default value (v1-beta) [Jim Weirich]
-* 79572a1 2012-02-16 | Using ARGV [Jim Weirich]
-* 9ceccdb 2012-02-16 | First Commit [Jim Weirich]</pre>
+* aafc3e3 2012-03-01 | Made interactive (HEAD, master) [Jim Weirich]
+* ab1bc50 2012-03-01 | Added README [Jim Weirich]
+* a8d3431 2012-03-01 | Added a Rakefile. [Jim Weirich]
+* cab3772 2012-03-01 | Moved hello.rb to lib [Jim Weirich]
+* 8fb1aae 2012-03-01 | Add an author/email comment [Jim Weirich]
+* af85a6b 2012-03-01 | Added a comment (v1) [Jim Weirich]
+* 00b7df0 2012-03-01 | Added a default value (v1-beta) [Jim Weirich]
+* 37a590f 2012-03-01 | Using ARGV [Jim Weirich]
+* 774072c 2012-03-01 | First Commit [Jim Weirich]</pre>
 <p>The &#8216;Added <span class="caps">README</span>&#8217; commit is the one directly before the conflicting interactive mode.  We will reset the master branch to &#8216;Added <span class="caps">README</span>&#8217; branch.</p>
 <h4>Execute:</h4>
 <pre class="instructions">git reset --hard &lt;hash&gt;
@@ -74,18 +75,18 @@ git hist --all</pre>
 <p>Review the log.  It should look like the repository has been wound back in time to the point before we merged anything.</p>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --all
-* 55ec0d3 2012-02-16 | Updated Rakefile (greet) [Jim Weirich]
-* fa7c815 2012-02-16 | Hello uses Greeter [Jim Weirich]
-* 46f3ae8 2012-02-16 | Added greeter class [Jim Weirich]
-| * 31ccaec 2012-02-16 | Added README (HEAD, master) [Jim Weirich]
+* 9040c98 2012-03-01 | Updated Rakefile (greet) [Jim Weirich]
+* b508727 2012-03-01 | Hello uses Greeter [Jim Weirich]
+* 37db88a 2012-03-01 | Added greeter class [Jim Weirich]
+| * ab1bc50 2012-03-01 | Added README (HEAD, master) [Jim Weirich]
 |/  
-* d4c45e4 2012-02-16 | Added a Rakefile. [Jim Weirich]
-* 695b7e6 2012-02-16 | Moved hello.rb to lib [Jim Weirich]
-* f4454aa 2012-02-16 | Add an author/email comment [Jim Weirich]
-* 1202254 2012-02-16 | Added a comment (v1) [Jim Weirich]
-* ce718d7 2012-02-16 | Added a default value (v1-beta) [Jim Weirich]
-* 79572a1 2012-02-16 | Using ARGV [Jim Weirich]
-* 9ceccdb 2012-02-16 | First Commit [Jim Weirich]</pre>
+* a8d3431 2012-03-01 | Added a Rakefile. [Jim Weirich]
+* cab3772 2012-03-01 | Moved hello.rb to lib [Jim Weirich]
+* 8fb1aae 2012-03-01 | Add an author/email comment [Jim Weirich]
+* af85a6b 2012-03-01 | Added a comment (v1) [Jim Weirich]
+* 00b7df0 2012-03-01 | Added a default value (v1-beta) [Jim Weirich]
+* 37a590f 2012-03-01 | Using ARGV [Jim Weirich]
+* 774072c 2012-03-01 | First Commit [Jim Weirich]</pre>
   </div>
 
   <div id="index">

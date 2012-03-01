@@ -32,7 +32,7 @@
     <img src="pager_blur.png">
   </div>
   <header id="header">
-    <a href="./" id="home_link">Git Immersion</a>
+    <a href="index.html" id="home_link">Git Immersion</a>
     <nav id="pager">
       <a id="arrow_next" class="arrow" href="lab_19.html">Next</a>
   
@@ -43,6 +43,7 @@
   <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
 </nav>
     <h1 class="lab_title"><em>lab 18</em> Remove the oops tag</h1>
+    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
   </header>
 
   <div id="main_content">
@@ -58,12 +59,12 @@
 git hist --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git tag -d oops
-Deleted tag 'oops' (was 37be8b8)
+Deleted tag 'oops' (was 7e7e220)
 $ git hist --all
-* 1202254 2012-02-16 | Added a comment (HEAD, v1, master) [Jim Weirich]
-* ce718d7 2012-02-16 | Added a default value (v1-beta) [Jim Weirich]
-* 79572a1 2012-02-16 | Using ARGV [Jim Weirich]
-* 9ceccdb 2012-02-16 | First Commit [Jim Weirich]</pre>
+* af85a6b 2012-03-01 | Added a comment (HEAD, v1, master) [Jim Weirich]
+* 00b7df0 2012-03-01 | Added a default value (v1-beta) [Jim Weirich]
+* 37a590f 2012-03-01 | Using ARGV [Jim Weirich]
+* 774072c 2012-03-01 | First Commit [Jim Weirich]</pre>
 <p>The oops tag is no longer listed in the repository.</p>
   </div>
 

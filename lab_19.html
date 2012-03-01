@@ -32,7 +32,7 @@
     <img src="pager_blur.png">
   </div>
   <header id="header">
-    <a href="./" id="home_link">Git Immersion</a>
+    <a href="index.html" id="home_link">Git Immersion</a>
     <nav id="pager">
       <a id="arrow_next" class="arrow" href="lab_20.html">Next</a>
   
@@ -43,6 +43,7 @@
   <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
 </nav>
     <h1 class="lab_title"><em>lab 19</em> Amending Commits</h1>
+    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
   </header>
 
   <div id="main_content">
@@ -80,7 +81,7 @@ git commit --amend -m "Add an author/email comment"</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git add hello.rb
 $ git commit --amend -m "Add an author/email comment"
-[master f4454aa] Add an author/email comment
+[master 8fb1aae] Add an author/email comment
  1 files changed, 2 insertions(+), 1 deletions(-)
 </pre>
 <h2>Review the History <em>04</em></h2>
@@ -88,11 +89,11 @@ $ git commit --amend -m "Add an author/email comment"
 <pre class="instructions">git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* f4454aa 2012-02-16 | Add an author/email comment (HEAD, master) [Jim Weirich]
-* 1202254 2012-02-16 | Added a comment (v1) [Jim Weirich]
-* ce718d7 2012-02-16 | Added a default value (v1-beta) [Jim Weirich]
-* 79572a1 2012-02-16 | Using ARGV [Jim Weirich]
-* 9ceccdb 2012-02-16 | First Commit [Jim Weirich]</pre>
+* 8fb1aae 2012-03-01 | Add an author/email comment (HEAD, master) [Jim Weirich]
+* af85a6b 2012-03-01 | Added a comment (v1) [Jim Weirich]
+* 00b7df0 2012-03-01 | Added a default value (v1-beta) [Jim Weirich]
+* 37a590f 2012-03-01 | Using ARGV [Jim Weirich]
+* 774072c 2012-03-01 | First Commit [Jim Weirich]</pre>
 <p>We can see the original &#8220;author&#8221; commit is now gone, and it is replaced by the &#8220;author/email&#8221; commit.  You can achieve the same effect by resetting the branch back one commit and then recommitting the new changes.</p>
   </div>
 

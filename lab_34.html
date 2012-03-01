@@ -32,7 +32,7 @@
     <img src="pager_blur.png">
   </div>
   <header id="header">
-    <a href="./" id="home_link">Git Immersion</a>
+    <a href="index.html" id="home_link">Git Immersion</a>
     <nav id="pager">
       <a id="arrow_next" class="arrow" href="lab_35.html">Next</a>
   
@@ -43,6 +43,7 @@
   <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
 </nav>
     <h1 class="lab_title"><em>lab 34</em> Rebasing</h1>
+    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
   </header>
 
   <div id="main_content">
@@ -68,17 +69,17 @@ Applying: hello uses Greeter
 Applying: updated Rakefile
 $
 $ git hist
-* 18ae642 2012-02-16 | Updated Rakefile (HEAD, greet) [Jim Weirich]
-* be85b98 2012-02-16 | Hello uses Greeter [Jim Weirich]
-* c34fd6c 2012-02-16 | Added greeter class [Jim Weirich]
-* 31ccaec 2012-02-16 | Added README (master) [Jim Weirich]
-* d4c45e4 2012-02-16 | Added a Rakefile. [Jim Weirich]
-* 695b7e6 2012-02-16 | Moved hello.rb to lib [Jim Weirich]
-* f4454aa 2012-02-16 | Add an author/email comment [Jim Weirich]
-* 1202254 2012-02-16 | Added a comment (v1) [Jim Weirich]
-* ce718d7 2012-02-16 | Added a default value (v1-beta) [Jim Weirich]
-* 79572a1 2012-02-16 | Using ARGV [Jim Weirich]
-* 9ceccdb 2012-02-16 | First Commit [Jim Weirich]</pre>
+* 0734ca9 2012-03-01 | Updated Rakefile (HEAD, greet) [Jim Weirich]
+* 6652960 2012-03-01 | Hello uses Greeter [Jim Weirich]
+* 80a6b0b 2012-03-01 | Added greeter class [Jim Weirich]
+* ab1bc50 2012-03-01 | Added README (master) [Jim Weirich]
+* a8d3431 2012-03-01 | Added a Rakefile. [Jim Weirich]
+* cab3772 2012-03-01 | Moved hello.rb to lib [Jim Weirich]
+* 8fb1aae 2012-03-01 | Add an author/email comment [Jim Weirich]
+* af85a6b 2012-03-01 | Added a comment (v1) [Jim Weirich]
+* 00b7df0 2012-03-01 | Added a default value (v1-beta) [Jim Weirich]
+* 37a590f 2012-03-01 | Using ARGV [Jim Weirich]
+* 774072c 2012-03-01 | First Commit [Jim Weirich]</pre>
 <h2>Merge VS Rebase <em>01</em></h2>
 <p>The final result of the rebase is very similar to the merge.  The greet branch now contains all of its changes, as well as all the changes from the master branch.  However, the commit tree is quite different.  The commit tree for the greet branch has been rewritten so that the master branch is a part of the commit history.  This leaves the chain of commits linear and much easier to read.</p>
 <h2>When to Rebase, When to Merge? <em>02</em></h2>

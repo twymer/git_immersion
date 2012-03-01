@@ -1,30 +1,62 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
   margin: 0;
   padding: 0;
-  border: 0;
+}
+
+a {
+  outline: none;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
+  background: transparent;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   line-height: 1;
 }
 
-ol, ul {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
   list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
 }
 
 table {
@@ -32,26 +64,21 @@ table {
   border-spacing: 0;
 }
 
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
   vertical-align: middle;
 }
 
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
+.clear {
+  clear: both;
 }
 
 @font-face {
@@ -84,28 +111,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url(DINWebPro.woff) format("woff");
 }
 
-.clear {
-  clear: both;
-}
-
 html, body {
-  padding-bottom: 20px;
-  font-family: 'DINWebProRegular', helvetica, arial, serif;
-  background: url(background.jpg);
-}
-
-#index_body {
-  background: #fff;
-}
-
-#image_preloader {
-  overflow: hidden;
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  width: 1px;
-  height: 0;
-  opacity: 0;
+  background: red !important;
 }
 
 .wrapper {
@@ -128,7 +135,7 @@ html, body {
   height: 130px;
   margin: 0 auto;
   text-indent: -999em;
-  background: url(logo_large.png) no-repeat 50% 50%;
+  background: url(logo_large.png);
 }
 
 /* Lab Header
@@ -150,7 +157,7 @@ html, body {
 
 #home_link {
   position: absolute;
-  top: 22px;
+  top: 47px;
   left: 42px;
   width: 210px;
   height: 35px;
@@ -164,7 +171,7 @@ html, body {
 
 #pager {
   position: absolute;
-  top: 62px;
+  top: 92px;
   left: 34px;
   width: 229px;
   height: 268px;
@@ -182,10 +189,6 @@ html, body {
   height: 40px;
 }
 
-#other_edgecase_link {
-  display: none;
-}
-
 #pager .arrow {
   position: absolute;
   top: 37px;
@@ -195,7 +198,7 @@ html, body {
 }
 
 #arrow_previous {
-  left: 16px;
+  left: 18px;
 }
 
 #arrow_next {
@@ -243,8 +246,8 @@ html, body {
 }
 
 .lab_title {
-  margin-top: 25px;
-  padding: 5px 10px 15px 340px;
+  width: 618px;
+  padding: 5px 0 15px 340px;
   color: #2e2e2e;
   font: 39px 'DINWeb-CondMedium', helvetica, arial, sans-serif;
   line-height: 100%;
@@ -392,13 +395,8 @@ html, body {
   color: #999;
 }
 
-/* Index: License and EdgeCase
+/* Index: Brought to you by
 ------------------------------------------------------------ */
-#license_and_edgecase {
-  float: right;
-  width: 485px;
-}
-
 #brought_to_you_by {
   color: #ED6B44;
   font: 39px 'DINWeb-CondMedium', helvetica, arial, sans-serif;
@@ -409,6 +407,8 @@ html, body {
   display: block;
 }
 
+/* Index: License
+------------------------------------------------------------ */
 #license {
   color: #999;
   font-size: 17px;
@@ -784,177 +784,4 @@ ol {
   width: 25px;
   font-weight: normal;
   text-align: right;
-}
-
-/* ------------------------------------------------------------- */
-/*                MAX WIDTH: 914px for Index Page                */
-/* ------------------------------------------------------------- */
-@media all and (max-width: 914px) {
-  .wrapper {
-    width: 708px;
-    padding: 0 30px;
-  }
-
-  #index_header {
-    height: 175px;
-  }
-  #index_header a {
-    top: 20px;
-    width: auto;
-    background-size: 700px 102px;
-  }
-
-  #attention p {
-    width: auto;
-    padding-right: 330px;
-  }
-  #attention p em {
-    font-size: 36px;
-  }
-
-  #start_immersion {
-    right: 42px;
-    bottom: 48px;
-  }
-  #start_immersion:active {
-    bottom: 47px;
-  }
-
-  #attention_links {
-    right: 33px;
-  }
-
-  #license_and_edgecase {
-    float: none;
-    width: auto;
-    margin-bottom: 40px;
-  }
-}
-/* ------------------------------------------------------------- */
-/*                   MAX WIDTH: 914px for Labs                   */
-/* ------------------------------------------------------------- */
-@media all and (max-width: 914px) {
-  #home_link {
-    top: 26px;
-    right: auto;
-    left: 24px;
-  }
-
-  #table_of_contents_link {
-    top: 14px;
-    left: 47px;
-    width: 128px;
-    height: 37px;
-  }
-
-  .blur #pager {
-    background: url(pager_ipad_blur.png);
-  }
-
-  #pager {
-    top: 69px;
-    left: 21px;
-    width: 227px;
-    height: 129px;
-    background-image: url(pager_ipad.png);
-  }
-  #pager .arrow {
-    top: 6px;
-  }
-
-  #edgecase_link {
-    display: none;
-  }
-
-  #arrow_previous {
-    left: 20px;
-  }
-
-  #arrow_next {
-    left: 181px;
-  }
-
-  #bookmark_link {
-    top: 65px;
-    height: 51px;
-  }
-
-  #bookmark_link #bookmark {
-    left: 21px;
-  }
-
-  #other_edgecase_link {
-    display: block;
-    position: absolute;
-    right: 50px;
-    bottom: 10px;
-    width: 84px;
-    height: 23px;
-    text-indent: -999em;
-    background: url(ipad-ec-logo.png);
-  }
-
-  .lab_title {
-    width: auto;
-    padding-left: 280px;
-    font-size: 32px;
-  }
-  .lab_title em {
-    margin-bottom: 8px;
-  }
-
-  #main_content {
-    padding-top: 230px;
-  }
-  #main_content p {
-    width: auto;
-    padding: 0 30px 0 88px;
-  }
-  #main_content ul {
-    margin-left: 0;
-    padding: 0 30px 0 88px;
-  }
-  #main_content ol {
-    margin-left: 1em;
-    padding-left: 72px;
-    list-style-type: lower-roman;
-  }
-  #main_content img {
-    margin-left: 88px;
-  }
-
-  h2 {
-    left: 0;
-    padding: 0 30px 0 86px;
-  }
-  h2 em {
-    top: -3px;
-    left: 25px;
-  }
-
-  h3 {
-    width: auto;
-    margin-left: 0;
-    padding: 0 30px 0 88px;
-  }
-
-  h4 {
-    left: 30px;
-    margin: 10px 0 10px 60px;
-  }
-
-  .instructions {
-    padding: 0 30px 0 66px;
-  }
-  .instructions pre {
-    width: auto;
-  }
-
-  .sample {
-    padding-left: 88px;
-  }
-
-  .file {
-    padding-left: 88px;
-  }
 }

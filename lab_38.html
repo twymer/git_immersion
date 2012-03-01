@@ -32,7 +32,7 @@
     <img src="pager_blur.png">
   </div>
   <header id="header">
-    <a href="./" id="home_link">Git Immersion</a>
+    <a href="index.html" id="home_link">Git Immersion</a>
     <nav id="pager">
       <a id="arrow_next" class="arrow" href="lab_39.html">Next</a>
   
@@ -43,6 +43,7 @@
   <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
 </nav>
     <h1 class="lab_title"><em>lab 38</em> Review the Cloned Repository</h1>
+    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
   </header>
 
   <div id="main_content">
@@ -69,17 +70,17 @@ lib
 <pre class="instructions">git hist --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --all
-* 18ae642 2012-02-16 | Updated Rakefile (HEAD, origin/master, origin/greet, origin/HEAD, master) [Jim Weirich]
-* be85b98 2012-02-16 | Hello uses Greeter [Jim Weirich]
-* c34fd6c 2012-02-16 | Added greeter class [Jim Weirich]
-* 31ccaec 2012-02-16 | Added README [Jim Weirich]
-* d4c45e4 2012-02-16 | Added a Rakefile. [Jim Weirich]
-* 695b7e6 2012-02-16 | Moved hello.rb to lib [Jim Weirich]
-* f4454aa 2012-02-16 | Add an author/email comment [Jim Weirich]
-* 1202254 2012-02-16 | Added a comment (v1) [Jim Weirich]
-* ce718d7 2012-02-16 | Added a default value (v1-beta) [Jim Weirich]
-* 79572a1 2012-02-16 | Using ARGV [Jim Weirich]
-* 9ceccdb 2012-02-16 | First Commit [Jim Weirich]</pre>
+* 0734ca9 2012-03-01 | Updated Rakefile (HEAD, origin/master, origin/greet, origin/HEAD, master) [Jim Weirich]
+* 6652960 2012-03-01 | Hello uses Greeter [Jim Weirich]
+* 80a6b0b 2012-03-01 | Added greeter class [Jim Weirich]
+* ab1bc50 2012-03-01 | Added README [Jim Weirich]
+* a8d3431 2012-03-01 | Added a Rakefile. [Jim Weirich]
+* cab3772 2012-03-01 | Moved hello.rb to lib [Jim Weirich]
+* 8fb1aae 2012-03-01 | Add an author/email comment [Jim Weirich]
+* af85a6b 2012-03-01 | Added a comment (v1) [Jim Weirich]
+* 00b7df0 2012-03-01 | Added a default value (v1-beta) [Jim Weirich]
+* 37a590f 2012-03-01 | Using ARGV [Jim Weirich]
+* 774072c 2012-03-01 | First Commit [Jim Weirich]</pre>
 <p>You should now see a list of the all the commits in the new repository, and it should (more or less) match the history of commits in the original repository.  The only difference should be in the names of the branches.</p>
 <h2>Remote branches <em>03</em></h2>
 <p>You should see a <strong>master</strong> branch (along with <strong><span class="caps">HEAD</span></strong>) in the history list.  But you will also have number of strangely named branches (<strong>origin/master</strong>, <strong>origin/greet</strong> and <strong>origin/<span class="caps">HEAD</span></strong>).  We&#8217;ll talk about them in a bit.</p>

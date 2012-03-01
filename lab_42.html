@@ -32,7 +32,7 @@
     <img src="pager_blur.png">
   </div>
   <header id="header">
-    <a href="./" id="home_link">Git Immersion</a>
+    <a href="index.html" id="home_link">Git Immersion</a>
     <nav id="pager">
       <a id="arrow_next" class="arrow" href="lab_43.html">Next</a>
   
@@ -43,6 +43,7 @@
   <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
 </nav>
     <h1 class="lab_title"><em>lab 42</em> Fetching Changes</h1>
+    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
   </header>
 
   <div id="main_content">
@@ -59,20 +60,20 @@ git hist --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git fetch
 From /Users/nummi/Projects/edgecase/git_immersion/auto/hello
-   18ae642..aaa933a  master     -&gt; origin/master
+   0734ca9..bb1c4d8  master     -&gt; origin/master
 $ git hist --all
-* aaa933a 2012-02-16 | Changed README in original repo (origin/master, origin/HEAD) [Jim Weirich]
-* 18ae642 2012-02-16 | Updated Rakefile (HEAD, origin/greet, master) [Jim Weirich]
-* be85b98 2012-02-16 | Hello uses Greeter [Jim Weirich]
-* c34fd6c 2012-02-16 | Added greeter class [Jim Weirich]
-* 31ccaec 2012-02-16 | Added README [Jim Weirich]
-* d4c45e4 2012-02-16 | Added a Rakefile. [Jim Weirich]
-* 695b7e6 2012-02-16 | Moved hello.rb to lib [Jim Weirich]
-* f4454aa 2012-02-16 | Add an author/email comment [Jim Weirich]
-* 1202254 2012-02-16 | Added a comment (v1) [Jim Weirich]
-* ce718d7 2012-02-16 | Added a default value (v1-beta) [Jim Weirich]
-* 79572a1 2012-02-16 | Using ARGV [Jim Weirich]
-* 9ceccdb 2012-02-16 | First Commit [Jim Weirich]</pre>
+* bb1c4d8 2012-03-01 | Changed README in original repo (origin/master, origin/HEAD) [Jim Weirich]
+* 0734ca9 2012-03-01 | Updated Rakefile (HEAD, origin/greet, master) [Jim Weirich]
+* 6652960 2012-03-01 | Hello uses Greeter [Jim Weirich]
+* 80a6b0b 2012-03-01 | Added greeter class [Jim Weirich]
+* ab1bc50 2012-03-01 | Added README [Jim Weirich]
+* a8d3431 2012-03-01 | Added a Rakefile. [Jim Weirich]
+* cab3772 2012-03-01 | Moved hello.rb to lib [Jim Weirich]
+* 8fb1aae 2012-03-01 | Add an author/email comment [Jim Weirich]
+* af85a6b 2012-03-01 | Added a comment (v1) [Jim Weirich]
+* 00b7df0 2012-03-01 | Added a default value (v1-beta) [Jim Weirich]
+* 37a590f 2012-03-01 | Using ARGV [Jim Weirich]
+* 774072c 2012-03-01 | First Commit [Jim Weirich]</pre>
 <p>At this point the repository has all the commits from the original repository, but they are not integrated into the the cloned repository&#8217;s local branches.</p>
 <p>Find the &#8220;Changed <span class="caps">README</span> in original repo&#8221; commit in the history above.  Notice that the commit includes &#8220;origin/master&#8221; and &#8220;origin/<span class="caps">HEAD</span>&#8221;.</p>
 <p>Now look at the &#8220;Updated Rakefile&#8221; commit.  You will see that it the local master branch points to this commit, not to the new commit that we just fetched.</p>

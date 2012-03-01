@@ -32,7 +32,7 @@
     <img src="pager_blur.png">
   </div>
   <header id="header">
-    <a href="./" id="home_link">Git Immersion</a>
+    <a href="index.html" id="home_link">Git Immersion</a>
     <nav id="pager">
       <a id="arrow_next" class="arrow" href="lab_24.html">Next</a>
   
@@ -43,6 +43,7 @@
   <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
 </nav>
     <h1 class="lab_title"><em>lab 23</em> Git Internals: Working directly with Git Objects</h1>
+    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
   </header>
 
   <div id="main_content">
@@ -59,7 +60,7 @@
 <p>This should show the latest commit made in the repository.  The SHA1 hash on your system is probably different that what is on mine, but you should see something like this.</p>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --max-count=1
-* d4c45e4 2012-02-16 | Added a Rakefile. (HEAD, master) [Jim Weirich]</pre>
+* a8d3431 2012-03-01 | Added a Rakefile. (HEAD, master) [Jim Weirich]</pre>
 <h2>Dumping the Latest Commit <em>02</em></h2>
 <p>Using the SHA1 hash from the commit listed above &#8230;</p>
 <h4>Execute:</h4>
@@ -67,13 +68,13 @@
 git cat-file -p &lt;hash&gt;</pre>
 <p>Here&#8217;s my output &#8230;</p>
 <h4>Output:</h4>
-<pre class="sample">$ git cat-file -t d4c45e4
+<pre class="sample">$ git cat-file -t a8d3431
 commit
-$ git cat-file -p d4c45e4
+$ git cat-file -p a8d3431
 tree 096b74c56bfc6b40e754fc0725b8c70b2038b91e
-parent 695b7e6925210a1ff33686869026825f49387901
-author Jim Weirich &lt;jim (at) edgecase.com&gt; 1329408571 -0500
-committer Jim Weirich &lt;jim (at) edgecase.com&gt; 1329408571 -0500
+parent cab3772842ed9071376acc6b6d7d8109f1187fbb
+author Jim Weirich &lt;jim (at) edgecase.com&gt; 1330618604 -0500
+committer Jim Weirich &lt;jim (at) edgecase.com&gt; 1330618604 -0500
 
 Added a Rakefile.
 </pre>
