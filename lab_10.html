@@ -58,27 +58,27 @@
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git log
-commit 1b6d0f3487a1b618e8fdc96930cbbe78313f9eb5
+commit 1c5e6d58e36598335cb600a50cd34f153a9400ca
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Mon May 14 15:23:51 2012 -0400
+Date:   Mon May 14 15:29:52 2012 -0400
 
     Added a comment
 
-commit 034ab8e1aed0ece15c28f77dfe3ba27af79ba3fc
+commit dae16f7f84e0a458167ac217db653d14fe36b61e
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Mon May 14 15:23:51 2012 -0400
+Date:   Mon May 14 15:29:52 2012 -0400
 
     Added a default value
 
-commit b53a8696576f73dd0fdd048e3a8a2f1df5da0d82
+commit 8e19f633cf9032a0cc0ea5201e925df8ce516742
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Mon May 14 15:23:51 2012 -0400
+Date:   Mon May 14 15:29:52 2012 -0400
 
     Using ARGV
 
-commit 13645b9e993b953ffc9d7d5d6d00ee29dc61816f
+commit d91b92cdc42c2e4030e2018526cc372b542226ce
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Mon May 14 15:23:50 2012 -0400
+Date:   Mon May 14 15:29:52 2012 -0400
 
     First Commit
 </pre>
@@ -90,10 +90,10 @@ Date:   Mon May 14 15:23:50 2012 -0400
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git log --pretty=oneline
-1b6d0f3487a1b618e8fdc96930cbbe78313f9eb5 Added a comment
-034ab8e1aed0ece15c28f77dfe3ba27af79ba3fc Added a default value
-b53a8696576f73dd0fdd048e3a8a2f1df5da0d82 Using ARGV
-13645b9e993b953ffc9d7d5d6d00ee29dc61816f First Commit
+1c5e6d58e36598335cb600a50cd34f153a9400ca Added a comment
+dae16f7f84e0a458167ac217db653d14fe36b61e Added a default value
+8e19f633cf9032a0cc0ea5201e925df8ce516742 Using ARGV
+d91b92cdc42c2e4030e2018526cc372b542226ce First Commit
 </pre>
 <h2>Controlling Which Entries are Displayed <em>02</em></h2>
 <p>There are a lot of options for selecting which entries are displayed in the log.  Play around with the following options:</p>
@@ -113,10 +113,10 @@ git log --pretty=oneline --all</pre>
 <p>It looks like this:</p>
 <h4>Output:</h4>
 <pre class="sample">$ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
-* 1b6d0f3 2012-05-14 | Added a comment (HEAD, master) [Jim Weirich]
-* 034ab8e 2012-05-14 | Added a default value [Jim Weirich]
-* b53a869 2012-05-14 | Using ARGV [Jim Weirich]
-* 13645b9 2012-05-14 | First Commit [Jim Weirich]</pre>
+* 1c5e6d5 2012-05-14 | Added a comment (HEAD, master) [Jim Weirich]
+* dae16f7 2012-05-14 | Added a default value [Jim Weirich]
+* 8e19f63 2012-05-14 | Using ARGV [Jim Weirich]
+* d91b92c 2012-05-14 | First Commit [Jim Weirich]</pre>
 <p>Let&#8217;s look at it in detail:</p>
 <ul>
 	<li><code>--pretty="..."</code> defines the format of the output.</li>
