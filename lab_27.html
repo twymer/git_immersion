@@ -58,33 +58,18 @@
 <pre class="instructions">git hist --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --all
-<<<<<<< HEAD
-* 86bef5b 2012-09-09 | Updated Rakefile (greet) [Jim Weirich]
-* 2f99f71 2012-09-09 | Hello uses Greeter [Jim Weirich]
-* fccf361 2012-09-09 | Added greeter class [Jim Weirich]
-| * 73fec64 2012-09-09 | Added README (HEAD, master) [Jim Weirich]
+* e9d7dc3 2012-09-09 | Updated Rakefile (greet) [Jim Weirich]
+* b67af6b 2012-09-09 | Hello uses Greeter [Jim Weirich]
+* 8c5d0e0 2012-09-09 | Added greeter class [Jim Weirich]
+| * d833bd1 2012-09-09 | Added README (HEAD, master) [Jim Weirich]
 |/  
-* 167b642 2012-09-09 | Added a Rakefile. [Jim Weirich]
-* 8d47157 2012-09-09 | Moved hello.rb to lib [Jim Weirich]
-* e37a051 2012-09-09 | Add an author/email comment [Jim Weirich]
-* 2abeab1 2012-09-09 | Added a comment (v1) [Jim Weirich]
-* 42b4d18 2012-09-09 | Added a default value (v1-beta) [Jim Weirich]
-* c7d6941 2012-09-09 | Using ARGV [Jim Weirich]
-* ecd1407 2012-09-09 | First Commit [Jim Weirich]</pre>
-=======
-* 7d843dc 2012-07-13 | Updated Rakefile (greet) [Jim Weirich]
-* ad30058 2012-07-13 | Hello uses Greeter [Jim Weirich]
-* b78c7ce 2012-07-13 | Added greeter class [Jim Weirich]
-| * 9b66e7d 2012-07-13 | Added README (HEAD, master) [Jim Weirich]
-|/  
-* 3fc6cef 2012-07-13 | Added a Rakefile. [Jim Weirich]
-* 2522e96 2012-07-13 | Moved hello.rb to lib [Jim Weirich]
-* cd1c2d8 2012-07-13 | Add an author/email comment [Jim Weirich]
-* 8faa289 2012-07-13 | Added a comment (v1) [Jim Weirich]
-* 6c6818d 2012-07-13 | Added a default value (v1-beta) [Jim Weirich]
-* 2d19dcc 2012-07-13 | Using ARGV [Jim Weirich]
-* d20d62a 2012-07-13 | First Commit [Jim Weirich]</pre>
->>>>>>> origin/gh-pages
+* fe8ce32 2012-09-09 | Added a Rakefile. [Jim Weirich]
+* 18013b5 2012-09-09 | Moved hello.rb to lib [Jim Weirich]
+* cddf476 2012-09-09 | Add an author/email comment [Jim Weirich]
+* b5df864 2012-09-09 | Added a comment (v1) [Jim Weirich]
+* 2ac1f20 2012-09-09 | Added a default value (v1-beta) [Jim Weirich]
+* 69c24d3 2012-09-09 | Using ARGV [Jim Weirich]
+* 35d31bb 2012-09-09 | First Commit [Jim Weirich]</pre>
 <p>Here is our first chance to see the <code>--graph</code> option on <code>git hist</code> in action. Adding the <code>--graph</code> option to <code>git log</code> causes it to draw the commit tree using simple <span class="caps">ASCII</span> characters.  We can see both branches (greet and master), and that the master branch is the current <span class="caps">HEAD</span>. The common ancestor to both branches is the &#8220;Added a Rakefile&#8221; branch.</p>
 <p>The <code>--all</code> flag makes sure that we see all the branches.  The default is to show only the current branch.</p>
   </div>

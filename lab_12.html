@@ -59,17 +59,10 @@
 <p class="note"><strong>Note:</strong> You did remember to define <code>hist</code> in your <code>.gitconfig</code> file, right?  If not, review the lab on aliases.</p>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-<<<<<<< HEAD
-* 2abeab1 2012-09-09 | Added a comment (HEAD, master) [Jim Weirich]
-* 42b4d18 2012-09-09 | Added a default value [Jim Weirich]
-* c7d6941 2012-09-09 | Using ARGV [Jim Weirich]
-* ecd1407 2012-09-09 | First Commit [Jim Weirich]</pre>
-=======
-* 8faa289 2012-07-13 | Added a comment (HEAD, master) [Jim Weirich]
-* 6c6818d 2012-07-13 | Added a default value [Jim Weirich]
-* 2d19dcc 2012-07-13 | Using ARGV [Jim Weirich]
-* d20d62a 2012-07-13 | First Commit [Jim Weirich]</pre>
->>>>>>> origin/gh-pages
+* b5df864 2012-09-09 | Added a comment (HEAD, master) [Jim Weirich]
+* 2ac1f20 2012-09-09 | Added a default value [Jim Weirich]
+* 69c24d3 2012-09-09 | Using ARGV [Jim Weirich]
+* 35d31bb 2012-09-09 | First Commit [Jim Weirich]</pre>
 <p>Examine the log output and find the hash for the first commit.  It should be the last line of the <code>git hist</code> output.  Use that hash code (the first 7 characters are enough) in the command below.  Then check the contents of the hello.rb file.</p>
 <h4>Execute:</h4>
 <pre class="instructions">git checkout &lt;hash&gt;
@@ -78,13 +71,8 @@ cat hello.rb</pre>
 <p class="note"><strong>Note:</strong> Many commands depend on the hash values in the repository.  Since your hash values will vary from mine, whenever you see something like &lt;hash&gt; or &lt;treehash&gt; in the command, substitute in the proper hash value for your repository.</p>
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
-<<<<<<< HEAD
-<pre class="sample">$ git checkout ecd1407
-Note: checking out 'ecd1407'.
-=======
-<pre class="sample">$ git checkout d20d62a
-Note: checking out 'd20d62a'.
->>>>>>> origin/gh-pages
+<pre class="sample">$ git checkout 35d31bb
+Note: checking out '35d31bb'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
@@ -95,11 +83,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b new_branch_name
 
-<<<<<<< HEAD
-HEAD is now at ecd1407... First Commit
-=======
-HEAD is now at d20d62a... First Commit
->>>>>>> origin/gh-pages
+HEAD is now at 35d31bb... First Commit
 $ cat hello.rb
 puts "Hello, World"
 </pre>
@@ -112,11 +96,7 @@ cat hello.rb</pre>
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git checkout master
-<<<<<<< HEAD
-Previous HEAD position was ecd1407... First Commit
-=======
-Previous HEAD position was d20d62a... First Commit
->>>>>>> origin/gh-pages
+Previous HEAD position was 35d31bb... First Commit
 Switched to branch 'master'
 $ cat hello.rb
 # Default is "World"
