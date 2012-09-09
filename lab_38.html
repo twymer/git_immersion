@@ -70,6 +70,7 @@ lib
 <pre class="instructions">git hist --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --all
+<<<<<<< HEAD
 * 5889126 2012-09-09 | Updated Rakefile (HEAD, origin/master, origin/greet, origin/HEAD, master) [Jim Weirich]
 * 40ec77a 2012-09-09 | Hello uses Greeter [Jim Weirich]
 * ab51fed 2012-09-09 | Added greeter class [Jim Weirich]
@@ -81,6 +82,19 @@ lib
 * 42b4d18 2012-09-09 | Added a default value (v1-beta) [Jim Weirich]
 * c7d6941 2012-09-09 | Using ARGV [Jim Weirich]
 * ecd1407 2012-09-09 | First Commit [Jim Weirich]</pre>
+=======
+* 381ffc8 2012-07-13 | Updated Rakefile (HEAD, origin/master, origin/greet, origin/HEAD, master) [Jim Weirich]
+* 3c36f74 2012-07-13 | Hello uses Greeter [Jim Weirich]
+* 83f1f8c 2012-07-13 | Added greeter class [Jim Weirich]
+* 9b66e7d 2012-07-13 | Added README [Jim Weirich]
+* 3fc6cef 2012-07-13 | Added a Rakefile. [Jim Weirich]
+* 2522e96 2012-07-13 | Moved hello.rb to lib [Jim Weirich]
+* cd1c2d8 2012-07-13 | Add an author/email comment [Jim Weirich]
+* 8faa289 2012-07-13 | Added a comment (v1) [Jim Weirich]
+* 6c6818d 2012-07-13 | Added a default value (v1-beta) [Jim Weirich]
+* 2d19dcc 2012-07-13 | Using ARGV [Jim Weirich]
+* d20d62a 2012-07-13 | First Commit [Jim Weirich]</pre>
+>>>>>>> origin/gh-pages
 <p>You should now see a list of the all the commits in the new repository, and it should (more or less) match the history of commits in the original repository.  The only difference should be in the names of the branches.</p>
 <h2>Remote branches <em>03</em></h2>
 <p>You should see a <strong>master</strong> branch (along with <strong><span class="caps">HEAD</span></strong>) in the history list.  But you will also have number of strangely named branches (<strong>origin/master</strong>, <strong>origin/greet</strong> and <strong>origin/<span class="caps">HEAD</span></strong>).  We&#8217;ll talk about them in a bit.</p>

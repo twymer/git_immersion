@@ -103,8 +103,12 @@ git commit -m "Merged master fixed conflict."</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git add lib/hello.rb
 $ git commit -m "Merged master fixed conflict."
+<<<<<<< HEAD
 Recorded resolution for 'lib/hello.rb'.
 [greet fe21ced] Merged master fixed conflict.
+=======
+[greet 718ab19] Merged master fixed conflict.
+>>>>>>> origin/gh-pages
 </pre>
 <h2>Advanced Merging <em>04</em></h2>
 <p>git doesn&#8217;t provide any graphical merge tools, but it will gladly work with any third party merge tool you wish to use.  See <a href="http://onestepback.org/index.cgi/Tech/Git/UsingP4MergeWithGit.red">http://onestepback.org/index.cgi/Tech/Git/UsingP4MergeWithGit.red</a> for a description of using the Perforce merge tool with git.</p>

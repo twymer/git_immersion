@@ -69,6 +69,7 @@ Applying: hello uses Greeter
 Applying: updated Rakefile
 $
 $ git hist
+<<<<<<< HEAD
 * 5889126 2012-09-09 | Updated Rakefile (HEAD, greet) [Jim Weirich]
 * 40ec77a 2012-09-09 | Hello uses Greeter [Jim Weirich]
 * ab51fed 2012-09-09 | Added greeter class [Jim Weirich]
@@ -80,6 +81,19 @@ $ git hist
 * 42b4d18 2012-09-09 | Added a default value (v1-beta) [Jim Weirich]
 * c7d6941 2012-09-09 | Using ARGV [Jim Weirich]
 * ecd1407 2012-09-09 | First Commit [Jim Weirich]</pre>
+=======
+* 381ffc8 2012-07-13 | Updated Rakefile (HEAD, greet) [Jim Weirich]
+* 3c36f74 2012-07-13 | Hello uses Greeter [Jim Weirich]
+* 83f1f8c 2012-07-13 | Added greeter class [Jim Weirich]
+* 9b66e7d 2012-07-13 | Added README (master) [Jim Weirich]
+* 3fc6cef 2012-07-13 | Added a Rakefile. [Jim Weirich]
+* 2522e96 2012-07-13 | Moved hello.rb to lib [Jim Weirich]
+* cd1c2d8 2012-07-13 | Add an author/email comment [Jim Weirich]
+* 8faa289 2012-07-13 | Added a comment (v1) [Jim Weirich]
+* 6c6818d 2012-07-13 | Added a default value (v1-beta) [Jim Weirich]
+* 2d19dcc 2012-07-13 | Using ARGV [Jim Weirich]
+* d20d62a 2012-07-13 | First Commit [Jim Weirich]</pre>
+>>>>>>> origin/gh-pages
 <h2>Merge VS Rebase <em>01</em></h2>
 <p>The final result of the rebase is very similar to the merge.  The greet branch now contains all of its changes, as well as all the changes from the master branch.  However, the commit tree is quite different.  The commit tree for the greet branch has been rewritten so that the master branch is a part of the commit history.  This leaves the chain of commits linear and much easier to read.</p>
 <h2>When to Rebase, When to Merge? <em>02</em></h2>
