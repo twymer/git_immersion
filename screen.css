@@ -14,12 +14,12 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
+  font-size: 100%;
   vertical-align: baseline;
 }
 
-body {
+html {
   line-height: 1;
 }
 
@@ -142,9 +142,8 @@ html, body {
   text-transform: uppercase;
   background: #fff;
   z-index: 2;
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
@@ -175,14 +174,14 @@ html, body {
   background: url(pager_blur.png);
 }
 
-#edgecase_link {
+#newcontext_link {
   top: 96px;
   left: 50px;
   width: 334px;
   height: 40px;
 }
 
-#other_edgecase_link {
+#other_newcontext_link {
   display: none;
 }
 
@@ -211,7 +210,7 @@ html, body {
   text-indent: -999em;
 }
 
-#edgecase_link {
+#newcontext_link {
   position: absolute;
   top: 185px;
   left: 5px;
@@ -361,12 +360,11 @@ html, body {
   padding: 3px 16px 5px 16px;
   color: #fff;
   text-decoration: none;
-  background: #ED6B44;
-  -moz-border-radius: 3px;
+  background: #6491E0;
   -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
+  -moz-border-radius: 3px;
   -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
 }
 
@@ -392,18 +390,17 @@ html, body {
   color: #999;
 }
 
-/* Index: License and EdgeCase
+/* Index: License and New Context
 ------------------------------------------------------------ */
-#license_and_edgecase {
+#license_and_newcontext {
   float: right;
   width: 485px;
 }
 
 #brought_to_you_by {
-  color: #ED6B44;
+  color: #6491E0;
   font: 39px 'DINWeb-CondMedium', helvetica, arial, sans-serif;
   text-decoration: none;
-  text-transform: uppercase;
 }
 #brought_to_you_by img {
   display: block;
@@ -515,11 +512,10 @@ h4 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   background: url(label.png) no-repeat 100% 0;
-  -moz-border-radius: 3px 0 0 3px;
   -webkit-border-radius: 3px 0 0 3px;
-  -o-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
   -ms-border-radius: 3px 0 0 3px;
-  -khtml-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
 
@@ -567,9 +563,8 @@ a {
 #main_content img {
   display: block;
   margin-left: 340px;
-  -moz-box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
-  -o-box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
 }
 
@@ -608,9 +603,8 @@ ol {
 .blur .sample {
   color: transparent;
   text-shadow: 0 0 2px #74e83f;
-  -moz-box-shadow: 0 0 5px black;
   -webkit-box-shadow: 0 0 5px black;
-  -o-box-shadow: 0 0 5px black;
+  -moz-box-shadow: 0 0 5px black;
   box-shadow: 0 0 5px black;
 }
 
@@ -663,9 +657,8 @@ ol {
   margin-left: -210px;
   background: #e9e7e0;
   z-index: 4;
-  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -824,7 +817,7 @@ ol {
     right: 33px;
   }
 
-  #license_and_edgecase {
+  #license_and_newcontext {
     float: none;
     width: auto;
     margin-bottom: 40px;
@@ -862,7 +855,7 @@ ol {
     top: 6px;
   }
 
-  #edgecase_link {
+  #newcontext_link {
     display: none;
   }
 
@@ -883,7 +876,7 @@ ol {
     left: 21px;
   }
 
-  #other_edgecase_link {
+  #other_newcontext_link {
     display: block;
     position: absolute;
     right: 50px;

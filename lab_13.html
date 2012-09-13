@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lab 13 - Git Immersion - Brought to you by EdgeCase</title>
+  <title>Lab 13 - Git Immersion - Brought to you by New Context</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" media="screen" href="screen.css">
@@ -40,10 +40,10 @@
   
   <a id="table_of_contents_link" href="#">Table of Contents</a>
   <a id="bookmark_link"><span id="bookmark"></span>Bookmark this lab</a>
-  <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
+  <a id="newcontext_link" href="http://newcontext.com" target="_blank">New Context</a>
 </nav>
     <h1 class="lab_title"><em>lab 13</em> Tagging versions</h1>
-    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
+    <a href="http://newcontext.com" target=_blank" id="other_newcontext_link">New Context</a>
   </header>
 
   <div id="main_content">
@@ -76,7 +76,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b new_branch_name
 
-HEAD is now at 2ac1f20... Added a default value
+HEAD is now at 16c5bd0... Added a default value
 $ cat hello.rb
 name = ARGV.first || "World"
 
@@ -92,11 +92,11 @@ puts "Hello, #{name}!"
 git checkout v1-beta</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git checkout v1
-Previous HEAD position was 2ac1f20... Added a default value
-HEAD is now at b5df864... Added a comment
+Previous HEAD position was 16c5bd0... Added a default value
+HEAD is now at e9aa06e... Added a comment
 $ git checkout v1-beta
-Previous HEAD position was b5df864... Added a comment
-HEAD is now at 2ac1f20... Added a default value
+Previous HEAD position was e9aa06e... Added a comment
+HEAD is now at 16c5bd0... Added a default value
 </pre>
 <h2>Viewing Tags using the <code>tag</code> command <em>04</em></h2>
 <p>You can see what tags are available using the <code>git tag</code> command.</p>
@@ -113,10 +113,10 @@ v1-beta
 <pre class="instructions">git hist master --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist master --all
-* b5df864 2012-09-09 | Added a comment (v1, master) [Jim Weirich]
-* 2ac1f20 2012-09-09 | Added a default value (HEAD, v1-beta) [Jim Weirich]
-* 69c24d3 2012-09-09 | Using ARGV [Jim Weirich]
-* 35d31bb 2012-09-09 | First Commit [Jim Weirich]</pre>
+* e9aa06e 2012-09-13 | Added a comment (v1, master) [Jim Weirich]
+* 16c5bd0 2012-09-13 | Added a default value (HEAD, v1-beta) [Jim Weirich]
+* ff8db4c 2012-09-13 | Using ARGV [Jim Weirich]
+* 7180e81 2012-09-13 | First Commit [Jim Weirich]</pre>
 <p>You can see both tags (<code>v1</code> and <code>v1-beta</code>) listed in the log output, along with the branch name (<code>master</code>).  Also <code>HEAD</code> shows you the currently checked out commit (which is <code>v1-beta</code> at the moment).</p>
   </div>
 

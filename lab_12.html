@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lab 12 - Git Immersion - Brought to you by EdgeCase</title>
+  <title>Lab 12 - Git Immersion - Brought to you by New Context</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" media="screen" href="screen.css">
@@ -40,10 +40,10 @@
   
   <a id="table_of_contents_link" href="#">Table of Contents</a>
   <a id="bookmark_link"><span id="bookmark"></span>Bookmark this lab</a>
-  <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
+  <a id="newcontext_link" href="http://newcontext.com" target="_blank">New Context</a>
 </nav>
     <h1 class="lab_title"><em>lab 12</em> Getting Old Versions</h1>
-    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
+    <a href="http://newcontext.com" target=_blank" id="other_newcontext_link">New Context</a>
   </header>
 
   <div id="main_content">
@@ -59,10 +59,10 @@
 <p class="note"><strong>Note:</strong> You did remember to define <code>hist</code> in your <code>.gitconfig</code> file, right?  If not, review the lab on aliases.</p>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* b5df864 2012-09-09 | Added a comment (HEAD, master) [Jim Weirich]
-* 2ac1f20 2012-09-09 | Added a default value [Jim Weirich]
-* 69c24d3 2012-09-09 | Using ARGV [Jim Weirich]
-* 35d31bb 2012-09-09 | First Commit [Jim Weirich]</pre>
+* e9aa06e 2012-09-13 | Added a comment (HEAD, master) [Jim Weirich]
+* 16c5bd0 2012-09-13 | Added a default value [Jim Weirich]
+* ff8db4c 2012-09-13 | Using ARGV [Jim Weirich]
+* 7180e81 2012-09-13 | First Commit [Jim Weirich]</pre>
 <p>Examine the log output and find the hash for the first commit.  It should be the last line of the <code>git hist</code> output.  Use that hash code (the first 7 characters are enough) in the command below.  Then check the contents of the hello.rb file.</p>
 <h4>Execute:</h4>
 <pre class="instructions">git checkout &lt;hash&gt;
@@ -71,8 +71,8 @@ cat hello.rb</pre>
 <p class="note"><strong>Note:</strong> Many commands depend on the hash values in the repository.  Since your hash values will vary from mine, whenever you see something like &lt;hash&gt; or &lt;treehash&gt; in the command, substitute in the proper hash value for your repository.</p>
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
-<pre class="sample">$ git checkout 35d31bb
-Note: checking out '35d31bb'.
+<pre class="sample">$ git checkout 7180e81
+Note: checking out '7180e81'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
@@ -83,7 +83,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b new_branch_name
 
-HEAD is now at 35d31bb... First Commit
+HEAD is now at 7180e81... First Commit
 $ cat hello.rb
 puts "Hello, World"
 </pre>
@@ -96,7 +96,7 @@ cat hello.rb</pre>
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git checkout master
-Previous HEAD position was 35d31bb... First Commit
+Previous HEAD position was 7180e81... First Commit
 Switched to branch 'master'
 $ cat hello.rb
 # Default is "World"
@@ -104,7 +104,7 @@ name = ARGV.first || "World"
 
 puts "Hello, #{name}!"
 </pre>
-<p>&#8216;master&#8217; is the name of the default branch.  By checking out a branch by name, you go to the latest version of that branch.</p>
+<p>&#8216;master&#8217; is the name of the default branch.  By checking out a branch by name, you go to the lastest version of that branch.</p>
   </div>
 
   <div id="index">

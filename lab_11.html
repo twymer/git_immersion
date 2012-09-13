@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lab 11 - Git Immersion - Brought to you by EdgeCase</title>
+  <title>Lab 11 - Git Immersion - Brought to you by New Context</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" media="screen" href="screen.css">
@@ -40,10 +40,10 @@
   
   <a id="table_of_contents_link" href="#">Table of Contents</a>
   <a id="bookmark_link"><span id="bookmark"></span>Bookmark this lab</a>
-  <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
+  <a id="newcontext_link" href="http://newcontext.com" target="_blank">New Context</a>
 </nav>
     <h1 class="lab_title"><em>lab 11</em> Aliases</h1>
-    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
+    <a href="http://newcontext.com" target=_blank" id="other_newcontext_link">New Context</a>
   </header>
 
   <div id="main_content">
@@ -53,7 +53,7 @@
 	<li>Learn how to setup aliases and shortcuts for git commands</li>
 </ul>
 <h2>Common Aliases <em>01</em></h2>
-<p><code>git status</code>, <code>git add</code>, <code>git commit</code>, and <code>git checkout</code> are such common commands that it is useful to have abbreviations for them.</p>
+<p><ins>git status</ins>, <ins>git add</ins>, <ins>git commit</ins>, and <ins>git checkout</ins> are such common commands that it is useful to have abbreviations for them.</p>
 <p>Add the following to the .gitconfig file in your $<span class="caps">HOME</span> directory.</p>
 <h4>File: <em>.gitconfig</em></h4>
 <pre class="file">[alias]
@@ -61,12 +61,11 @@
   ci = commit
   st = status
   br = branch
-  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
 </pre>
-<p>We&#8217;ve covered the commit and status commands already.  And we just covered the <code>log</code> command in the previous lab. The <code>checkout</code> command will be coming up soon.</p>
-<p>With these aliases defined in the <code>.gitconfig</code> file you can type <code>git co</code> wherever you used to have to type <code>git checkout</code>.  Likewise with <code>git st</code> for <code>git status</code> and <code>git ci</code> for <code>git commit</code>.  And best of all, <code>git hist</code> will allow you to avoid the really long <code>log</code> command.</p>
+<p>We&#8217;ve covered checkout, commit and status already.  And we just covered the <code>log</code> command in the previous lab. Now you can type <code>git co</code> wherever you used to have to type <code>git checkout</code>.  Likewise with <code>git st</code> for <code>git status</code> and <code>git ci</code> for <code>git commit</code>.  And best of all, <code>git hist</code> will allow you to avoid the really long <code>log</code> command.</p>
 <p>Go ahead and give the new commands a try.</p>
 <h2>Define the <code>hist</code> alias in your <code>.gitconfig</code> file <em>02</em></h2>
 <p>For the most part, I will continue to type out the full command in these instructions.  The only exception is that I will use the <code>hist</code> alias defined above anytime we need to see the git log output.  Make sure you have a <code>hist</code> alias setup in your <code>.gitconfig</code> file before continuing if you wish to follow along.</p>

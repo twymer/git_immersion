@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lab 10 - Git Immersion - Brought to you by EdgeCase</title>
+  <title>Lab 10 - Git Immersion - Brought to you by New Context</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" media="screen" href="screen.css">
@@ -40,10 +40,10 @@
   
   <a id="table_of_contents_link" href="#">Table of Contents</a>
   <a id="bookmark_link"><span id="bookmark"></span>Bookmark this lab</a>
-  <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
+  <a id="newcontext_link" href="http://newcontext.com" target="_blank">New Context</a>
 </nav>
     <h1 class="lab_title"><em>lab 10</em> History</h1>
-    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
+    <a href="http://newcontext.com" target=_blank" id="other_newcontext_link">New Context</a>
   </header>
 
   <div id="main_content">
@@ -58,27 +58,27 @@
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git log
-commit b5df8645c9e86e152d86adf1b2e1c83cc2854a5a
-Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Sun Sep 9 17:12:17 2012 -0400
+commit e9aa06ea9869455c0cc35374caa2845c7914289b
+Author: Jim Weirich &lt;jim (at) newcontext.com&gt;
+Date:   Thu Sep 13 09:41:47 2012 -0400
 
     Added a comment
 
-commit 2ac1f20034d316595e615a4c295406c59a563b15
-Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Sun Sep 9 17:12:17 2012 -0400
+commit 16c5bd04d2d84c234593474dbc26eb319e19dc12
+Author: Jim Weirich &lt;jim (at) newcontext.com&gt;
+Date:   Thu Sep 13 09:41:47 2012 -0400
 
     Added a default value
 
-commit 69c24d32c03f99d19ff147801e28505debc1c194
-Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Sun Sep 9 17:12:17 2012 -0400
+commit ff8db4c5c65fb31d7ed5580be763c844be4a6ead
+Author: Jim Weirich &lt;jim (at) newcontext.com&gt;
+Date:   Thu Sep 13 09:41:47 2012 -0400
 
     Using ARGV
 
-commit 35d31bb4329b622c4d823794ae9660cc0a35736e
-Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Sun Sep 9 17:12:16 2012 -0400
+commit 7180e81f71b656689326b122aec21b16fb096fb5
+Author: Jim Weirich &lt;jim (at) newcontext.com&gt;
+Date:   Thu Sep 13 09:41:47 2012 -0400
 
     First Commit
 </pre>
@@ -90,10 +90,10 @@ Date:   Sun Sep 9 17:12:16 2012 -0400
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git log --pretty=oneline
-b5df8645c9e86e152d86adf1b2e1c83cc2854a5a Added a comment
-2ac1f20034d316595e615a4c295406c59a563b15 Added a default value
-69c24d32c03f99d19ff147801e28505debc1c194 Using ARGV
-35d31bb4329b622c4d823794ae9660cc0a35736e First Commit
+e9aa06ea9869455c0cc35374caa2845c7914289b Added a comment
+16c5bd04d2d84c234593474dbc26eb319e19dc12 Added a default value
+ff8db4c5c65fb31d7ed5580be763c844be4a6ead Using ARGV
+7180e81f71b656689326b122aec21b16fb096fb5 First Commit
 </pre>
 <h2>Controlling Which Entries are Displayed <em>02</em></h2>
 <p>There are a lot of options for selecting which entries are displayed in the log.  Play around with the following options:</p>
@@ -105,18 +105,18 @@ git log --pretty=oneline --all</pre>
 <p>See man git-log for all the details.</p>
 <h2>Getting Fancy <em>03</em></h2>
 <p>Here&#8217;s what I use to review the changes made in the last week. I&#8217;ll add <code>--author=jim</code> if I only want to see changes I made.</p>
-<pre class="instructions">git log --all --pretty=format:'%h %cd %s (%an)' --since='7 days ago'</pre>
+<pre class="instructions">git log --all --pretty=format:"%h %cd %s (%an)" --since='7 days ago'</pre>
 <h2>The Ultimate Log Format <em>04</em></h2>
 <p>Over time, I&#8217;ve decided that I like the following log format for most of my work.</p>
 <h4>Execute:</h4>
-<pre class="instructions">git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short</pre>
+<pre class="instructions">git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short</pre>
 <p>It looks like this:</p>
 <h4>Output:</h4>
-<pre class="sample">$ git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-* b5df864 2012-09-09 | Added a comment (HEAD, master) [Jim Weirich]
-* 2ac1f20 2012-09-09 | Added a default value [Jim Weirich]
-* 69c24d3 2012-09-09 | Using ARGV [Jim Weirich]
-* 35d31bb 2012-09-09 | First Commit [Jim Weirich]</pre>
+<pre class="sample">$ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+* e9aa06e 2012-09-13 | Added a comment (HEAD, master) [Jim Weirich]
+* 16c5bd0 2012-09-13 | Added a default value [Jim Weirich]
+* ff8db4c 2012-09-13 | Using ARGV [Jim Weirich]
+* 7180e81 2012-09-13 | First Commit [Jim Weirich]</pre>
 <p>Let&#8217;s look at it in detail:</p>
 <ul>
 	<li><code>--pretty="..."</code> defines the format of the output.</li>

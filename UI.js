@@ -37,12 +37,12 @@ $(function() {
     , showIndex              = function() {
       $('#cover').show();
       $('#index').fadeIn(200);
-      $('body').addClass('blur');
+      //$('body').addClass('blur');
     }
     , hideIndex              = function() {
       $('#cover').hide();
       $('#index').fadeOut(200);
-      $('body').removeClass('blur');
+      //$('body').removeClass('blur');
     }
   ;
 
