@@ -88,13 +88,13 @@ html, body {
 
 .blur #pager { background: url(pager_blur.png); }
 
-#newcontext_link {
+#neo_link {
   top    : 96px;
   left   : 50px;
   width  : 334px;
   height : 40px; }
 
-#other_newcontext_link {
+#other_neo_link {
   display: none; }
 
 #pager .arrow {
@@ -115,7 +115,7 @@ html, body {
   height      : 50px;
   text-indent :-999em; }
 
-#newcontext_link {
+#neo_link {
   position    : absolute;
   top         : 185px;
   left        : 5px;
@@ -294,10 +294,10 @@ html, body {
 
 
 
-/* Index: License and New Context
+/* Index: License and Neo
 ------------------------------------------------------------ */
 
-#license_and_newcontext {
+#license_and_neo {
   float : right;
   width : 485px;
 }
@@ -657,7 +657,7 @@ ol {
     right: 33px;
   }
 
-  #license_and_newcontext {
+  #license_and_neo {
     float         : none;
     width         : auto;
     margin-bottom : 40px;
@@ -694,7 +694,7 @@ ol {
     .arrow { top: 6px; }
   }
 
-  #newcontext_link { display: none; }
+  #neo_link { display: none; }
 
   #arrow_previous { left: 20px; }
   #arrow_next { left: 181px; }
@@ -702,7 +702,7 @@ ol {
   #bookmark_link { top: 65px; height: 51px; }
   #bookmark_link #bookmark { left: 21px; }
 
-  #other_newcontext_link {
+  #other_neo_link {
     display     : block;
     position    : absolute;
     right       : 50px;
