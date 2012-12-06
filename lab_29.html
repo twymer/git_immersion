@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lab 29 - Git Immersion - Brought to you by New Context</title>
+  <title>Lab 29 - Git Immersion - Brought to you by Neo</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" media="screen" href="screen.css">
@@ -40,10 +40,11 @@
   
   <a id="table_of_contents_link" href="#">Table of Contents</a>
   <a id="bookmark_link"><span id="bookmark"></span>Bookmark this lab</a>
-  <a id="newcontext_link" href="http://newcontext.com" target="_blank">New Context</a>
+  <a id="neo_link" href="http://neo.com" target="_blank">Neo</a>
 </nav>
+
     <h1 class="lab_title"><em>lab 29</em> Creating a Conflict</h1>
-    <a href="http://newcontext.com" target=_blank" id="other_newcontext_link">New Context</a>
+    <a href="http://neo.com" target=_blank" id="other_neo_link">Neo</a>
   </header>
 
   <div id="main_content">
@@ -70,22 +71,22 @@ git commit -m "Made interactive"</pre>
 <pre class="instructions">git hist --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --all
-*   77c5685 2012-09-13 | Merge branch 'master' into greet (greet) [Jim Weirich]
+*   808e0dc 2012-12-06 | Merge branch 'master' into greet (greet) [Jim Weirich]
 |\  
-* | 99859cd 2012-09-13 | Updated Rakefile [Jim Weirich]
-* | eb3b972 2012-09-13 | Hello uses Greeter [Jim Weirich]
-* | 1691285 2012-09-13 | Added greeter class [Jim Weirich]
-| | * 862d832 2012-09-13 | Made interactive (HEAD, master) [Jim Weirich]
+* | c4d9253 2012-12-06 | Updated Rakefile [Jim Weirich]
+* | 416cb08 2012-12-06 | Hello uses Greeter [Jim Weirich]
+* | 6cd5cd3 2012-12-06 | Added greeter class [Jim Weirich]
+| | * 161d95a 2012-12-06 | Made interactive (HEAD, master) [Jim Weirich]
 | |/  
-| * 8213fad 2012-09-13 | Added README [Jim Weirich]
+| * 0941ebd 2012-12-06 | Added README [Jim Weirich]
 |/  
-* a137bcf 2012-09-13 | Added a Rakefile. [Jim Weirich]
-* 0441cd9 2012-09-13 | Moved hello.rb to lib [Jim Weirich]
-* ad06914 2012-09-13 | Add an author/email comment [Jim Weirich]
-* e9aa06e 2012-09-13 | Added a comment (v1) [Jim Weirich]
-* 16c5bd0 2012-09-13 | Added a default value (v1-beta) [Jim Weirich]
-* ff8db4c 2012-09-13 | Using ARGV [Jim Weirich]
-* 7180e81 2012-09-13 | First Commit [Jim Weirich]</pre>
+* c1582b8 2012-12-06 | Added a Rakefile. [Jim Weirich]
+* 7e6ab4b 2012-12-06 | Moved hello.rb to lib [Jim Weirich]
+* c4439d8 2012-12-06 | Add an author/email comment [Jim Weirich]
+* 616a03e 2012-12-06 | Added a comment (v1) [Jim Weirich]
+* d2bef50 2012-12-06 | Added a default value (v1-beta) [Jim Weirich]
+* efb8f9b 2012-12-06 | Using ARGV [Jim Weirich]
+* db5c5ad 2012-12-06 | First Commit [Jim Weirich]</pre>
 <p>Master at commit &#8220;Added <span class="caps">README</span>&#8221; has been merged to the greet branch, but there is now an additional commit on master that has not been merged back to greet.</p>
 <h2>Up Next <em>03</em></h2>
 <p>The latest change in master conflicts with some existing changes in greet.  Next we will resolve those changes.</p>

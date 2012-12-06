@@ -174,14 +174,14 @@ html, body {
   background: url(pager_blur.png);
 }
 
-#newcontext_link {
+#neo_link {
   top: 96px;
   left: 50px;
   width: 334px;
   height: 40px;
 }
 
-#other_newcontext_link {
+#other_neo_link {
   display: none;
 }
 
@@ -210,7 +210,7 @@ html, body {
   text-indent: -999em;
 }
 
-#newcontext_link {
+#neo_link {
   position: absolute;
   top: 185px;
   left: 5px;
@@ -390,9 +390,9 @@ html, body {
   color: #999;
 }
 
-/* Index: License and New Context
+/* Index: License and Neo
 ------------------------------------------------------------ */
-#license_and_newcontext {
+#license_and_neo {
   float: right;
   width: 485px;
 }
@@ -817,7 +817,7 @@ ol {
     right: 33px;
   }
 
-  #license_and_newcontext {
+  #license_and_neo {
     float: none;
     width: auto;
     margin-bottom: 40px;
@@ -855,7 +855,7 @@ ol {
     top: 6px;
   }
 
-  #newcontext_link {
+  #neo_link {
     display: none;
   }
 
@@ -876,7 +876,7 @@ ol {
     left: 21px;
   }
 
-  #other_newcontext_link {
+  #other_neo_link {
     display: block;
     position: absolute;
     right: 50px;
