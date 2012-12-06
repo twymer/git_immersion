@@ -360,7 +360,7 @@ html, body {
   padding: 3px 16px 5px 16px;
   color: #fff;
   text-decoration: none;
-  background: #6491E0;
+  background: #82A238;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -398,7 +398,7 @@ html, body {
 }
 
 #brought_to_you_by {
-  color: #6491E0;
+  color: #82A238;
   font: 39px 'DINWeb-CondMedium', helvetica, arial, sans-serif;
   text-decoration: none;
 }
