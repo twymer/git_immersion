@@ -60,10 +60,10 @@
 <p class="note"><strong>Note:</strong> You did remember to define <code>hist</code> in your <code>.gitconfig</code> file, right?  If not, review the lab on aliases.</p>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* 848576f 2012-12-06 | Added a comment (HEAD, master) [Jim Weirich]
-* fda8d00 2012-12-06 | Added a default value [Jim Weirich]
-* 0df962d 2012-12-06 | Using ARGV [Jim Weirich]
-* 3357241 2012-12-06 | First Commit [Jim Weirich]</pre>
+* 55d2671 2012-12-06 | Added a comment (HEAD, master) [Jim Weirich]
+* 4f5aea5 2012-12-06 | Added a default value [Jim Weirich]
+* 23170f3 2012-12-06 | Using ARGV [Jim Weirich]
+* 5803e4b 2012-12-06 | First Commit [Jim Weirich]</pre>
 <p>Examine the log output and find the hash for the first commit.  It should be the last line of the <code>git hist</code> output.  Use that hash code (the first 7 characters are enough) in the command below.  Then check the contents of the hello.rb file.</p>
 <h4>Execute:</h4>
 <pre class="instructions">git checkout &lt;hash&gt;
@@ -72,8 +72,8 @@ cat hello.rb</pre>
 <p class="note"><strong>Note:</strong> Many commands depend on the hash values in the repository.  Since your hash values will vary from mine, whenever you see something like &lt;hash&gt; or &lt;treehash&gt; in the command, substitute in the proper hash value for your repository.</p>
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
-<pre class="sample">$ git checkout 3357241
-Note: checking out '3357241'.
+<pre class="sample">$ git checkout 5803e4b
+Note: checking out '5803e4b'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
@@ -84,7 +84,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b new_branch_name
 
-HEAD is now at 3357241... First Commit
+HEAD is now at 5803e4b... First Commit
 $ cat hello.rb
 puts "Hello, World"
 </pre>
@@ -97,7 +97,7 @@ cat hello.rb</pre>
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git checkout master
-Previous HEAD position was 3357241... First Commit
+Previous HEAD position was 5803e4b... First Commit
 Switched to branch 'master'
 $ cat hello.rb
 # Default is "World"

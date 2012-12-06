@@ -82,7 +82,7 @@ git commit --amend -m "Add an author/email comment"</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git add hello.rb
 $ git commit --amend -m "Add an author/email comment"
-[master b0c1dee] Add an author/email comment
+[master 25937be] Add an author/email comment
  1 file changed, 2 insertions(+), 1 deletion(-)
 </pre>
 <h2>Review the History <em>04</em></h2>
@@ -90,11 +90,11 @@ $ git commit --amend -m "Add an author/email comment"
 <pre class="instructions">git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* b0c1dee 2012-12-06 | Add an author/email comment (HEAD, master) [Jim Weirich]
-* 848576f 2012-12-06 | Added a comment (v1) [Jim Weirich]
-* fda8d00 2012-12-06 | Added a default value (v1-beta) [Jim Weirich]
-* 0df962d 2012-12-06 | Using ARGV [Jim Weirich]
-* 3357241 2012-12-06 | First Commit [Jim Weirich]</pre>
+* 25937be 2012-12-06 | Add an author/email comment (HEAD, master) [Jim Weirich]
+* 55d2671 2012-12-06 | Added a comment (v1) [Jim Weirich]
+* 4f5aea5 2012-12-06 | Added a default value (v1-beta) [Jim Weirich]
+* 23170f3 2012-12-06 | Using ARGV [Jim Weirich]
+* 5803e4b 2012-12-06 | First Commit [Jim Weirich]</pre>
 <p>We can see the original &#8220;author&#8221; commit is now gone, and it is replaced by the &#8220;author/email&#8221; commit.  You can achieve the same effect by resetting the branch back one commit and then recommitting the new changes.</p>
   </div>
 

@@ -77,7 +77,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b new_branch_name
 
-HEAD is now at fda8d00... Added a default value
+HEAD is now at 4f5aea5... Added a default value
 $ cat hello.rb
 name = ARGV.first || "World"
 
@@ -93,11 +93,11 @@ puts "Hello, #{name}!"
 git checkout v1-beta</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git checkout v1
-Previous HEAD position was fda8d00... Added a default value
-HEAD is now at 848576f... Added a comment
+Previous HEAD position was 4f5aea5... Added a default value
+HEAD is now at 55d2671... Added a comment
 $ git checkout v1-beta
-Previous HEAD position was 848576f... Added a comment
-HEAD is now at fda8d00... Added a default value
+Previous HEAD position was 55d2671... Added a comment
+HEAD is now at 4f5aea5... Added a default value
 </pre>
 <h2>Viewing Tags using the <code>tag</code> command <em>04</em></h2>
 <p>You can see what tags are available using the <code>git tag</code> command.</p>
@@ -114,10 +114,10 @@ v1-beta
 <pre class="instructions">git hist master --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist master --all
-* 848576f 2012-12-06 | Added a comment (v1, master) [Jim Weirich]
-* fda8d00 2012-12-06 | Added a default value (HEAD, v1-beta) [Jim Weirich]
-* 0df962d 2012-12-06 | Using ARGV [Jim Weirich]
-* 3357241 2012-12-06 | First Commit [Jim Weirich]</pre>
+* 55d2671 2012-12-06 | Added a comment (v1, master) [Jim Weirich]
+* 4f5aea5 2012-12-06 | Added a default value (HEAD, v1-beta) [Jim Weirich]
+* 23170f3 2012-12-06 | Using ARGV [Jim Weirich]
+* 5803e4b 2012-12-06 | First Commit [Jim Weirich]</pre>
 <p>You can see both tags (<code>v1</code> and <code>v1-beta</code>) listed in the log output, along with the branch name (<code>master</code>).  Also <code>HEAD</code> shows you the currently checked out commit (which is <code>v1-beta</code> at the moment).</p>
   </div>
 
