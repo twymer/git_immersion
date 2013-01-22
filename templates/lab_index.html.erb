@@ -4,8 +4,12 @@
   <div id="no_bookmarks"></div>
   <ul>
     <li id="lab_0_link"><a href="index.html"><span>&nbsp;</span>Home Cover Page</a></li>
-    <% labs.each do |l| -%>
-      <li id="lab_<%= l.number %>_link" data-lab-id="<%= l.number %>"><a href="<%= l.filename %>"><span><%= l.number %>:</span> <%= l.name %></a></li>
+    <% sessions.each do |session| -%>
+    <li class='session'>Session: <%= session.name %></li>
+    <% session.labs.each do |l| -%>
+    <li id="lab_<%= l.number %>_link" data-lab-id="<%= l.number %>"><a href="<%= l.filename %>"><span><%= l.number %>:</span> <%= l.name %></a></li>
+    <% end -%>
+    </li>
     <% end -%>
   </ul>
 </div>

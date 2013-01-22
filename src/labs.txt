@@ -1,3 +1,4 @@
+SESSION: Getting Started
 ----------------------------------------------------------------------
 h1. Setup
 
@@ -53,6 +54,7 @@ with three sub-directories:
 * work -- An empty working directory.  Create your repos in here.
 * repos -- Prepackaged Git repositories so you can jump into the tutorial at any point.  If you get stuck, just copy the desired lab into your working directory.
 
+SESSION: Basics
 ----------------------------------------------------------------------
 h1. Create a Project
 
@@ -441,6 +443,7 @@ h2. Commit the Second Change
 Execute:
 git commit -m "Added a comment"
 
+SESSION: Dealing with the Past
 ----------------------------------------------------------------------
 h1. History
 
@@ -716,7 +719,7 @@ lookup up the hash, we will use the @^@ notation to indicate "the parent
 of v1".
 
 p(note). If the @v1@^ notation gives you any trouble, you can also try
-@v1~1@, which will reference the same version.  This notation means 
+@v1~1@, which will reference the same version.  This notation means
 "the first ancestor of v1".
 
 Execute:
@@ -779,6 +782,7 @@ p. You can see both tags (@v1@ and @v1-beta@) listed in the log
 output, along with the branch name (@master@).  Also @HEAD@ shows you
 the currently checked out commit (which is @v1-beta@ at the moment).
 
+SESSION: Fixing Mistakes
 ----------------------------------------------------------------------
 h1. Undoing Local Changes (before staging)
 
@@ -1201,6 +1205,7 @@ replaced by the "author/email" commit.  You can achieve the same
 effect by resetting the branch back one commit and then recommitting
 the new changes.
 
+SESSION: Internals
 ----------------------------------------------------------------------
 h1. Moving Files
 
@@ -1509,6 +1514,7 @@ p. Explore the git repo manually on your own.  See if you can find the
 original hello.rb file from the very first commit by manually
 following the SHA1 hash references starting in the latest commit.
 
+SESSION: Branching
 ----------------------------------------------------------------------
 h1. Creating a Branch
 
@@ -1699,6 +1705,7 @@ The common ancestor to both branches is the "Added a Rakefile" branch.
 p. The @--all@ flag makes sure that we see all the branches.  The
 default is to show only the current branch.
 
+SESSION: Merging and Conflicts
 ----------------------------------------------------------------------
 h1. Merging
 
@@ -2067,6 +2074,7 @@ EOF
 
 p. The greet and master branches are now identical.
 
+SESSION: Multiple Repositories
 ----------------------------------------------------------------------
 h1. Multiple Repositories
 
@@ -2223,8 +2231,8 @@ EOF
 p. Now we see that the remote repository "origin" is simply the original
 *hello* repository.  Remote repositories typically live on a separate
 machine, possibly a centralized server.  As we can see here, however,
-they can just as well point to a repository on the same machine.  
-There is nothing particularly special about the name "origin", 
+they can just as well point to a repository on the same machine.
+There is nothing particularly special about the name "origin",
 however the convention is to use the name "origin" for
 the primary centralized repository (if there is one).
 
@@ -2440,6 +2448,7 @@ EOF
 
 p. We can now see the greet branch in the branch list and in the log.
 
+SESSION: Bare Repositories
 ----------------------------------------------------------------------
 h1. Bare Repositories
 
@@ -2600,6 +2609,7 @@ addresses and see if you can pull from each other's repositories.
 p(note). *NOTE:* The gitjour gem is really useful in sharing
 ad-hoc repositories.
 
+SESSION: Wrap-up
 ----------------------------------------------------------------------
 h1. Advanced / Future Topics
 
@@ -2621,4 +2631,3 @@ h1. Thank You
 
 p. Thank you for trying out the Git Immersion Labs.  Feel free to send
 comments to jim.weirich@gmail.com.
-

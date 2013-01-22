@@ -1,4 +1,5 @@
 module RunLabs
+  extend FileUtils
   module_function
 
   def make_sample_name(lab_number, word)

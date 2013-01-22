@@ -4,6 +4,19 @@ module Labs
   HTML_DIR = 'git_tutorial/html'
   WORK_DIR = 'git_tutorial/work'
 
+  class Session
+    attr_reader :name, :labs
+
+    def initialize(name)
+      @name = name
+      @labs = []
+    end
+
+    def <<(lab)
+      @labs << lab
+    end
+  end
+
   class Lab
     attr_reader :name, :number, :lines
     attr_accessor :next, :prev
@@ -38,6 +51,8 @@ module Labs
   def generate_labs(io)
     lab_index = -1
     step_index = 0
+    current_session = nil
+    sessions = []
     labs = []
     mode = :direct
     gathered_line = ''
@@ -51,6 +66,7 @@ module Labs
           step_index = 0
           lab_index += 1
           lab = Lab.new($1, lab_index+1)
+          current_session << lab
           lab.prev = labs.last
           labs.last.next = lab if labs.last
           line.sub!(/h1\./, "h1(lab_title). _lab #{lab_index+1}_ ") # add lab number
@@ -86,6 +102,9 @@ module Labs
           # Skip freeze lines
         elsif line =~ /^=\w+/
           # Skip include lines
+        elsif line =~ /^SESSION:\s+(.*)$/
+          current_session = Session.new($1)
+          sessions << current_session
         else
           labs[lab_index] << line unless lab_index < 0
         end
@@ -117,9 +136,9 @@ module Labs
         end
       end
     end
-    write_index_html(labs)
+    write_index_html(sessions)
     labs.each do |lab|
-      write_lab_html(lab, labs)
+      write_lab_html(lab, sessions)
     end
   end
 
@@ -127,7 +146,7 @@ module Labs
     partial("nav", binding)
   end
 
-  def lab_index(f, labs)
+  def lab_index(f, sessions)
     partial("lab_index", binding)
   end
 
@@ -140,13 +159,13 @@ module Labs
     result.gsub(/@NONEWLINE@\n/, '')
   end
 
-  def write_index_html(labs)
+  def write_index_html(sessions)
     File.open("#{HTML_DIR}/index.html", "w") do |f|
       f.puts partial('index', binding)
     end
   end
 
-  def write_lab_html(lab, labs)
+  def write_lab_html(lab, sessions)
     lab_html = lab.to_html
     File.open("#{HTML_DIR}/#{lab.filename}", "w") { |f|
       f.puts partial('lab', binding)

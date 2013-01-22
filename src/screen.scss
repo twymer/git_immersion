@@ -413,7 +413,7 @@ h4 {
   @include border_radius(3px 0 0 3px); }
 
 .blur h4 {
-  color       : transparent; 
+  color       : transparent;
   text-shadow : 0 0 2px #fff;
   background  : url(label_blur.png) no-repeat 100% 0; }
 
@@ -579,6 +579,15 @@ ol {
   margin   : 0;
   padding  : 50px 0 10px 0;
   z-index  : 1; }
+
+#index li.session {
+  background: rgb(203,203,203);
+  margin-left: 12px;
+  padding-left: 6px;
+  padding-top: 6px;
+  margin-top: 0.3em;
+  padding-bottom: 6px;
+}
 
 #index ul::-webkit-scrollbar                        { width: 10px; height: 10px; }
 #index ul::-webkit-scrollbar-track:enabled          { background-color: transparent; }
