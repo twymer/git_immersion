@@ -754,6 +754,15 @@ ol {
   padding-left: 12px;
 }
 
+#index li.session {
+  background: rgb(203,203,203);
+  margin-left: 12px;
+  padding-left: 6px;
+  padding-top: 6px;
+  margin-top: 0.3em;
+  padding-bottom: 6px;
+}
+
 #index a {
   display: block;
   height: 28px;
