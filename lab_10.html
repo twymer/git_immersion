@@ -59,27 +59,27 @@
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git log
-commit 68f85c819d22f3682e56b31e513deb686c6b6579
-Author: Jim Weirich &lt;jim (at) newcontext.com&gt;
-Date:   Fri Apr 12 17:49:01 2013 -0400
+commit 1f7ec5eaa8f37c2770dae3b984c55a1531fcc9e7
+Author: Jim Weirich &lt;jim (at) neo.com&gt;
+Date:   Sat Apr 13 15:20:42 2013 -0400
 
     Added a comment
 
-commit 6217587d08f04f2411d258cb53a52c6521f5aacc
-Author: Jim Weirich &lt;jim (at) newcontext.com&gt;
-Date:   Fri Apr 12 17:49:01 2013 -0400
+commit 582495ae59ca91bca156a3372a72f88f6261698b
+Author: Jim Weirich &lt;jim (at) neo.com&gt;
+Date:   Sat Apr 13 15:20:42 2013 -0400
 
     Added a default value
 
-commit eb0fea14e07d8c555f5e2fe416a135e66039fce6
-Author: Jim Weirich &lt;jim (at) newcontext.com&gt;
-Date:   Fri Apr 12 17:49:00 2013 -0400
+commit 323e28d99a07d404c04f27eb6e415d4b8ab1d615
+Author: Jim Weirich &lt;jim (at) neo.com&gt;
+Date:   Sat Apr 13 15:20:42 2013 -0400
 
     Using ARGV
 
-commit d6ab31335c80c87b0666d71760460f54da668ee7
-Author: Jim Weirich &lt;jim (at) newcontext.com&gt;
-Date:   Fri Apr 12 17:49:00 2013 -0400
+commit 94164160adf8faa3119b409fcfcd13d0a0eb8020
+Author: Jim Weirich &lt;jim (at) neo.com&gt;
+Date:   Sat Apr 13 15:20:42 2013 -0400
 
     First Commit
 </pre>
@@ -91,10 +91,10 @@ Date:   Fri Apr 12 17:49:00 2013 -0400
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git log --pretty=oneline
-68f85c819d22f3682e56b31e513deb686c6b6579 Added a comment
-6217587d08f04f2411d258cb53a52c6521f5aacc Added a default value
-eb0fea14e07d8c555f5e2fe416a135e66039fce6 Using ARGV
-d6ab31335c80c87b0666d71760460f54da668ee7 First Commit
+1f7ec5eaa8f37c2770dae3b984c55a1531fcc9e7 Added a comment
+582495ae59ca91bca156a3372a72f88f6261698b Added a default value
+323e28d99a07d404c04f27eb6e415d4b8ab1d615 Using ARGV
+94164160adf8faa3119b409fcfcd13d0a0eb8020 First Commit
 </pre>
 <h2>Controlling Which Entries are Displayed <em>02</em></h2>
 <p>There are a lot of options for selecting which entries are displayed in the log.  Play around with the following options:</p>
@@ -106,18 +106,18 @@ git log --pretty=oneline --all</pre>
 <p>See man git-log for all the details.</p>
 <h2>Getting Fancy <em>03</em></h2>
 <p>Here&#8217;s what I use to review the changes made in the last week. I&#8217;ll add <code>--author=jim</code> if I only want to see changes I made.</p>
-<pre class="instructions">git log --all --pretty=format:"%h %cd %s (%an)" --since='7 days ago'</pre>
+<pre class="instructions">git log --all --pretty=format:'%h %cd %s (%an)' --since='7 days ago'</pre>
 <h2>The Ultimate Log Format <em>04</em></h2>
 <p>Over time, I&#8217;ve decided that I like the following log format for most of my work.</p>
 <h4>Execute:</h4>
-<pre class="instructions">git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short</pre>
+<pre class="instructions">git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short</pre>
 <p>It looks like this:</p>
 <h4>Output:</h4>
-<pre class="sample">$ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
-* 68f85c8 2013-04-12 | Added a comment (HEAD, master) [Jim Weirich]
-* 6217587 2013-04-12 | Added a default value [Jim Weirich]
-* eb0fea1 2013-04-12 | Using ARGV [Jim Weirich]
-* d6ab313 2013-04-12 | First Commit [Jim Weirich]</pre>
+<pre class="sample">$ git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+* 1f7ec5e 2013-04-13 | Added a comment (HEAD, master) [Jim Weirich]
+* 582495a 2013-04-13 | Added a default value [Jim Weirich]
+* 323e28d 2013-04-13 | Using ARGV [Jim Weirich]
+* 9416416 2013-04-13 | First Commit [Jim Weirich]</pre>
 <p>Let&#8217;s look at it in detail:</p>
 <ul>
 	<li><code>--pretty="..."</code> defines the format of the output.</li>
