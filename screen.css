@@ -175,14 +175,14 @@ html, body {
   background: url(pager_blur.png);
 }
 
-#edgecase_link {
+#neo_link {
   top: 96px;
   left: 50px;
   width: 334px;
   height: 40px;
 }
 
-#other_edgecase_link {
+#other_neo_link {
   display: none;
 }
 
@@ -211,7 +211,7 @@ html, body {
   text-indent: -999em;
 }
 
-#edgecase_link {
+#neo_link {
   position: absolute;
   top: 185px;
   left: 5px;
@@ -361,7 +361,7 @@ html, body {
   padding: 3px 16px 5px 16px;
   color: #fff;
   text-decoration: none;
-  background: #ED6B44;
+  background: #82A238;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
@@ -392,15 +392,15 @@ html, body {
   color: #999;
 }
 
-/* Index: License and EdgeCase
+/* Index: License and neo
 ------------------------------------------------------------ */
-#license_and_edgecase {
+#license_and_neo {
   float: right;
   width: 485px;
 }
 
 #brought_to_you_by {
-  color: #ED6B44;
+  color: #82A238;
   font: 39px 'DINWeb-CondMedium', helvetica, arial, sans-serif;
   text-decoration: none;
   text-transform: uppercase;
@@ -824,7 +824,7 @@ ol {
     right: 33px;
   }
 
-  #license_and_edgecase {
+  #license_and_neo {
     float: none;
     width: auto;
     margin-bottom: 40px;
@@ -862,7 +862,7 @@ ol {
     top: 6px;
   }
 
-  #edgecase_link {
+  #neo_link {
     display: none;
   }
 
@@ -883,7 +883,7 @@ ol {
     left: 21px;
   }
 
-  #other_edgecase_link {
+  #other_neo_link {
     display: block;
     position: absolute;
     right: 50px;

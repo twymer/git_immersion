@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lab 19 - Git Immersion - Brought to you by EdgeCase</title>
+  <title>Lab 19 - Git Immersion - Brought to you by Neo</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" media="screen" href="screen.css">
@@ -40,10 +40,11 @@
   
   <a id="table_of_contents_link" href="#">Table of Contents</a>
   <a id="bookmark_link"><span id="bookmark"></span>Bookmark this lab</a>
-  <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
+  <a id="neo_link" href="http://neo.com" target="_blank">Neo</a>
 </nav>
+
     <h1 class="lab_title"><em>lab 19</em> Amending Commits</h1>
-    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
+    <a href="http://neo.com" target=_blank" id="other_neo_link">Neo</a>
   </header>
 
   <div id="main_content">
@@ -81,7 +82,7 @@ git commit --amend -m "Add an author/email comment"</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git add hello.rb
 $ git commit --amend -m "Add an author/email comment"
-[master 5f3452f] Add an author/email comment
+[master bfd1408] Add an author/email comment
  1 file changed, 2 insertions(+), 1 deletion(-)
 </pre>
 <h2>Review the History <em>04</em></h2>
@@ -89,11 +90,11 @@ $ git commit --amend -m "Add an author/email comment"
 <pre class="instructions">git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* 5f3452f 2014-09-10 | Add an author/email comment (HEAD, master) [Jim Weirich]
-* 439537a 2014-09-10 | Added a comment (tag: v1) [Jim Weirich]
-* 5e8d3ce 2014-09-10 | Added a default value (tag: v1-beta) [Jim Weirich]
-* 9d5feaa 2014-09-10 | Using ARGV [Jim Weirich]
-* 7e5c12d 2014-09-10 | First Commit [Jim Weirich]</pre>
+* bfd1408 2014-10-25 | Add an author/email comment (HEAD, master) [Jim Weirich]
+* a1189df 2014-10-25 | Added a comment (tag: v1) [Jim Weirich]
+* 6083cb8 2014-10-25 | Added a default value (tag: v1-beta) [Jim Weirich]
+* b24f3ff 2014-10-25 | Using ARGV [Jim Weirich]
+* cf466b4 2014-10-25 | First Commit [Jim Weirich]</pre>
 <p>We can see the original &#8220;author&#8221; commit is now gone, and it is replaced by the &#8220;author/email&#8221; commit.  You can achieve the same effect by resetting the branch back one commit and then recommitting the new changes.</p>
   </div>
 

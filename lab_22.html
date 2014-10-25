@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lab 22 - Git Immersion - Brought to you by EdgeCase</title>
+  <title>Lab 22 - Git Immersion - Brought to you by Neo</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" media="screen" href="screen.css">
@@ -40,10 +40,11 @@
   
   <a id="table_of_contents_link" href="#">Table of Contents</a>
   <a id="bookmark_link"><span id="bookmark"></span>Bookmark this lab</a>
-  <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
+  <a id="neo_link" href="http://neo.com" target="_blank">Neo</a>
 </nav>
+
     <h1 class="lab_title"><em>lab 22</em> Git Internals: The .git directory</h1>
-    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
+    <a href="http://neo.com" target=_blank" id="other_neo_link">Neo</a>
   </header>
 
   <div id="main_content">
@@ -67,17 +68,17 @@ HEAD		config		logs		refs
 <pre class="instructions">ls -C .git/objects</pre>
 <h4>Output:</h4>
 <pre class="sample">$ ls -C .git/objects
-00	11	27	52	5f	78	9c	b5	e4	pack
-09	17	28	59	69	7e	9d	c4	e7
-0c	24	43	5e	6b	97	af	df	info
+09	24	43	59	6b	9c	b0	bf	e4	pack
+11	27	47	60	78	a1	b2	c4	e7
+14	28	4b	69	97	af	b5	cf	info
 </pre>
 <p>You should see a bunch of directories with 2 letter names.  The directory names are the first two letters of the sha1 hash of the object stored in git.</p>
 <h2>Deeper into the Object Store <em>03</em></h2>
 <h4>Execute:</h4>
 <pre class="instructions">ls -C .git/objects/&lt;dir&gt;</pre>
 <h4>Output:</h4>
-<pre class="sample">$ ls -C .git/objects/00
-577d03709cc4ddc2fd81f5a7db5b75ba74349e
+<pre class="sample">$ ls -C .git/objects/09
+6b74c56bfc6b40e754fc0725b8c70b2038b91e	9fb6f9d3a104feb32fcac22354c4d0e8a182c1
 </pre>
 <p>Look in one of the two-letter directories.  You should see some files with 38-character names.  These are the files that contain the objects stored in git.  These files are compressed and encoded, so looking at their contents directly won&#8217;t be very helpful, but we will take a closer look in a bit.</p>
 <h2>Config File <em>04</em></h2>
@@ -113,7 +114,7 @@ $ ls .git/refs/tags
 v1
 v1-beta
 $ cat .git/refs/tags/v1
-439537a68f9823f85014ad8913799e2457f53319
+a1189df6a2e597e7d31c2ecf07a9068cf820ce29
 </pre>
 <p>You should recognize the files in the tags subdirectory.  Each file corresponds to a tag you created with the <code>git tag</code> command earlier. Its content is just the hash of the commit tied to the tag.</p>
 <p>The heads directory is similar, but is used for branches rather than tags.  We only have one branch at the moment, so all you will see is master in this directory.</p>
