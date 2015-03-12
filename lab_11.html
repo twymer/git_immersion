@@ -54,7 +54,7 @@
 	<li>Learn how to setup aliases and shortcuts for git commands</li>
 </ul>
 <h2>Common Aliases <em>01</em></h2>
-<p><ins>git status</ins>, <ins>git add</ins>, <ins>git commit</ins>, and <ins>git checkout</ins> are such common commands that it is useful to have abbreviations for them.</p>
+<p><code>git status</code>, <code>git add</code>, <code>git commit</code>, and <code>git checkout</code> are such common commands that it is useful to have abbreviations for them.</p>
 <p>Add the following to the .gitconfig file in your $<span class="caps">HOME</span> directory.</p>
 <h4>File: <em>.gitconfig</em></h4>
 <pre class="file">[alias]
@@ -62,11 +62,12 @@
   ci = commit
   st = status
   br = branch
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   type = cat-file -t
   dump = cat-file -p
 </pre>
-<p>We&#8217;ve covered checkout, commit and status already.  And we just covered the <code>log</code> command in the previous lab. Now you can type <code>git co</code> wherever you used to have to type <code>git checkout</code>.  Likewise with <code>git st</code> for <code>git status</code> and <code>git ci</code> for <code>git commit</code>.  And best of all, <code>git hist</code> will allow you to avoid the really long <code>log</code> command.</p>
+<p>We&#8217;ve covered the commit and status commands already.  And we just covered the <code>log</code> command in the previous lab. The <code>checkout</code> command will be coming up soon.</p>
+<p>With these aliases defined in the <code>.gitconfig</code> file you can type <code>git co</code> wherever you used to have to type <code>git checkout</code>.  Likewise with <code>git st</code> for <code>git status</code> and <code>git ci</code> for <code>git commit</code>.  And best of all, <code>git hist</code> will allow you to avoid the really long <code>log</code> command.</p>
 <p>Go ahead and give the new commands a try.</p>
 <h2>Define the <code>hist</code> alias in your <code>.gitconfig</code> file <em>02</em></h2>
 <p>For the most part, I will continue to type out the full command in these instructions.  The only exception is that I will use the <code>hist</code> alias defined above anytime we need to see the git log output.  Make sure you have a <code>hist</code> alias setup in your <code>.gitconfig</code> file before continuing if you wish to follow along.</p>

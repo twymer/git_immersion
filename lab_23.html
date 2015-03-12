@@ -61,7 +61,7 @@
 <p>This should show the latest commit made in the repository.  The SHA1 hash on your system is probably different that what is on mine, but you should see something like this.</p>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --max-count=1
-* 36c4312 2012-12-06 | Added a Rakefile. (HEAD, master) [Jim Weirich]</pre>
+* 14ba469 2014-10-25 | Added a Rakefile. (HEAD, master) [Jim Weirich]</pre>
 <h2>Dumping the Latest Commit <em>02</em></h2>
 <p>Using the SHA1 hash from the commit listed above &#8230;</p>
 <h4>Execute:</h4>
@@ -69,13 +69,13 @@
 git cat-file -p &lt;hash&gt;</pre>
 <p>Here&#8217;s my output &#8230;</p>
 <h4>Output:</h4>
-<pre class="sample">$ git cat-file -t 36c4312
+<pre class="sample">$ git cat-file -t 14ba469
 commit
-$ git cat-file -p 36c4312
+$ git cat-file -p 14ba469
 tree 096b74c56bfc6b40e754fc0725b8c70b2038b91e
-parent 185eb6707550e519912ee7d61b9680015872430c
-author Jim Weirich &lt;jim (at) newcontext.com&gt; 1354811688 -0500
-committer Jim Weirich &lt;jim (at) newcontext.com&gt; 1354811688 -0500
+parent 4b249b37a5bcc71d62230344179aebfd7afc1ae5
+author Jim Weirich &lt;jim (at) edgecase.com&gt; 1414268718 -0400
+committer Jim Weirich &lt;jim (at) edgecase.com&gt; 1414268718 -0400
 
 Added a Rakefile.
 </pre>

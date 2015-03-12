@@ -62,12 +62,12 @@ git status</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git add hello.rb
 $ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD &lt;file&gt;..." to unstage)
-#
-#	modified:   hello.rb
-#
+On branch master
+Changes to be committed:
+  (use "git reset HEAD &lt;file&gt;..." to unstage)
+
+	modified:   hello.rb
+
 </pre>
 <p>The change to the <code>hello.rb</code> file has been staged.  This means that git now knows about the change, but the change hasn&#8217;t been <em>permanently</em> recorded in the repository yet.  The next commit operation will include the staged changes.</p>
 <p>If you decide you <em>don&#8217;t</em> want to commit that change after all, the status command reminds you that the <code>git reset</code> command can be used to unstage that change.</p>

@@ -81,18 +81,18 @@ puts "Hello, #{name}!"
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD &lt;file&gt;..." to unstage)
-#
-#	modified:   hello.rb
-#
-# Changes not staged for commit:
-#   (use "git add &lt;file&gt;..." to update what will be committed)
-#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
-#
-#	modified:   hello.rb
-#
+On branch master
+Changes to be committed:
+  (use "git reset HEAD &lt;file&gt;..." to unstage)
+
+	modified:   hello.rb
+
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+
+	modified:   hello.rb
+
 </pre>
 <p>Notice how <code>hello.rb</code> is listed twice in the status.  The first change (adding a default) is staged and is ready to be committed.  The second change (adding a comment) is unstaged.  If you were to commit right now, the comment would not be saved in the repository.</p>
 <p>Let&#8217;s try that.</p>
@@ -104,16 +104,16 @@ git status</pre>
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git commit -m "Added a default value"
-[master 4f5aea5] Added a default value
+[master 6083cb8] Added a default value
  1 file changed, 3 insertions(+), 1 deletion(-)
 $ git status
-# On branch master
-# Changes not staged for commit:
-#   (use "git add &lt;file&gt;..." to update what will be committed)
-#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
-#
-#	modified:   hello.rb
-#
+On branch master
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+
+	modified:   hello.rb
+
 no changes added to commit (use "git add" and/or "git commit -a")
 </pre>
 <p>The status command is telling you that <code>hello.rb</code> has unrecorded changes, but is no longer in the staging area.</p>
@@ -127,12 +127,12 @@ git status</pre>
 <p>You should see &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD &lt;file&gt;..." to unstage)
-#
-#	modified:   hello.rb
-#
+On branch master
+Changes to be committed:
+  (use "git reset HEAD &lt;file&gt;..." to unstage)
+
+	modified:   hello.rb
+
 </pre>
 <p>Now the second change has been staged and is ready to commit.</p>
 <h2>Commit the Second Change <em>07</em></h2>
