@@ -303,7 +303,7 @@ EOF
 p. The "Waiting for Emacs..." line comes from the @emacsclient@
 program which sends the file to a running emacs program and waits for
 the file to be closed.  The rest of the output is the standard commit
-messages.
+message.
 
 h2. Check the status
 
@@ -1423,8 +1423,8 @@ git hist --max-count=1
 =log
 
 p. This should show the latest commit made in the repository.  The
-SHA1 hash on your system is probably different that what is on mine,
-but you should see something like this.
+SHA1 hash on your system is probably different from the sample output,
+but one should see something like the following sample.
 
 Output:
 =log
@@ -1516,7 +1516,7 @@ h3. Goals
 
 * Learn how to create a local branch in a repository
 
-p. It's time to do a major rewrite of the hello world functionality.
+p. It's time to do a major rewrite of the 'Hello World' program's functionality.
 Since this might take awhile, you'll want to put these changes into a
 separate branch to isolate them from changes in master.
 
@@ -1961,7 +1961,7 @@ EOF
 
 p. The 'Added README' commit is the one directly before the
 conflicting interactive mode.  We will reset the master branch to
-'Added README' branch.
+the 'Added README' branch & corresponding commit.
 
 Set: hash=hash_for("Added README")
 Execute:
@@ -2077,7 +2077,7 @@ network connection.
 
 p. In the next section we will create a new repository called
 "cloned_hello".  We will show how to move changes from one repository
-to another, and how to handle conflicts when they arise from between
+to another, and how to handle conflicts when they arise between
 two repositories.
 
  !git_clone.png!
@@ -2190,7 +2190,7 @@ names of the branches.
 h2. Remote branches
 
 p. You should see a *master* branch (along with *HEAD*) in the history
-list.  But you will also have number of strangely named branches
+list.  But you will also have a number of strangely named branches
 (*origin/master*, *origin/greet* and *origin/HEAD*).  We'll talk about
 them in a bit.
 
@@ -2331,7 +2331,7 @@ p. Find the "Changed README in original repo" commit in the history
 above.  Notice that the commit includes "origin/master" and
 "origin/HEAD".
 
-p. Now look at the "Updated Rakefile" commit.  You will see that it
+p. Now look at the "Updated Rakefile" commit.  You will see that 
 the local master branch points to this commit, not to the new commit
 that we just fetched.
 
@@ -2493,7 +2493,7 @@ h1. Pushing a Change
 
 h3. Goals
 
-* Learn how out to push a change to a remote repository.
+* Learn how to push a change to a remote repository.
 
 p. Since bare repositories are usually shared on some sort of network
 server, it is usually difficult to cd into the repo and pull changes.
@@ -2518,7 +2518,7 @@ Execute:
 git push shared master
 =push
 
-p. _shared_ is the name of the repository receiving the changes we are
+p. '_shared_' is the name of the repository receiving the changes we are
 pushing. (Remember, we added it as a remote in the previous lab.)
 
 Output:
@@ -2578,7 +2578,7 @@ git clone git://localhost/hello.git network_hello
 cd network_hello
 ls
 
-p. You should see a copy of hello project.
+p. You should see a copy of the hello project.
 
 h2. Pushing to the Git Daemon
 
