@@ -60,7 +60,7 @@ module Labs
           labs << lab
         elsif line =~ /^h2\./
           step_index += 1
-          labs[lab_index] << line.sub(/h2\.\s+(.+)/, "h2. \\1 _#{step_index.to_s.rjust(2,'0')}_")
+          labs[lab_index] << line.sub(/h2\.\s+(.+)/, "h2. \\1")
         elsif line =~ /^pre*\(.*\)\.\s*$/
           mode = :gather1
           gathered_line = line.strip
@@ -69,15 +69,15 @@ module Labs
           gathered_line = line.strip
         elsif line =~ /^Execute:$/i
           mode = :gather1
-          labs[lab_index] << "h4. Execute:\n\n"
+          labs[lab_index] << "h3. **Execute:**\n\n"
           gathered_line = "pre(instructions)."
         elsif line =~ /^File:\s+(\S+)$/i
           file_name = $1
-          labs[lab_index] << "h4. File: _#{file_name}_\n\n"
+          labs[lab_index] << "h3(file-heading). _#{file_name}_\n\n"
           gathered_line = "<pre class=\"file\">"
           mode = :file
         elsif line =~ /^Output:\s*$/
-          labs[lab_index] << "h4. Output:\n\n"
+          labs[lab_index] << "h3. **Output:**\n\n"
           gathered_line = "<pre class=\"sample\">"
           mode = :file
         elsif line =~ /^Set: +\w+=.*$/
@@ -165,7 +165,7 @@ directory Labs::HTML_DIR
 directory Labs::WORK_DIR
 
 TO_HTML = "#{Labs::HTML_DIR}/%f"
-EXTRA_SRCS = FileList['src/*.css', 'src/*.js', 'src/*.gif', 'src/*.jpg', 'src/*.png', 'src/*.eot', 'src/*.ttf', 'src/*.woff', 'diagrams/*.png']
+EXTRA_SRCS = FileList['src/*.css', 'src/*.js', 'src/*.gif', 'src/*.jpg', 'src/*.png', 'src/*.eot', 'src/*.ttf', 'src/*.woff', 'diagrams/*.png', 'src/manifest.json']
 EXTRA_OUT = EXTRA_SRCS.pathmap(TO_HTML)
 INDEX_HTML = File.join(Labs::HTML_DIR, "index.html")
 

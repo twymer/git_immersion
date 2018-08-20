@@ -1,0 +1,8 @@
+{
+  "short_name": "GitImmersion",
+  "name": "Git Immersion",
+  "background_color": "#ffffff",
+  "theme_color": "#0000ff",
+  "display": "standalone",
+  "start_url": "/"
+}
