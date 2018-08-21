@@ -1,17 +1,19 @@
-<nav id="pager">
-  <% if lab.next -%>
-    <a id="arrow_next" class="arrow" href="<%= lab.next.filename %>">Next</a>
-  <% else -%>
-    <span id="arrow_next" class="arrow">Next</span>
-  <% end -%>
-
+<nav class="foot-navigation">
   <% if lab.prev -%>
-    <a id="arrow_previous" class="arrow" href="<%= lab.prev.filename %>">Previous</a>
-  <% else -%>
-    <span id="arrow_previous" class="arrow">Previous</span>
+    <a href="<%= lab.prev.filename %>">
+      <svg version="1.1" width="36" height="36" viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M27.66,15.61,18,6,8.34,15.61A1,1,0,1,0,9.75,17L17,9.81V28.94a1,1,0,1,0,2,0V9.81L26.25,17a1,1,0,0,0,1.41-1.42Z"></path></svg>
+      Previous
+    </a>
+  <% else %>
+    <span></span>
   <% end -%>
 
-  <a id="table_of_contents_link" href="#">Table of Contents</a>
-  <a id="bookmark_link"><span id="bookmark"></span>Bookmark this lab</a>
-  <a id="neo_link" href="http://neo.com" target="_blank">Neo</a>
+  <% if lab.next -%>
+    <a href="<%= lab.next.filename %>">
+      <svg version="1.1" width="36" height="36" viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M27.66,15.61,18,6,8.34,15.61A1,1,0,1,0,9.75,17L17,9.81V28.94a1,1,0,1,0,2,0V9.81L26.25,17a1,1,0,0,0,1.41-1.42Z"></path></svg>
+      Next
+    </a>
+  <% else %>
+    <span></span
+  <% end -%>
 </nav>

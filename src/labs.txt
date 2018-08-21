@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------
 h1. Setup
 
-h3. Goals
+h2. Goals
 
 * To setup git and ruby so that it is ready for work.
 
@@ -40,7 +40,7 @@ installed yet, it is time to set it up now:
 ----------------------------------------------------------------------
 h1. More Setup
 
-h3. Goals
+h2. Goals
 
 * Get the tutorial materials setup and ready to run.
 
@@ -63,7 +63,7 @@ with three sub-directories:
 ----------------------------------------------------------------------
 h1. Create a Project
 
-h3. Goals
+h2. Goals
 
 * Learn how to create a git repository from scratch.
 
@@ -116,7 +116,7 @@ EOF
 ----------------------------------------------------------------------
 h1. Checking Status
 
-h3. Goals
+h2. Goals
 
 * Learn how to check the status of the repository
 
@@ -145,7 +145,7 @@ state between the repository and the working directory.
 ----------------------------------------------------------------------
 h1. Making Changes
 
-h3. Goals
+h2. Goals
 
 * Learn how to monitor the state of the working directory
 
@@ -188,7 +188,7 @@ p. Let's stage the change.
 ----------------------------------------------------------------------
 h1. Staging Changes
 
-h3. Goals
+h2. Goals
 
 * Learn how to stage changes for later commits
 
@@ -251,7 +251,7 @@ easily fine tune what goes into each commit.
 ----------------------------------------------------------------------
 h1. Committing Changes
 
-h3. Goals
+h2. Goals
 
 * Learn how to commit changes to the repository
 
@@ -331,7 +331,7 @@ p. The working directory is clean and ready for you to continue.
 ----------------------------------------------------------------------
 h1. Changes, not Files
 
-h3. Goals
+h2. Goals
 
 * Learn that git works with changes, not files.
 
@@ -451,7 +451,7 @@ git commit -m "Added a comment"
 ----------------------------------------------------------------------
 h1. History
 
-h3. Goals
+h2. Goals
 
 * Learn how to view the history of the project.
 
@@ -545,7 +545,7 @@ platform) are useful in exploring log history.
 ----------------------------------------------------------------------
 h1. Aliases
 
-h3. Goals
+h2. Goals
 
 * Learn how to setup aliases and shortcuts for git commands
 
@@ -630,7 +630,7 @@ create aliases for them.
 ----------------------------------------------------------------------
 h1. Getting Old Versions
 
-h3. Goals
+h2. Goals
 
 * Learn how to checkout any previous snapshot into the working directory.
 
@@ -705,7 +705,7 @@ by name, you go to the latest version of that branch.
 ----------------------------------------------------------------------
 h1. Tagging versions
 
-h3. Goals
+h2. Goals
 
 * Learn how to tag commits with names for future reference
 
@@ -793,7 +793,7 @@ the currently checked out commit (which is @v1-beta@ at the moment).
 ----------------------------------------------------------------------
 h1. Undoing Local Changes (before staging)
 
-h3. Goals
+h2. Goals
 
 * Learn how to revert changes in the working directory
 
@@ -860,7 +860,7 @@ the file contents.
 ----------------------------------------------------------------------
 h1. Undoing Staged Changes (before committing)
 
-h3. Goals
+h2. Goals
 
 * Learn how to revert changes that have been staged
 
@@ -932,7 +932,7 @@ p. And our working directory is clean once again.
 ----------------------------------------------------------------------
 h1. Undoing Committed Changes
 
-h3. Goals
+h2. Goals
 
 * Learn how to revert changes that have been committed to a local repository.
 
@@ -1010,7 +1010,7 @@ recent commits from the repository history.
 ----------------------------------------------------------------------
 h1. Removing Commits from a Branch
 
-h3. Goals
+h2. Goals
 
 * Learn how to remove the most recent commits from a branch
 
@@ -1121,7 +1121,7 @@ can confuse other users sharing the branch.
 ----------------------------------------------------------------------
 h1. Remove the oops tag
 
-h3. Goals
+h2. Goals
 
 * Remove the oops tag (housekeeping)
 
@@ -1146,7 +1146,7 @@ p. The oops tag is no longer listed in the repository.
 ----------------------------------------------------------------------
 h1. Amending Commits
 
-h3. Goals
+h2. Goals
 
 * Learn how to amend an existing commit
 
@@ -1215,7 +1215,7 @@ the new changes.
 ----------------------------------------------------------------------
 h1. Moving Files
 
-h3. Goals
+h2. Goals
 
 * Learn how to move a file within a repository.
 
@@ -1274,7 +1274,7 @@ git commit -m "Moved hello.rb to lib"
 ----------------------------------------------------------------------
 h1. More Structure
 
-h3. Goals
+h2. Goals
 
 * Add another file to our repository
 
@@ -1319,7 +1319,7 @@ EOF
 ----------------------------------------------------------------------
 h1. Git Internals: The .git directory
 
-h3. Goals
+h2. Goals
 
 * Learn about the structure of the @.git@ directory
 
@@ -1427,7 +1427,7 @@ should be a reference to master at this point.
 ----------------------------------------------------------------------
 h1. Git Internals: Working directly with Git Objects
 
-h3. Goals
+h2. Goals
 
 * Explore the structure of the object store
 * Learn how to use the SHA1 hashes to find content in the repository
@@ -1530,7 +1530,7 @@ following the SHA1 hash references starting in the latest commit.
 ----------------------------------------------------------------------
 h1. Creating a Branch
 
-h3. Goals
+h2. Goals
 
 * Learn how to create a local branch in a repository
 
@@ -1613,7 +1613,7 @@ Next we will learn how to navigate and switch between branches.
 ----------------------------------------------------------------------
 h1. Navigating Branches
 
-h3. Goals
+h2. Goals
 
 * Learn how to navigate between the branches of a repository
 
@@ -1664,7 +1664,7 @@ p. The contents of the @lib/hello.rb@ confirms we are back on the
 ----------------------------------------------------------------------
 h1. Changes in Master
 
-h3. Goals
+h2. Goals
 
 * Learning how to deal with multiple branches with different (and possibly conflicting) changes.
 
@@ -1691,7 +1691,7 @@ git commit -m "Added README"
 ----------------------------------------------------------------------
 h1. Viewing Diverging Branches
 
-h3. Goals
+h2. Goals
 
 * Learn how to view diverging branches in a repository.
 
@@ -1720,7 +1720,7 @@ default is to show only the current branch.
 ----------------------------------------------------------------------
 h1. Merging
 
-h3. Goals
+h2. Goals
 
 * Learn how to merge two diverging branches to bring the changes back into a single branch.
 
@@ -1758,7 +1758,7 @@ in greet?
 ----------------------------------------------------------------------
 h1. Creating a Conflict
 
-h3. Goals
+h2. Goals
 
 * Create a conflicting change in the master branch.
 
@@ -1802,7 +1802,7 @@ greet.  Next we will resolve those changes.
 ----------------------------------------------------------------------
 h1. Resolving Conflicts
 
-h3. Goals
+h2. Goals
 
 * Learn how to handle conflicts during a merge
 
@@ -1885,11 +1885,11 @@ for a description of using the Perforce merge tool with git.
 ----------------------------------------------------------------------
 h1. Rebasing VS Merging
 
-h3. Goals
+h2. Goals
 
 * Learn the differences between rebasing and merging.
 
-h3. Discussion
+h2. Discussion
 
 p. Let's explore the differences between merging and rebasing.  In
 order to do so, we need to rewind the repository back in time before
@@ -1902,7 +1902,7 @@ back in time.
 ----------------------------------------------------------------------
 h1. Resetting the Greet Branch
 
-h3. Goals
+h2. Goals
 
 * Reset the greet branch to the point before the first merge.
 
@@ -1956,7 +1956,7 @@ EOF
 ----------------------------------------------------------------------
 h1. Resetting the Master Branch
 
-h3. Goals
+h2. Goals
 
 * Reset the master branch to the point before the conflicting commit.
 
@@ -1997,7 +1997,7 @@ EOF
 ----------------------------------------------------------------------
 h1. Rebasing
 
-h3. Goals
+h2. Goals
 
 * Use the rebase command rather than the merge command.
 
@@ -2048,7 +2048,7 @@ local branches and merge for branches in the public repository.
 ----------------------------------------------------------------------
 h1. Merging Back to Master
 
-h3. Goals
+h2. Goals
 
 * We've kept our greet branch up to date with master (via rebase), now let's merge the greet changes back into the master branch.
 
@@ -2113,7 +2113,7 @@ in at each step of the following labs.
 ----------------------------------------------------------------------
 h1. Cloning Repositories
 
-h3. Goals
+h2. Goals
 
 * Learn how to make copies of repositories.
 
@@ -2167,7 +2167,7 @@ repository.
 ----------------------------------------------------------------------
 h1. Review the Cloned Repository
 
-h3. Goals
+h2. Goals
 
 * Learn about branches on remote repositories.
 
@@ -2215,7 +2215,7 @@ them in a bit.
 ----------------------------------------------------------------------
 h1. What is Origin?
 
-h3. Goals
+h2. Goals
 
 * Learn about naming remote repositories.
 
@@ -2249,7 +2249,7 @@ the primary centralized repository (if there is one).
 ----------------------------------------------------------------------
 h1. Remote Branches
 
-h3. Goals
+h2. Goals
 
 * Learn about local VS remote branches
 
@@ -2287,7 +2287,7 @@ will see how to do that in a minute.
 ----------------------------------------------------------------------
 h1. Change the Original Repository
 
-h3. Goals
+h2. Goals
 
 * Make some changes to the original repository so we can try to pull the changes
 
@@ -2322,7 +2322,7 @@ repository.
 ----------------------------------------------------------------------
 h1. Fetching Changes
 
-h3. Goals
+h2. Goals
 
 * Learn how to pull changes from a remote repository.
 
@@ -2374,7 +2374,7 @@ p. See, no changes.
 ----------------------------------------------------------------------
 h1. Merging Pulled Changes
 
-h3. Goals
+h2. Goals
 
 * Learn to get the pulled changes into the current branch and working directory.
 
@@ -2413,11 +2413,11 @@ a single command.
 ----------------------------------------------------------------------
 h1. Pulling Changes
 
-h3. Goals
+h2. Goals
 
 * Learn that @git pull@ is equivalent to a @git fetch@ followed by a @git merge@.
 
-h3. Discussion
+h2. Discussion
 
 p. We're not going to go through the process of creating another
 change and pulling it again, but we do want you to know that doing:
@@ -2432,7 +2432,7 @@ git merge origin/master
 ----------------------------------------------------------------------
 h1. Adding a Tracking Branch
 
-h3. Goals
+h2. Goals
 
 * Learn how to add a local branch that tracks a remote branch.
 
@@ -2461,7 +2461,7 @@ p. We can now see the greet branch in the branch list and in the log.
 ----------------------------------------------------------------------
 h1. Bare Repositories
 
-h3. Goals
+h2. Goals
 
 * Learn how to create bare repositories.
 
@@ -2493,7 +2493,7 @@ non-bare repo.
 ----------------------------------------------------------------------
 h1. Adding a Remote Repository
 
-h3. Goals
+h2. Goals
 
 * Add the bare repository as a remote to our original repository.
 
@@ -2509,7 +2509,7 @@ p{color:red}. *NOTE: Now in the +hello+ repository.*
 ----------------------------------------------------------------------
 h1. Pushing a Change
 
-h3. Goals
+h2. Goals
 
 * Learn how out to push a change to a remote repository.
 
@@ -2551,7 +2551,7 @@ Branch" gem for easy management of remote branches.
 ----------------------------------------------------------------------
 h1. Pulling Shared Changes
 
-h3. Goals
+h2. Goals
 
 * Learn how to pull changes from a shared repository.
 
@@ -2575,7 +2575,7 @@ cat README
 ----------------------------------------------------------------------
 h1. Hosting your Git Repositories
 
-h3. Goals
+h2. Goals
 
 * Learn how to setup git server for sharing repositories.
 
@@ -2608,7 +2608,7 @@ repository.
 ----------------------------------------------------------------------
 h1. Sharing Repos
 
-h3. Goals
+h2. Goals
 
 * Learn to share repos across WIFI.
 
