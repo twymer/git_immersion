@@ -26,6 +26,46 @@ if (!DocumentType.prototype.replaceWith)
     DocumentType.prototype.replaceWith = ReplaceWithPolyfill;
 
 
+window.scrollTo = function(element, to, duration) {
+  var start = element.scrollTop,
+      change = to - start,
+      currentTime = 0,
+      increment = 20;
+      
+  var animateScroll = function(){
+      currentTime += increment;
+      var val = Math.easeInOutQuad(currentTime, start, change, duration);
+      element.scrollTop = val;
+      if(currentTime < duration) {
+        setTimeout(animateScroll, increment);
+      }
+  };
+  animateScroll();
+}
+
+//t = current time
+//b = start value
+//c = change in value
+//d = duration
+Math.easeInOutQuad = function (t, b, c, d) {
+  t /= d/2;
+  if (t < 1) return c/2*t*t + b;
+  t--;
+  return -c/2 * (t*(t-2) - 1) + b;
+};
+
+var scrollToActiveNavItem = function() {
+  var nav = document.querySelector('#index nav');
+
+  nav.focus();
+  scrollTo(
+    document.querySelector('.layout'),
+    document.querySelector('nav .active').offsetTop,
+    550
+  );
+};
+
+
 document.addEventListener('DOMContentLoaded', function() {
   var fallbackCopyTextToClipboard = function(text, callback) {
     var textarea = document.createElement('textarea');
@@ -61,10 +101,12 @@ document.addEventListener('DOMContentLoaded', function() {
   document
     .querySelector('.link-menu')
     .addEventListener('click', function(e) {
-      var nav = document.querySelector('#index nav')
+      var nav = document.querySelector('#index nav');
       nav.classList.toggle('open');
-      nav.scrollIntoView();
-      nav.focus();
+
+      if(nav.classList.contains('open')) {
+        setTimeout(scrollToActiveNavItem, 200);
+      }
     });
 
   // wrap terminal commands in div.instructions
@@ -113,6 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    var labID = document.body.getAttribute('data-lab-id');
-    document.querySelector('#lab_' + labID + '_link a').classList.add('active');
+  // Add active link to current page in nav
+  var labID = document.body.getAttribute('data-lab-id');
+  document.querySelector('#lab_' + labID + '_link a').classList.add('active');
 });

@@ -66,3 +66,21 @@ ul {
 .footer a {
   color: #333;
 }
+
+@media all and (max-width: 550px) {
+  body { padding-bottom: 60px; }
+
+  .footer { padding-top: 0; }
+
+  .start {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    border-radius: 0;
+    padding: 0;
+    line-height: 60px;
+    text-align: center;
+  }
+}
