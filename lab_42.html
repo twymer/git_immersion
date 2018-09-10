@@ -4,7 +4,7 @@
     <title>Lab 42 - Git Immersion</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover"">
     <meta name="description" content="A guided tour that walks through the fundamentals of Git">
     <meta name="theme-color" content="#0000ff">
     <link rel="manifest" href="manifest.json">
@@ -94,7 +94,7 @@
         </nav>
       </div>
 
-      <div id="content">
+      <div id="content" tabindex="-1">
         <h1 class="lab_title"><em>lab 42</em>  Fetching Changes</h1>
 <h2>Goals</h2>
 <ul>
@@ -107,21 +107,21 @@ git hist --all</pre>
 <p class="note red"><strong><span class="caps">NOTE</span>: Now in the <em>cloned_hello</em> repo</strong></p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git fetch
-From /Users/jerrynummi/Desktop/git_immersion/auto/hello
-   8c8adbe..de8a9c4  master     -&gt; origin/master
+From /Users/jerrynummi/Projects/git_immersion_edgecase/auto/hello
+   b18a17b..b7fe99d  master     -&gt; origin/master
 $ git hist --all
-* de8a9c4 2018-08-21 | Changed README in original repo (origin/master, origin/HEAD) [Jim Weirich]
-* 8c8adbe 2018-08-21 | Updated Rakefile (HEAD -&gt; master, origin/greet) [Jim Weirich]
-* 30b31cb 2018-08-21 | Hello uses Greeter [Jim Weirich]
-* 14dfc5f 2018-08-21 | Added greeter class [Jim Weirich]
-* bacac12 2018-08-21 | Added README [Jim Weirich]
-* 908e18f 2018-08-21 | Added a Rakefile. [Jim Weirich]
-* 4be58de 2018-08-21 | Moved hello.rb to lib [Jim Weirich]
-* f515ebf 2018-08-21 | Add an author/email comment [Jim Weirich]
-* d78a7e7 2018-08-21 | Added a comment (tag: v1) [Jim Weirich]
-* 97731fc 2018-08-21 | Added a default value (tag: v1-beta) [Jim Weirich]
-* 66c4919 2018-08-21 | Using ARGV [Jim Weirich]
-* c15d16f 2018-08-21 | First Commit [Jim Weirich]</pre>
+* b7fe99d 2018-09-10 | Changed README in original repo (origin/master, origin/HEAD) [Jim Weirich]
+* b18a17b 2018-09-10 | Updated Rakefile (HEAD -&gt; master, origin/greet) [Jim Weirich]
+* 89b99a1 2018-09-10 | Hello uses Greeter [Jim Weirich]
+* 4936f71 2018-09-10 | Added greeter class [Jim Weirich]
+* 7721667 2018-09-10 | Added README [Jim Weirich]
+* 4ced2a1 2018-09-10 | Added a Rakefile. [Jim Weirich]
+* 079be55 2018-09-10 | Moved hello.rb to lib [Jim Weirich]
+* ee9635f 2018-09-10 | Add an author/email comment [Jim Weirich]
+* 9ccf526 2018-09-10 | Added a comment (tag: v1) [Jim Weirich]
+* 5f8b7b1 2018-09-10 | Added a default value (tag: v1-beta) [Jim Weirich]
+* a0ce1ce 2018-09-10 | Using ARGV [Jim Weirich]
+* 970a059 2018-09-10 | First Commit [Jim Weirich]</pre>
 <p>At this point the repository has all the commits from the original repository, but they are not integrated into the the cloned repository&#8217;s local branches.</p>
 <p>Find the &#8220;Changed <span class="caps">README</span> in original repo&#8221; commit in the history above.  Notice that the commit includes &#8220;origin/master&#8221; and &#8220;origin/<span class="caps">HEAD</span>&#8221;.</p>
 <p>Now look at the &#8220;Updated Rakefile&#8221; commit.  You will see that it the local master branch points to this commit, not to the new commit that we just fetched.</p>

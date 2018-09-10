@@ -4,7 +4,7 @@
     <title>Lab 23 - Git Immersion</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover"">
     <meta name="description" content="A guided tour that walks through the fundamentals of Git">
     <meta name="theme-color" content="#0000ff">
     <link rel="manifest" href="manifest.json">
@@ -94,7 +94,7 @@
         </nav>
       </div>
 
-      <div id="content">
+      <div id="content" tabindex="-1">
         <h1 class="lab_title"><em>lab 23</em>  Git Internals:<br> Working directly with Git Objects</h1>
 <h2>Goals</h2>
 <ul>
@@ -108,7 +108,7 @@
 <p>This should show the latest commit made in the repository.  The SHA1 hash on your system is probably different that what is on mine, but you should see something like this.</p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist --max-count=1
-* 908e18f 2018-08-21 | Added a Rakefile. (HEAD -&gt; master) [Jim Weirich]</pre>
+* 4ced2a1 2018-09-10 | Added a Rakefile. (HEAD -&gt; master) [Jim Weirich]</pre>
 <h2>Dumping the Latest Commit</h2>
 <p>Using the SHA1 hash from the commit listed above &#8230;</p>
 <h3><b>Execute:</b></h3>
@@ -116,13 +116,13 @@
 git cat-file -p &lt;hash&gt;</pre>
 <p>Here&#8217;s my output &#8230;</p>
 <h3><b>Output:</b></h3>
-<pre class="sample">$ git cat-file -t 908e18f
+<pre class="sample">$ git cat-file -t 4ced2a1
 commit
-$ git cat-file -p 908e18f
+$ git cat-file -p 4ced2a1
 tree 096b74c56bfc6b40e754fc0725b8c70b2038b91e
-parent 4be58de6e4352d29bcc60fd9d65419b0245715c4
-author Jim Weirich &lt;jim (at) edgecase.com&gt; 1534877105 -0700
-committer Jim Weirich &lt;jim (at) edgecase.com&gt; 1534877105 -0700
+parent 079be55850630bb71bee9ad7e86a9de34c0fb2b3
+author Jim Weirich &lt;jim (at) edgecase.com&gt; 1536622367 -0700
+committer Jim Weirich &lt;jim (at) edgecase.com&gt; 1536622367 -0700
 
 Added a Rakefile.
 </pre>

@@ -4,7 +4,7 @@
     <title>Lab 30 - Git Immersion</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover"">
     <meta name="description" content="A guided tour that walks through the fundamentals of Git">
     <meta name="theme-color" content="#0000ff">
     <link rel="manifest" href="manifest.json">
@@ -94,7 +94,7 @@
         </nav>
       </div>
 
-      <div id="content">
+      <div id="content" tabindex="-1">
         <h1 class="lab_title"><em>lab 30</em>  Resolving Conflicts</h1>
 <h2>Goals</h2>
 <ul>
@@ -152,7 +152,7 @@ git commit -m "Merged master fixed conflict."</pre>
 <pre class="sample">$ git add lib/hello.rb
 $ git commit -m "Merged master fixed conflict."
 Recorded resolution for 'lib/hello.rb'.
-[greet 7b791ac] Merged master fixed conflict.
+[greet f27667f] Merged master fixed conflict.
 </pre>
 <h2>Advanced Merging</h2>
 <p>git doesn&#8217;t provide any graphical merge tools, but it will gladly work with any third party merge tool you wish to use.  See <a href="http://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#External-Merge-and-Diff-Tools">http://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#External-Merge-and-Diff-Tools</a> for a description of using the Perforce merge tool with git.</p>

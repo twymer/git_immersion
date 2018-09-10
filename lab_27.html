@@ -4,7 +4,7 @@
     <title>Lab 27 - Git Immersion</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover"">
     <meta name="description" content="A guided tour that walks through the fundamentals of Git">
     <meta name="theme-color" content="#0000ff">
     <link rel="manifest" href="manifest.json">
@@ -94,7 +94,7 @@
         </nav>
       </div>
 
-      <div id="content">
+      <div id="content" tabindex="-1">
         <h1 class="lab_title"><em>lab 27</em>  Viewing Diverging Branches</h1>
 <h2>Goals</h2>
 <ul>
@@ -106,18 +106,18 @@
 <pre class="instructions">git hist --all</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist --all
-* d11c116 2018-08-21 | Updated Rakefile (greet) [Jim Weirich]
-* 039a5d2 2018-08-21 | Hello uses Greeter [Jim Weirich]
-* 8372532 2018-08-21 | Added greeter class [Jim Weirich]
-| * bacac12 2018-08-21 | Added README (HEAD -&gt; master) [Jim Weirich]
+* 5d4dd47 2018-09-10 | Updated Rakefile (greet) [Jim Weirich]
+* d5b136f 2018-09-10 | Hello uses Greeter [Jim Weirich]
+* efd7198 2018-09-10 | Added greeter class [Jim Weirich]
+| * 7721667 2018-09-10 | Added README (HEAD -&gt; master) [Jim Weirich]
 |/  
-* 908e18f 2018-08-21 | Added a Rakefile. [Jim Weirich]
-* 4be58de 2018-08-21 | Moved hello.rb to lib [Jim Weirich]
-* f515ebf 2018-08-21 | Add an author/email comment [Jim Weirich]
-* d78a7e7 2018-08-21 | Added a comment (tag: v1) [Jim Weirich]
-* 97731fc 2018-08-21 | Added a default value (tag: v1-beta) [Jim Weirich]
-* 66c4919 2018-08-21 | Using ARGV [Jim Weirich]
-* c15d16f 2018-08-21 | First Commit [Jim Weirich]</pre>
+* 4ced2a1 2018-09-10 | Added a Rakefile. [Jim Weirich]
+* 079be55 2018-09-10 | Moved hello.rb to lib [Jim Weirich]
+* ee9635f 2018-09-10 | Add an author/email comment [Jim Weirich]
+* 9ccf526 2018-09-10 | Added a comment (tag: v1) [Jim Weirich]
+* 5f8b7b1 2018-09-10 | Added a default value (tag: v1-beta) [Jim Weirich]
+* a0ce1ce 2018-09-10 | Using ARGV [Jim Weirich]
+* 970a059 2018-09-10 | First Commit [Jim Weirich]</pre>
 <p>Here is our first chance to see the <code>--graph</code> option on <code>git hist</code> in action. Adding the <code>--graph</code> option to <code>git log</code> causes it to draw the commit tree using simple <span class="caps">ASCII</span> characters.  We can see both branches (greet and master), and that the master branch is the current <span class="caps">HEAD</span>. The common ancestor to both branches is the &#8220;Added a Rakefile&#8221; branch.</p>
 <p>The <code>--all</code> flag makes sure that we see all the branches.  The default is to show only the current branch.</p>
         <nav class="foot-navigation">

@@ -4,7 +4,7 @@
     <title>Lab 12 - Git Immersion</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover"">
     <meta name="description" content="A guided tour that walks through the fundamentals of Git">
     <meta name="theme-color" content="#0000ff">
     <link rel="manifest" href="manifest.json">
@@ -94,7 +94,7 @@
         </nav>
       </div>
 
-      <div id="content">
+      <div id="content" tabindex="-1">
         <h1 class="lab_title"><em>lab 12</em>  Getting Old Versions</h1>
 <h2>Goals</h2>
 <ul>
@@ -107,10 +107,10 @@
 <p class="note"><strong>Note:</strong> You did remember to define <code>hist</code> in your <code>.gitconfig</code> file, right?  If not, review the lab on aliases.</p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist
-* d78a7e7 2018-08-21 | Added a comment (HEAD -&gt; master) [Jim Weirich]
-* 97731fc 2018-08-21 | Added a default value [Jim Weirich]
-* 66c4919 2018-08-21 | Using ARGV [Jim Weirich]
-* c15d16f 2018-08-21 | First Commit [Jim Weirich]</pre>
+* 9ccf526 2018-09-10 | Added a comment (HEAD -&gt; master) [Jim Weirich]
+* 5f8b7b1 2018-09-10 | Added a default value [Jim Weirich]
+* a0ce1ce 2018-09-10 | Using ARGV [Jim Weirich]
+* 970a059 2018-09-10 | First Commit [Jim Weirich]</pre>
 <p>Examine the log output and find the hash for the first commit.  It should be the last line of the <code>git hist</code> output.  Use that hash code (the first 7 characters are enough) in the command below.  Then check the contents of the hello.rb file.</p>
 <h3><b>Execute:</b></h3>
 <pre class="instructions">git checkout &lt;hash&gt;
@@ -119,8 +119,8 @@ cat hello.rb</pre>
 <p class="note"><strong>Note:</strong> Many commands depend on the hash values in the repository.  Since your hash values will vary from mine, whenever you see something like &lt;hash&gt; or &lt;treehash&gt; in the command, substitute in the proper hash value for your repository.</p>
 <p>You should see &#8230;</p>
 <h3><b>Output:</b></h3>
-<pre class="sample">$ git checkout c15d16f
-Note: checking out 'c15d16f'.
+<pre class="sample">$ git checkout 970a059
+Note: checking out '970a059'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
@@ -131,7 +131,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b &lt;new-branch-name&gt;
 
-HEAD is now at c15d16f... First Commit
+HEAD is now at 970a059... First Commit
 $ cat hello.rb
 puts "Hello, World"
 </pre>
@@ -144,7 +144,7 @@ cat hello.rb</pre>
 <p>You should see &#8230;</p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git checkout master
-Previous HEAD position was c15d16f... First Commit
+Previous HEAD position was 970a059... First Commit
 Switched to branch 'master'
 $ cat hello.rb
 # Default is "World"

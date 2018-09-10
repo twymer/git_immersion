@@ -4,7 +4,7 @@
     <title>Lab 13 - Git Immersion</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover"">
     <meta name="description" content="A guided tour that walks through the fundamentals of Git">
     <meta name="theme-color" content="#0000ff">
     <link rel="manifest" href="manifest.json">
@@ -94,7 +94,7 @@
         </nav>
       </div>
 
-      <div id="content">
+      <div id="content" tabindex="-1">
         <h1 class="lab_title"><em>lab 13</em>  Tagging versions</h1>
 <h2>Goals</h2>
 <ul>
@@ -124,7 +124,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b &lt;new-branch-name&gt;
 
-HEAD is now at 97731fc... Added a default value
+HEAD is now at 5f8b7b1... Added a default value
 $ cat hello.rb
 name = ARGV.first || "World"
 
@@ -140,11 +140,11 @@ puts "Hello, #{name}!"
 git checkout v1-beta</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git checkout v1
-Previous HEAD position was 97731fc... Added a default value
-HEAD is now at d78a7e7... Added a comment
+Previous HEAD position was 5f8b7b1... Added a default value
+HEAD is now at 9ccf526... Added a comment
 $ git checkout v1-beta
-Previous HEAD position was d78a7e7... Added a comment
-HEAD is now at 97731fc... Added a default value
+Previous HEAD position was 9ccf526... Added a comment
+HEAD is now at 5f8b7b1... Added a default value
 </pre>
 <h2>Viewing Tags using the <code>tag</code> command</h2>
 <p>You can see what tags are available using the <code>git tag</code> command.</p>
@@ -161,10 +161,10 @@ v1-beta
 <pre class="instructions">git hist master --all</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist master --all
-* d78a7e7 2018-08-21 | Added a comment (tag: v1, master) [Jim Weirich]
-* 97731fc 2018-08-21 | Added a default value (HEAD, tag: v1-beta) [Jim Weirich]
-* 66c4919 2018-08-21 | Using ARGV [Jim Weirich]
-* c15d16f 2018-08-21 | First Commit [Jim Weirich]</pre>
+* 9ccf526 2018-09-10 | Added a comment (tag: v1, master) [Jim Weirich]
+* 5f8b7b1 2018-09-10 | Added a default value (HEAD, tag: v1-beta) [Jim Weirich]
+* a0ce1ce 2018-09-10 | Using ARGV [Jim Weirich]
+* 970a059 2018-09-10 | First Commit [Jim Weirich]</pre>
 <p>You can see both tags (<code>v1</code> and <code>v1-beta</code>) listed in the log output, along with the branch name (<code>master</code>).  Also <code>HEAD</code> shows you the currently checked out commit (which is <code>v1-beta</code> at the moment).</p>
         <nav class="foot-navigation">
       <a href="lab_12.html">
