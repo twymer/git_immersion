@@ -44,12 +44,9 @@ h2. Goals
 
 * Get the tutorial materials setup and ready to run.
 
-h2. Get the Tutorial package.
+h2. Get the Tutorial package
 
-p. Git the tutorial package from either:
-
-* The memory sticks provided in the tutorial
-* The URL "http://gitimmersion.com/git_tutorial.zip":http://gitimmersion.com/git_tutorial.zip
+* Download from: "http://gitimmersion.com/git_tutorial.zip":http://gitimmersion.com/git_tutorial.zip
 
 h2. Unzip the tutorial
 
