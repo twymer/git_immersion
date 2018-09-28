@@ -107,15 +107,15 @@
 git hist</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist
-* 2af1236 2018-09-10 | Made interactive (HEAD -&gt; master) [Jim Weirich]
-* 7721667 2018-09-10 | Added README [Jim Weirich]
-* 4ced2a1 2018-09-10 | Added a Rakefile. [Jim Weirich]
-* 079be55 2018-09-10 | Moved hello.rb to lib [Jim Weirich]
-* ee9635f 2018-09-10 | Add an author/email comment [Jim Weirich]
-* 9ccf526 2018-09-10 | Added a comment (tag: v1) [Jim Weirich]
-* 5f8b7b1 2018-09-10 | Added a default value (tag: v1-beta) [Jim Weirich]
-* a0ce1ce 2018-09-10 | Using ARGV [Jim Weirich]
-* 970a059 2018-09-10 | First Commit [Jim Weirich]</pre>
+* 17a6c56 2018-09-28 | Made interactive (HEAD -&gt; master) [Jim Weirich]
+* 5c40874 2018-09-28 | Added README [Jim Weirich]
+* 191f0c6 2018-09-28 | Added a Rakefile. [Jim Weirich]
+* ef98cae 2018-09-28 | Moved hello.rb to lib [Jim Weirich]
+* e1e08fd 2018-09-28 | Add an author/email comment [Jim Weirich]
+* 7bf0bf1 2018-09-28 | Added a comment (tag: v1) [Jim Weirich]
+* 9cf3f21 2018-09-28 | Added a default value (tag: v1-beta) [Jim Weirich]
+* 94e1b8b 2018-09-28 | Using ARGV [Jim Weirich]
+* f656098 2018-09-28 | First Commit [Jim Weirich]</pre>
 <p>The &#8216;Added <span class="caps">README</span>&#8217; commit is the one directly before the conflicting interactive mode.  We will reset the master branch to &#8216;Added <span class="caps">README</span>&#8217; branch.</p>
 <h3><b>Execute:</b></h3>
 <pre class="instructions">git reset --hard &lt;hash&gt;
@@ -123,18 +123,18 @@ git hist --all</pre>
 <p>Review the log.  It should look like the repository has been wound back in time to the point before we merged anything.</p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist --all
-* 5d4dd47 2018-09-10 | Updated Rakefile (greet) [Jim Weirich]
-* d5b136f 2018-09-10 | Hello uses Greeter [Jim Weirich]
-* efd7198 2018-09-10 | Added greeter class [Jim Weirich]
-| * 7721667 2018-09-10 | Added README (HEAD -&gt; master) [Jim Weirich]
+* 3f038a4 2018-09-28 | Updated Rakefile (greet) [Jim Weirich]
+* fa0b537 2018-09-28 | Hello uses Greeter [Jim Weirich]
+* 6f9af14 2018-09-28 | Added greeter class [Jim Weirich]
+| * 5c40874 2018-09-28 | Added README (HEAD -&gt; master) [Jim Weirich]
 |/  
-* 4ced2a1 2018-09-10 | Added a Rakefile. [Jim Weirich]
-* 079be55 2018-09-10 | Moved hello.rb to lib [Jim Weirich]
-* ee9635f 2018-09-10 | Add an author/email comment [Jim Weirich]
-* 9ccf526 2018-09-10 | Added a comment (tag: v1) [Jim Weirich]
-* 5f8b7b1 2018-09-10 | Added a default value (tag: v1-beta) [Jim Weirich]
-* a0ce1ce 2018-09-10 | Using ARGV [Jim Weirich]
-* 970a059 2018-09-10 | First Commit [Jim Weirich]</pre>
+* 191f0c6 2018-09-28 | Added a Rakefile. [Jim Weirich]
+* ef98cae 2018-09-28 | Moved hello.rb to lib [Jim Weirich]
+* e1e08fd 2018-09-28 | Add an author/email comment [Jim Weirich]
+* 7bf0bf1 2018-09-28 | Added a comment (tag: v1) [Jim Weirich]
+* 9cf3f21 2018-09-28 | Added a default value (tag: v1-beta) [Jim Weirich]
+* 94e1b8b 2018-09-28 | Using ARGV [Jim Weirich]
+* f656098 2018-09-28 | First Commit [Jim Weirich]</pre>
         <nav class="foot-navigation">
       <a href="lab_32.html">
       <svg version="1.1" width="36" height="36" viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M27.66,15.61,18,6,8.34,15.61A1,1,0,1,0,9.75,17L17,9.81V28.94a1,1,0,1,0,2,0V9.81L26.25,17a1,1,0,0,0,1.41-1.42Z"></path></svg>
