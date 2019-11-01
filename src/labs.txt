@@ -720,7 +720,7 @@ h2. Tagging Previous Versions
 
 p. Let's tag the version immediately prior to the current version
 v1-beta.  First we need to checkout the previous version.  Rather than
-lookup up the hash, we will use the @^@ notation to indicate "the parent
+look up the hash, we will use the @^@ notation to indicate "the parent
 of v1".
 
 p(note). If the @v1@^ notation gives you any trouble, you can also try
@@ -1438,7 +1438,7 @@ git hist --max-count=1
 =log
 
 p. This should show the latest commit made in the repository.  The
-SHA1 hash on your system is probably different that what is on mine,
+SHA1 hash on your system is probably different from what is on mine,
 but you should see something like this.
 
 Output:
@@ -1976,7 +1976,7 @@ EOF
 
 p. The 'Added README' commit is the one directly before the
 conflicting interactive mode.  We will reset the master branch to
-'Added README' branch.
+'Added README' commit.
 
 Set: hash=hash_for("Added README")
 Execute:
@@ -2092,7 +2092,7 @@ network connection.
 
 p. In the next section we will create a new repository called
 "cloned_hello".  We will show how to move changes from one repository
-to another, and how to handle conflicts when they arise from between
+to another, and how to handle conflicts when they arise between
 two repositories.
 
  !git_clone.png!
@@ -2197,7 +2197,7 @@ Output:
 =log
 EOF
 
-p. You should now see a list of the all the commits in the new
+p. You should now see a list of all the commits in the new
 repository, and it should (more or less) match the history of commits
 in the original repository.  The only difference should be in the
 names of the branches.
@@ -2205,7 +2205,7 @@ names of the branches.
 h2. Remote branches
 
 p. You should see a *master* branch (along with *HEAD*) in the history
-list.  But you will also have number of strangely named branches
+list.  But you will also have a number of strangely named branches
 (*origin/master*, *origin/greet* and *origin/HEAD*).  We'll talk about
 them in a bit.
 
@@ -2339,14 +2339,14 @@ Output:
 EOF
 
 p. At this point the repository has all the commits from the original
-repository, but they are not integrated into the the cloned
+repository, but they are not integrated into the cloned
 repository's local branches.
 
 p. Find the "Changed README in original repo" commit in the history
 above.  Notice that the commit includes "origin/master" and
 "origin/HEAD".
 
-p. Now look at the "Updated Rakefile" commit.  You will see that it
+p. Now look at the "Updated Rakefile" commit.  You will see that
 the local master branch points to this commit, not to the new commit
 that we just fetched.
 
@@ -2508,7 +2508,7 @@ h1. Pushing a Change
 
 h2. Goals
 
-* Learn how out to push a change to a remote repository.
+* Learn how to push a change to a remote repository.
 
 p. Since bare repositories are usually shared on some sort of network
 server, it is usually difficult to cd into the repo and pull changes.

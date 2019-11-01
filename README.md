@@ -48,7 +48,7 @@ master branch, then run `rake publish`.
 
 ## Lab Format Directives
 
-The `labs.txt` file contains all the lab text, formatted as a textile
+The `labs.txt` file contains all the lab text, formatted as a text
 file with additional directives interpreted for both run time
 (generating the sample output) and format time (generating the HTML).
 
@@ -180,7 +180,7 @@ Define/use a sample output.
 
 Sample output are generated during the run phase of building the Git
 Immersion labs.  They are the output of a single command line in the
-Execute sction of a lab.
+Execute section of a lab.
 
 Example:
 
