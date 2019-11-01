@@ -107,24 +107,24 @@ git hist --all</pre>
 <p class="note red"><strong><span class="caps">NOTE</span>: Now in the <em>cloned_hello</em> repo</strong></p>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git fetch
-From /Users/jerrynummi/Projects/git_immersion_edgecase/auto/hello
-   c46c56e..76cd598  master     -&gt; origin/master
+From /Users/jerrynummi/Projects/git-immersion-edgecase/auto/hello
+   ff7c118..2eece92  master     -&gt; origin/master
 $ git hist --all
-* 76cd598 2018-09-28 | Changed README in original repo (origin/master, origin/HEAD) [Jim Weirich]
-* c46c56e 2018-09-28 | Updated Rakefile (HEAD -&gt; master, origin/greet) [Jim Weirich]
-* 0ccac93 2018-09-28 | Hello uses Greeter [Jim Weirich]
-* a5ff572 2018-09-28 | Added greeter class [Jim Weirich]
-* 5c40874 2018-09-28 | Added README [Jim Weirich]
-* 191f0c6 2018-09-28 | Added a Rakefile. [Jim Weirich]
-* ef98cae 2018-09-28 | Moved hello.rb to lib [Jim Weirich]
-* e1e08fd 2018-09-28 | Add an author/email comment [Jim Weirich]
-* 7bf0bf1 2018-09-28 | Added a comment (tag: v1) [Jim Weirich]
-* 9cf3f21 2018-09-28 | Added a default value (tag: v1-beta) [Jim Weirich]
-* 94e1b8b 2018-09-28 | Using ARGV [Jim Weirich]
-* f656098 2018-09-28 | First Commit [Jim Weirich]</pre>
-<p>At this point the repository has all the commits from the original repository, but they are not integrated into the the cloned repository&#8217;s local branches.</p>
+* 2eece92 2019-11-01 | Changed README in original repo (origin/master, origin/HEAD) [Jim Weirich]
+* ff7c118 2019-11-01 | Updated Rakefile (HEAD -&gt; master, origin/greet) [Jim Weirich]
+* 2a262be 2019-11-01 | Hello uses Greeter [Jim Weirich]
+* 413c34f 2019-11-01 | Added greeter class [Jim Weirich]
+* 099ccd0 2019-11-01 | Added README [Jim Weirich]
+* ed35144 2019-11-01 | Added a Rakefile. [Jim Weirich]
+* 4421854 2019-11-01 | Moved hello.rb to lib [Jim Weirich]
+* 185fc95 2019-11-01 | Add an author/email comment [Jim Weirich]
+* 4d578d4 2019-11-01 | Added a comment (tag: v1) [Jim Weirich]
+* dc1d42f 2019-11-01 | Added a default value (tag: v1-beta) [Jim Weirich]
+* 9a1c494 2019-11-01 | Using ARGV [Jim Weirich]
+* 063b40e 2019-11-01 | First Commit [Jim Weirich]</pre>
+<p>At this point the repository has all the commits from the original repository, but they are not integrated into the cloned repository&#8217;s local branches.</p>
 <p>Find the &#8220;Changed <span class="caps">README</span> in original repo&#8221; commit in the history above.  Notice that the commit includes &#8220;origin/master&#8221; and &#8220;origin/<span class="caps">HEAD</span>&#8221;.</p>
-<p>Now look at the &#8220;Updated Rakefile&#8221; commit.  You will see that it the local master branch points to this commit, not to the new commit that we just fetched.</p>
+<p>Now look at the &#8220;Updated Rakefile&#8221; commit.  You will see that the local master branch points to this commit, not to the new commit that we just fetched.</p>
 <p>The upshot of this is that the &#8220;git fetch&#8221; command will fetch new commits from the remote repository, but it will not merge these commits into the local branches.</p>
 <h2>Check the <span class="caps">README</span></h2>
 <p>We can demonstrate that the cloned <span class="caps">README</span> is unchanged.</p>

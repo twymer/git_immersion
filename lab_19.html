@@ -129,8 +129,8 @@ git commit --amend -m "Add an author/email comment"</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git add hello.rb
 $ git commit --amend -m "Add an author/email comment"
-[master e1e08fd] Add an author/email comment
- Date: Fri Sep 28 08:58:09 2018 -0700
+[master 185fc95] Add an author/email comment
+ Date: Fri Nov 1 10:47:29 2019 -0700
  1 file changed, 2 insertions(+), 1 deletion(-)
 </pre>
 <h2>Review the History</h2>
@@ -138,11 +138,11 @@ $ git commit --amend -m "Add an author/email comment"
 <pre class="instructions">git hist</pre>
 <h3><b>Output:</b></h3>
 <pre class="sample">$ git hist
-* e1e08fd 2018-09-28 | Add an author/email comment (HEAD -&gt; master) [Jim Weirich]
-* 7bf0bf1 2018-09-28 | Added a comment (tag: v1) [Jim Weirich]
-* 9cf3f21 2018-09-28 | Added a default value (tag: v1-beta) [Jim Weirich]
-* 94e1b8b 2018-09-28 | Using ARGV [Jim Weirich]
-* f656098 2018-09-28 | First Commit [Jim Weirich]</pre>
+* 185fc95 2019-11-01 | Add an author/email comment (HEAD -&gt; master) [Jim Weirich]
+* 4d578d4 2019-11-01 | Added a comment (tag: v1) [Jim Weirich]
+* dc1d42f 2019-11-01 | Added a default value (tag: v1-beta) [Jim Weirich]
+* 9a1c494 2019-11-01 | Using ARGV [Jim Weirich]
+* 063b40e 2019-11-01 | First Commit [Jim Weirich]</pre>
 <p>We can see the original &#8220;author&#8221; commit is now gone, and it is replaced by the &#8220;author/email&#8221; commit.  You can achieve the same effect by resetting the branch back one commit and then recommitting the new changes.</p>
         <nav class="foot-navigation">
       <a href="lab_18.html">
