@@ -32,7 +32,7 @@ git config --global core.safecrlf true
 
 h2. Setup Ruby 
 
-p. For this tutorial you need a working Ruby interpreter. If you haven´t one 
+p. For this tutorial you need a working Ruby interpreter. If you haven't one 
 installed yet, it is time to set it up now:
 
 "https://www.ruby-lang.org/en/installation/":https://www.ruby-lang.org/en/installation/
