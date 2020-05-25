@@ -175,7 +175,7 @@ changes.
 
 p. Also notice that the status message gives you hints about what you
 need to do next.  If you want to add these changes to the repository,
-then use the @git add@ command.  Otherwise the @git checkout@ command
+then use the @git add@ command.  Otherwise the @git restore@ command
 can be used to discard the changes.
 
 h2. Up Next
@@ -212,7 +212,7 @@ _permanently_ recorded in the repository yet.  The next commit
 operation will include the staged changes.
 
 p. If you decide you _don't_ want to commit that change after all, the
-status command reminds you that the @git reset@ command can be used to
+status command reminds you that the @git restore --staged@ command can be used to
 unstage that change.
 
 ----------------------------------------------------------------------
@@ -684,20 +684,20 @@ p. Notice the contents of the hello.rb file are the original contents.
 h2. Return the latest version in the master branch
 
 Execute:
-git checkout master
-=checkout2
+git switch master
+=switch
 cat hello.rb
 =cat2
 
 p. You should see ...
 
 Output:
-=checkout2
+=switch
 =cat2
 EOF
 
-p. 'master' is the name of the default branch.  By checking out a branch
-by name, you go to the latest version of that branch.
+p. 'master' is the name of the default branch.  By switching to a branch
+by name, you check out the latest version of that branch.
 
 ----------------------------------------------------------------------
 h1. Tagging versions
@@ -833,19 +833,19 @@ staged yet.
 
 h2. Revert the changes in the working directory
 
-p. Use the @checkout@ command to checkout the repository's version of
+p. Use the @restore@ command to checkout the repository's version of
 the @hello.rb@ file.
 
 Execute:
-git checkout hello.rb
-=checkout
+git restore hello.rb
+=restore
 !git status
 =status2
 cat hello.rb
 =cat
 
 Output:
-=checkout
+=restore
 =status2
 =cat
 EOF
@@ -898,20 +898,22 @@ p. Fortunately the status output tells us exactly what we need to do
 to unstage the change.
 
 Execute:
-git reset HEAD hello.rb
-=reset
+git restore --staged hello.rb
+git status
+=status2
 
 Output:
-=reset
+=status2
 EOF
 
-p. The @reset@ command resets the staging area to be whatever is in
+p. The @restore@ command restores the staging area to be whatever is in
 HEAD.  This clears the staging area of the change we just staged.
 
-p. The @reset@ command (by default) doesn't change the working
-directory.  So the working directory still has the unwanted comment in
-it.  We can use  the @checkout@ command of the previous lab to remove
-the unwanted change from the working directory.
+p. The @restore@ command doesn't change the working as long as we call it
+with the @--staged@ flag directory.  As we saw earlier, using it without this
+will restore the file to what is in the repository.  So the working directory
+still has the unwanted comment in it.  We can use the @checkout@ command of
+the previous lab to remove the unwanted change from the working directory.
 
 h2. Checkout the Committed Version
 
@@ -1540,11 +1542,11 @@ h2. Create a Branch
 p. Let's call our new branch 'greet'.
 
 Execute:
-git checkout -b greet
+git switch -c greet
 !git status
 
-p(note). *NOTE:* @git checkout -b <branchname>@ is a shortcut for @git
-branch <branchname>@ followed by a @git checkout <branchname>@.
+p(note). *NOTE:* @git switch -c <branchname>@ is a shortcut for @git
+branch <branchname>@ followed by a @git switch <branchname>@.
 
 p. Notice that the git status command reports that you are on the
 'greet' branch.
@@ -1626,16 +1628,16 @@ EOF
 
 h2. Switch to the Master Branch
 
-p. Just use the @git checkout@ command to switch between branches.
+p. Just use the @git switch@ command to switch between branches.
 
 Execute:
-git checkout master
-=checkout
+git switch master
+=switch
 cat lib/hello.rb
 =cat
 
 Output:
-=checkout
+=switch
 =cat
 EOF
 
@@ -1645,13 +1647,13 @@ hello.rb file doesn't use the @Greeter@ class.
 h2. Switch Back to the Greet Branch.
 
 Execute:
-git checkout greet
-=checkout2
+git switch greet
+=switch2
 cat lib/hello.rb
 =cat2
 
 Output:
-=checkout2
+=switch2
 =cat2
 EOF
 
@@ -1671,7 +1673,7 @@ update the master branch.  They added a README.
 h2. Switch to the master branch.
 
 Execute:
-git checkout master
+git switch master
 
 h2. Create the README.
 
@@ -1727,15 +1729,15 @@ p. Merging brings the changes in two branches together.  Let's go back
 to the greet branch and merge master onto greet.
 
 Execute:
-git checkout greet
-=checkout
+git siwtch greet
+=switch
 git merge master
 =merge
 git hist --all
 =hist
 
 Output:
-=checkout
+=switch
 =merge
 =hist
 EOF
@@ -1764,7 +1766,7 @@ h2. Switch back to master and create a conflict
 p. Switch back to the master branch and make this change:
 
 Execute:
-git checkout master
+git switch master
 
 File: lib/hello.rb
 puts "What's your name"
@@ -1808,11 +1810,11 @@ h2. Merge master to greet
 p. Now go back to the greet branch and try to merge the new master.
 
 Execute:
-git checkout greet
+git switch greet
 !git merge master
 
 Output:
-$ git checkout greet
+$ git switch greet
 Switched to branch 'greet'
 $ git merge master
 Auto-merging lib/hello.rb
@@ -1914,13 +1916,13 @@ p. In this case we want to back greet up to the point prior to the
 merge with master.  We need to find the last commit before the merge.
 
 Execute:
-git checkout greet
-=checkout
+git switch greet
+=switch
 git hist
 =log
 
 Output:
-=checkout
+=switch
 =log
 EOF
 
@@ -1966,7 +1968,7 @@ allows us to demonstrate the rebase command without worrying about
 conflicts.
 
 Execute:
-git checkout master
+git switch master
 git hist
 =log
 
@@ -2005,7 +2007,7 @@ p. This time we will use the rebase command instead of the merge
 command to bring in the changes from the master branch.
 
 Execute:
-git checkout greet
+git switch greet
 git rebase master
 git hist
 =log
@@ -2052,12 +2054,12 @@ h2. Goals
 h2. Merge greet into master
 
 Execute:
-git checkout master
+git switch master
 git merge greet
 =merge
 
 Output:
-$ git checkout master
+$ git switch master
 Switched to branch 'master'
 $
 =merge
@@ -2523,7 +2525,7 @@ This is the Hello World example from the git tutorial.
 EOF
 
 Execute:
-git checkout master
+git switch master
 git add README
 git commit -m "Added shared comment to readme"
 
